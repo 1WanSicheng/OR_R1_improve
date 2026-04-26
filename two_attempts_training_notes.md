@@ -123,6 +123,42 @@ r_total = r_fmt + r_code + r_vote + lambda_struct * r_struct
 
 这样做的原因是控制变量。先只改 reward，便于判断 reward 设计本身是否有效。
 
+更具体地说，`structure reward` 不是单独训练一个 verifier，也不是额外训练一个 schema 预测器，而是直接插进现有 `reward_with_reference(...)` 这条 reward 链里。
+
+原始 OR-R1 的 GRPO 一条样本的训练流转是：
+
+```text
+question
+-> prompt
+-> model sample K 个 completions
+-> 每个 completion 执行 reward 验证
+-> 得到每个 completion 的 total reward
+-> GRPO 根据 reward 更新模型参数
+```
+
+加入 structure reward 后，变化只在“reward 验证”这一步：
+
+```text
+question
+-> prompt
+-> model sample K 个 completions
+-> 每个 completion:
+     r_fmt
+     r_code
+     r_vote
+     r_struct
+-> total reward = r_fmt + r_code + r_vote + lambda_struct * r_struct
+-> GRPO 根据新的 total reward 更新模型参数
+```
+
+所以它“教模型学习”的方式不是监督学习，而是：
+
+- 如果某个 completion 的结构更像合理建模，`r_struct` 更高
+- 该 completion 在 RL 中就更容易被提高概率
+- 反过来，结构明显不合理的 completion 概率会被压低
+
+也就是说，它是通过 **改变 completion 级别的 reward**，间接改变模型的生成偏好。
+
 ### 3.3 新 reward 怎么计算
 
 `r_struct` 不是由另一个 LLM 生成的，也不是再让模型跑一次题。它是基于规则的 schema matching。
@@ -153,6 +189,65 @@ schema 提取本身不是模型推理，而是正则和关键词规则。主要�
 ```text
 r_struct = weighted_avg(r_obj, r_var, r_con, r_align)
 ```
+
+这里最容易误解的一点是：`problem_schema` 和 `completion_schema` 都不是“再跑一次模型”得到的。
+
+- `problem_schema`：直接从题目文本抽
+- `completion_schema`：直接从模型输出文本抽
+
+两边都是规则抽取，不涉及额外采样。当前实现里，schema 提取主要靠：
+
+- 正则匹配目标方向
+- 关键词匹配变量类型
+- 变量索引模式匹配维度
+- 关键词集合匹配约束类别
+- 正则/关键词匹配参数与实体关系
+
+所以可以把它理解成：
+
+```text
+text -> heuristic schema parser -> schema object
+```
+
+不是：
+
+```text
+text -> LLM judge -> schema
+```
+
+### 3.3.1 它是怎么 verify 的
+
+当前 `r_struct` 的 verify 是 **强规则字段匹配**，不是 learned reward model，也不是符号级数学证明。
+
+验证逻辑可以理解成：
+
+1. 题目里能不能看出这是 `maximize` 还是 `minimize`
+2. 题目里能不能看出变量更像 `binary/integer/continuous`
+3. 题目里提到的关键结构，比如 `capacity / demand / budget / flow balance`，completion 里有没有出现
+4. completion 的变量维度、约束类别、目标方向，和题目里抽出来的 schema 是否大体一致
+
+因此，它判断的是：
+
+```text
+completion 在结构层面是否“像对的”
+```
+
+而不是：
+
+```text
+completion 在数学上是否“严格正确”
+```
+
+这也是它和原始 OR-R1 最大的差别：
+
+- 原始 OR-R1 更偏格式、执行和组内一致性
+- structure reward 新增的是结构一致性
+
+但这也解释了它的局限：
+
+- `problem_schema` 自身可能抽错
+- `completion_schema` 自身也可能抽不全
+- 所以 `r_struct` 是启发式信号，不是绝对真值
 
 ### 3.4 它和原始 OR-R1 的区别
 
@@ -231,6 +326,21 @@ problem + failed_output + diagnosis -> repaired_solution
 - self-repair 当前主要插在 **SFT 数据构建层**
 - 不是直接插进原始 GRPO reward 里
 
+从“模型怎么学习”这个角度看，self-repair 当前版本做的不是：
+
+```text
+每一轮 RL 后在线反思
+```
+
+而是：
+
+```text
+先离线造出一批 repair 监督样本
+再把这些样本当成新的 SFT 数据做一次监督训练
+```
+
+所以它给模型学习的方式，是 **改 SFT 训练样本的输入输出映射**，而不是改原始 GRPO reward。
+
 ### 4.3 repair 是怎么生成的
 
 repair 不是人工写的，而是模型二次生成的。
@@ -278,6 +388,49 @@ problem + failed_output + diagnosis + feedback
 
 只有 repair 后的结果真的更好，才会进入 SFT 数据集。
 
+这里的 `repaired_solution` 不是人工写的标准答案，也不是从参考答案反推出来的，而是 **同一个 base model 在 repair prompt 条件下二次生成的结果**。
+
+所以真实流程是：
+
+```text
+第一次生成：
+problem -> failed_output
+
+第二次生成：
+problem + failed_output + diagnosis + feedback
+-> repaired_solution
+```
+
+也就是说，repair 本身也是模型生成的，只不过它的输入条件更丰富。
+
+### 4.3.1 repair 是怎么判断“值不值得学”的
+
+不是所有 repair 都会进入训练集。当前流程会对 repair 结果再执行、再筛选。
+
+第一版的筛选逻辑更严格，大致是：
+
+- repair 后直接答对，收
+- 或者 repair 后比 first-pass 更接近答案，且 solver 状态是 `optimal`，收
+
+第二版改成了分层接收：
+
+- `tier1_code_recovery`
+  `no_code -> executable`
+- `tier2_execution_fix`
+  `runtime_error / missing_variable / syntax_error -> optimal`
+- `tier3_model_fix`
+  `infeasible / unbounded / non_optimal -> optimal`
+- `tier4_correct_answer`
+  最终数值直接答对
+
+所以 self-repair 不只是“生成一版 repair”，而是：
+
+```text
+生成 repair
+-> 执行 repair
+-> 根据状态和数值改善决定是否入库
+```
+
 ### 4.4 self-repair 的 SFT 样本长什么样
 
 第一性原则上，它不是把原题再训练一遍，而是写成新的 `prompt/completion`：
@@ -297,6 +450,52 @@ problem + failed_output + diagnosis + feedback
 
 ```text
 full repaired solution
+```
+
+这里“给模型学习”的关键点在于，self-repair 改了 SFT 的输入语义，也改了监督目标的语义：
+
+原始 SFT 学的是：
+
+```text
+problem -> solution
+```
+
+self-repair SFT 学的是：
+
+```text
+problem + failed_output + diagnosis -> repaired_solution
+```
+
+也就是说，模型不再只是学“怎么解题”，而是额外学一层：
+
+```text
+看到这种失败和这种错误信号时，应该如何修改
+```
+
+### 4.4.1 self-repair 样本里到底包含什么
+
+当前 self-repair 的 `prompt` 不是只有题目，而是显式包含：
+
+- 原题
+- first-pass 失败输出
+- `failure_type`
+- `diagnostic_tags`
+- `likely_cause`
+- `repair_instruction`
+- V2 中还可能有 `quality_tier`
+
+`completion` 则是修复后的完整答案。
+
+所以当前 self-repair SFT 的本质是：
+
+```text
+把“失败轨迹 + 诊断 + 修复后答案”写成监督样本
+```
+
+而不是：
+
+```text
+只把原题和最终正确答案重新训练一遍
 ```
 
 ### 4.5 第一版和第二版
@@ -350,6 +549,9 @@ V2 的收益是把大量 `no_code` 压下去了，但新的主失败变成了 `s
 最终通过新增训练入口解决：
 
 - [01_sft_train_self_repair.py](01_sft_train_self_repair.py)
+
+6. 更根本的问题是“repair 数据本身太弱”  
+如果大部分 repair 结果没有明显优于 first-pass，那么即使 SFT 脚本本身能正常跑，训练学到的也仍然是噪声而不是稳定修复规律。
 
 ### 4.7 当前结论
 
