@@ -1,0 +1,855 @@
+{
+  "input_root": "output/full_grpo_sft_qwen3_8b_dir_3Ksample_1epoch_localfull",
+  "num_datasets": 8,
+  "datasets": [
+    {
+      "dataset": "ComplexOR",
+      "file": "output/full_grpo_sft_qwen3_8b_dir_3Ksample_1epoch_localfull/eval.ComplexOR.pass1/executed.jsonl",
+      "total": 18,
+      "correct": 8,
+      "wrong": 10,
+      "pass@1": 0.4444444444444444,
+      "wrong_category_counts": {
+        "numeric/wrong_answer": 7,
+        "solver/non_optimal": 1,
+        "execution/runtime_error": 2
+      },
+      "wrong_tag_counts": {
+        "numeric_too_high": 4,
+        "missing_integrality_or_binary": 4,
+        "possible_missing_capacity/budget/resource": 2,
+        "numeric_too_low": 2,
+        "possible_missing_upper/lower bounds": 1,
+        "near_miss": 1,
+        "infeasible": 1,
+        "possible_missing_demand/minimum": 2,
+        "possible_missing_inventory/time balance": 1,
+        "possible_missing_flow/supply-demand": 1,
+        "runtime_error": 2
+      },
+      "wrong_numeric_relative_error_median": 0.25,
+      "examples_by_category": {
+        "numeric/wrong_answer": [
+          {
+            "question": "We have a set of flight legs (one-way non-stop flight) with a limited passenger capacity. According to market research, we defined a set of flight itineraries to sell as a package with a given price. For each package, we have an estimated d",
+            "answer": 8000.0,
+            "prediction": "9000.0",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "numeric_too_high"
+            ],
+            "relative_error": 0.125
+          },
+          {
+            "question": "Consider a problem where we have a set `P`. For each element `j` in `P`, we have a parameter `a[j]`, a parameter `c[j]`, and a parameter `u[j]`. We also have a global parameter `b`. We have a variable `X[j]` for each `j` in `P`. The goal is",
+            "answer": 66.0,
+            "prediction": "55.66666666666667",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "missing_integrality_or_binary",
+              "possible_missing_capacity/budget/resource",
+              "numeric_too_low"
+            ],
+            "relative_error": 0.1565656565656565
+          },
+          {
+            "question": "A telecom company needs to build a set of cell towers to provide signal coverage for the inhabitants of a given city. A number of potential locations where the towers could be built have been identified. The towers have a fixed range, and d",
+            "answer": 200.0,
+            "prediction": "250.0",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "numeric_too_high"
+            ],
+            "relative_error": 0.25
+          }
+        ],
+        "solver/non_optimal": [
+          {
+            "question": "This is a multi-commodity transportation problem. Given a set of origins `Origins`, a set of destinations `Destinations`, and a set of products `Products`. Each origin `i` has a certain supply of each product `p` `Supply_{i,p}` and each des",
+            "answer": 235.0,
+            "prediction": "No Best Solution",
+            "state": "Execution Successful but No Best Solution Found",
+            "tags": [
+              "infeasible"
+            ],
+            "relative_error": null
+          }
+        ],
+        "execution/runtime_error": [
+          {
+            "question": "Consider a transportation problem with multiple products. Given a set of cities `Cities` and a set of links `Links` between the cities. Each city `i` has a certain supply of each product `p` `Supply_{i,p}` and a certain demand for each prod",
+            "answer": 10.0,
+            "prediction": null,
+            "state": "Execution Failed: 2026-04-03 09:31:57 [INFO] checks license for COPT v8.0.3 20260113\n2026-04-03 09:31:57 [WARN] no license files in current working folder: /mnt/workspace0/WWWWWWWWWWWW/OR-R1\n2026-04-03 09:31:57 [WARN] no license files in binary folder: /home/wan/enter/bin\n2026-04-03 09:31:57 [WARN] no license files in HOME folder: /home/wan/copt\n2026-04-03 09:31:57 [INFO] empty environment variable: COPT_LICENSE_DIR\n2026-04-03 09:31:57 [WARN] no license files in EV 'COPT_LICENSE_DIR': \n\nNo license found. Starting COPT with size limitations for non-commercial use\nPlease apply for a license from www.shanshu.ai/copt\n\nCardinal Optimizer v8.0.3. Build date Jan 13 2026\nCopyright Cardinal Operations 2026. All Rights Reserved\n\n",
+            "tags": [
+              "runtime_error"
+            ],
+            "relative_error": null
+          },
+          {
+            "question": "The Aircraft Landing Problem (ALP) is the problem of deciding a landing time on an appropriate runway for each aircraft in a given set of aircraft such that each aircraft lands within a predetermined time window; and separation criteria bet",
+            "answer": 0.0,
+            "prediction": null,
+            "state": "Execution Failed: 2026-04-03 09:31:57 [INFO] checks license for COPT v8.0.3 20260113\n2026-04-03 09:31:57 [WARN] no license files in current working folder: /mnt/workspace0/WWWWWWWWWWWW/OR-R1\n2026-04-03 09:31:57 [WARN] no license files in binary folder: /home/wan/enter/bin\n2026-04-03 09:31:57 [WARN] no license files in HOME folder: /home/wan/copt\n2026-04-03 09:31:57 [INFO] empty environment variable: COPT_LICENSE_DIR\n2026-04-03 09:31:57 [WARN] no license files in EV 'COPT_LICENSE_DIR': \n\nNo license found. Starting COPT with size limitations for non-commercial use\nPlease apply for a license from www.shanshu.ai/copt\n\nCardinal Optimizer v8.0.3. Build date Jan 13 2026\nCopyright Cardinal Operations 2026. All Rights Reserved\n\n",
+            "tags": [
+              "runtime_error"
+            ],
+            "relative_error": null
+          }
+        ]
+      }
+    },
+    {
+      "dataset": "ICMLTEST",
+      "file": "output/full_grpo_sft_qwen3_8b_dir_3Ksample_1epoch_localfull/eval.ICMLTEST.pass1/executed.jsonl",
+      "total": 410,
+      "correct": 354,
+      "wrong": 56,
+      "pass@1": 0.8634146341463415,
+      "wrong_category_counts": {
+        "numeric/wrong_answer": 54,
+        "solver/non_optimal": 1,
+        "execution/runtime_error": 1
+      },
+      "wrong_tag_counts": {
+        "possible_missing_upper/lower bounds": 23,
+        "numeric_too_low": 32,
+        "missing_integrality_or_binary": 9,
+        "possible_missing_demand/minimum": 16,
+        "possible_missing_inventory/time balance": 15,
+        "near_miss": 3,
+        "numeric_too_high": 19,
+        "infeasible": 1,
+        "possible_missing_flow/supply-demand": 5,
+        "possible_missing_assignment/selection": 2,
+        "runtime_error": 1,
+        "possible_missing_capacity/budget/resource": 4,
+        "objective_direction_mismatch": 1
+      },
+      "wrong_numeric_relative_error_median": 0.8674698795180723,
+      "examples_by_category": {
+        "numeric/wrong_answer": [
+          {
+            "question": "A cosmetics company makes high-end skincare products whose main customers are wealthy women, both young girls and middle-aged women. In order to promote their product line, they decided to invest in short commercial spots on two types of pr",
+            "answer": 260000.0,
+            "prediction": "25.0",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "possible_missing_upper/lower bounds",
+              "numeric_too_low"
+            ],
+            "relative_error": 0.9999038461538462
+          },
+          {
+            "question": "A paint store mixes two brands of paint, Ruby and Sapphire, to create a new mixture of paint. A can of Ruby paint costs $12 and a can of Sapphire paint costs $15. A can of Ruby paint contains 2 units of dye, 4 units of thinner, and 5 units ",
+            "answer": 78.0,
+            "prediction": "68.0625",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "missing_integrality_or_binary",
+              "numeric_too_low"
+            ],
+            "relative_error": 0.12740384615384615
+          },
+          {
+            "question": "A chair produced by Elm Furniture yields a profit of $43, while every dresser yields a $52 profit. Each week, 17 gallons of stain and 11 lengths of oak wood are available. Each chair requires 1.4 gallons of stain and 2 lengths of oak wood, ",
+            "answer": 224.0,
+            "prediction": "236.5",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "possible_missing_demand/minimum",
+              "possible_missing_inventory/time balance",
+              "near_miss"
+            ],
+            "relative_error": 0.05580357142857143
+          }
+        ],
+        "solver/non_optimal": [
+          {
+            "question": "A client asks his stockbroker to invest $100,000 for maximum annual income, subject to the following conditions: Spread the investment over no more than three different stocks. Put no more than 40 percent of the money into any one stock. Pu",
+            "answer": 9649.57,
+            "prediction": "No Best Solution",
+            "state": "Execution Successful but No Best Solution Found",
+            "tags": [
+              "infeasible"
+            ],
+            "relative_error": null
+          }
+        ],
+        "execution/runtime_error": [
+          {
+            "question": "Brooks City has three consolidated high schools, each with a capacity of 1,200 students. The school board has partitioned the city into five busing districts—north, south, east, west, and central—each with different high school student popu",
+            "answer": 26200.0,
+            "prediction": null,
+            "state": "Execution Failed: 2026-04-03 09:57:48 [INFO] checks license for COPT v8.0.3 20260113\n2026-04-03 09:57:48 [WARN] no license files in current working folder: /mnt/workspace0/WWWWWWWWWWWW/OR-R1\n2026-04-03 09:57:48 [WARN] no license files in binary folder: /home/wan/enter/bin\n2026-04-03 09:57:48 [WARN] no license files in HOME folder: /home/wan/copt\n2026-04-03 09:57:48 [INFO] empty environment variable: COPT_LICENSE_DIR\n2026-04-03 09:57:48 [WARN] no license files in EV 'COPT_LICENSE_DIR': \n\nNo license found. Starting COPT with size limitations for non-commercial use\nPlease apply for a license from www.shanshu.ai/copt\n\nCardinal Optimizer v8.0.3. Build date Jan 13 2026\nCopyright Cardinal Operations 2026. All Rights Reserved\n\n",
+            "tags": [
+              "runtime_error"
+            ],
+            "relative_error": null
+          }
+        ]
+      }
+    },
+    {
+      "dataset": "IndustryOR",
+      "file": "output/full_grpo_sft_qwen3_8b_dir_3Ksample_1epoch_localfull/eval.IndustryOR.pass1/executed.jsonl",
+      "total": 100,
+      "correct": 28,
+      "wrong": 72,
+      "pass@1": 0.28,
+      "wrong_category_counts": {
+        "numeric/wrong_answer": 41,
+        "solver/non_optimal": 20,
+        "execution/runtime_error": 11
+      },
+      "wrong_tag_counts": {
+        "numeric_too_high": 21,
+        "infeasible": 16,
+        "possible_missing_capacity/budget/resource": 5,
+        "possible_missing_demand/minimum": 6,
+        "numeric_too_low": 18,
+        "possible_missing_inventory/time balance": 9,
+        "possible_missing_upper/lower bounds": 12,
+        "runtime_error": 11,
+        "missing_integrality_or_binary": 7,
+        "possible_missing_assignment/selection": 5,
+        "unbounded": 4,
+        "possible_missing_flow/supply-demand": 2,
+        "near_miss": 2
+      },
+      "wrong_numeric_relative_error_median": 0.9705882352941176,
+      "examples_by_category": {
+        "numeric/wrong_answer": [
+          {
+            "question": "A strategic bomber squadron has been ordered to destroy enemy military targets. It is known that there are four key areas, and destroying any one of them will achieve the objective. To complete this mission, the limits are set at $48000 \\ma",
+            "answer": -99999.0,
+            "prediction": "0.65",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "numeric_too_high"
+            ],
+            "relative_error": 1.0000065000650007
+          },
+          {
+            "question": "A factory produces three types of products: A, B, and C. Each unit of product A requires 1 hour of technical preparation, 10 hours of direct labor, and 3 kilograms of material. Each unit of product B requires 2 hours of technical preparatio",
+            "answer": 734.0,
+            "prediction": "880.0",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "possible_missing_capacity/budget/resource",
+              "possible_missing_demand/minimum",
+              "numeric_too_high"
+            ],
+            "relative_error": 0.1989100817438692
+          },
+          {
+            "question": "The Zhang family has decided to invest in several different restaurants. Restaurant A has an annual income of $15,000, Restaurant B has an annual income of $40,000, Restaurant C has an annual income of $30,000, and Restaurant D has an annua",
+            "answer": 90000.0,
+            "prediction": "90.0",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "numeric_too_low"
+            ],
+            "relative_error": 0.999
+          }
+        ],
+        "solver/non_optimal": [
+          {
+            "question": "A company plans to transport goods between a city and suburb and needs to choose the most environmentally friendly mode of transportation. The company can choose from the following three options: motorcycles, small trucks, and large trucks.",
+            "answer": 600.0,
+            "prediction": "No Best Solution",
+            "state": "Execution Successful but No Best Solution Found",
+            "tags": [
+              "infeasible"
+            ],
+            "relative_error": null
+          },
+          {
+            "question": "An Italian transportation company needs to transport some empty containers from its 6 warehouses (located in Verona, Perugia, Rome, Pescara, Taranto, and La Spezia) to major national ports (Genoa, Venice, Ancona, Naples, Bari). The inventor",
+            "answer": 4685100.0,
+            "prediction": "No Best Solution",
+            "state": "Execution Successful but No Best Solution Found",
+            "tags": [
+              "infeasible"
+            ],
+            "relative_error": null
+          },
+          {
+            "question": "Mary is planning her dinner for tonight. Each 100 grams of okra contains 3.2 grams of fiber, each 100 grams of carrots contains 2.7 grams of fiber, each 100 grams of celery contains 1.6 grams of fiber, and each 100 grams of cabbage contains",
+            "answer": 16.0,
+            "prediction": "No Best Solution",
+            "state": "Execution Successful but No Best Solution Found",
+            "tags": [
+              "infeasible"
+            ],
+            "relative_error": null
+          }
+        ],
+        "execution/runtime_error": [
+          {
+            "question": "A project consists of the following 7 activities, with their durations (in days) as follows: $A(4), B(3), C(5), D(2), E(10), F(10), G(1)$. The following priorities are also given: $A \\\\rightarrow G, D ; E, G \\\\rightarrow F; D, F \\\\rightarro",
+            "answer": 5004.0,
+            "prediction": null,
+            "state": "Execution Failed: 2026-04-03 09:46:30 [INFO] checks license for COPT v8.0.3 20260113\n2026-04-03 09:46:30 [WARN] no license files in current working folder: /mnt/workspace0/WWWWWWWWWWWW/OR-R1\n2026-04-03 09:46:30 [WARN] no license files in binary folder: /home/wan/enter/bin\n2026-04-03 09:46:30 [WARN] no license files in HOME folder: /home/wan/copt\n2026-04-03 09:46:30 [INFO] empty environment variable: COPT_LICENSE_DIR\n2026-04-03 09:46:30 [WARN] no license files in EV 'COPT_LICENSE_DIR': \n\nNo license found. Starting COPT with size limitations for non-commercial use\nPlease apply for a license from www.shanshu.ai/copt\n\nCardinal Optimizer v8.0.3. Build date Jan 13 2026\nCopyright Cardinal Operations 2026. All Rights Reserved\n\n",
+            "tags": [
+              "runtime_error"
+            ],
+            "relative_error": null
+          },
+          {
+            "question": "There are 8 villages in Tuanjie Township, with their respective coordinates and the number of elementary school students shown in Table 5-14.\n\nTable 5-14\n\\begin{tabular}{c|c|c|c}\n\\hline Village Code & \\multicolumn{2}{|c|}{Coordinate Positio",
+            "answer": 770.0,
+            "prediction": null,
+            "state": "Execution Failed: 2026-04-03 09:46:30 [INFO] checks license for COPT v8.0.3 20260113\n2026-04-03 09:46:30 [WARN] no license files in current working folder: /mnt/workspace0/WWWWWWWWWWWW/OR-R1\n2026-04-03 09:46:30 [WARN] no license files in binary folder: /home/wan/enter/bin\n2026-04-03 09:46:30 [WARN] no license files in HOME folder: /home/wan/copt\n2026-04-03 09:46:30 [INFO] empty environment variable: COPT_LICENSE_DIR\n2026-04-03 09:46:30 [WARN] no license files in EV 'COPT_LICENSE_DIR': \n\nNo license found. Starting COPT with size limitations for non-commercial use\nPlease apply for a license from www.shanshu.ai/copt\n\nCardinal Optimizer v8.0.3. Build date Jan 13 2026\nCopyright Cardinal Operations 2026. All Rights Reserved\n\n",
+            "tags": [
+              "runtime_error"
+            ],
+            "relative_error": null
+          },
+          {
+            "question": "The planning of the operation and use of arrival and departure lines at large passenger railway stations in our country is mainly carried out by dispatchers, and the adjustment of the operation plan is not flexible. In the case of a fixed s",
+            "answer": 16.0,
+            "prediction": null,
+            "state": "Execution Failed: 2026-04-03 09:46:30 [INFO] checks license for COPT v8.0.3 20260113\n2026-04-03 09:46:30 [WARN] no license files in current working folder: /mnt/workspace0/WWWWWWWWWWWW/OR-R1\n2026-04-03 09:46:30 [WARN] no license files in binary folder: /home/wan/enter/bin\n2026-04-03 09:46:30 [WARN] no license files in HOME folder: /home/wan/copt\n2026-04-03 09:46:30 [INFO] empty environment variable: COPT_LICENSE_DIR\n2026-04-03 09:46:30 [WARN] no license files in EV 'COPT_LICENSE_DIR': \n\nNo license found. Starting COPT with size limitations for non-commercial use\nPlease apply for a license from www.shanshu.ai/copt\n\nCardinal Optimizer v8.0.3. Build date Jan 13 2026\nCopyright Cardinal Operations 2026. All Rights Reserved\n\n",
+            "tags": [
+              "runtime_error"
+            ],
+            "relative_error": null
+          }
+        ]
+      }
+    },
+    {
+      "dataset": "MAMO_ComplexLP",
+      "file": "output/full_grpo_sft_qwen3_8b_dir_3Ksample_1epoch_localfull/eval.MAMO_ComplexLP.pass1/executed.jsonl",
+      "total": 211,
+      "correct": 92,
+      "wrong": 119,
+      "pass@1": 0.43601895734597157,
+      "wrong_category_counts": {
+        "numeric/wrong_answer": 73,
+        "execution/runtime_error": 4,
+        "solver/non_optimal": 42
+      },
+      "wrong_tag_counts": {
+        "missing_integrality_or_binary": 17,
+        "numeric_too_high": 34,
+        "numeric_too_low": 22,
+        "possible_missing_capacity/budget/resource": 15,
+        "possible_missing_upper/lower bounds": 34,
+        "near_miss": 17,
+        "runtime_error": 4,
+        "possible_missing_assignment/selection": 12,
+        "infeasible": 40,
+        "possible_missing_demand/minimum": 19,
+        "possible_missing_flow/supply-demand": 16,
+        "possible_missing_inventory/time balance": 11,
+        "objective_direction_mismatch": 1,
+        "unbounded": 2,
+        "very_few_constraints": 2
+      },
+      "wrong_numeric_relative_error_median": 0.26207807874932,
+      "examples_by_category": {
+        "numeric/wrong_answer": [
+          {
+            "question": "Embark on a journey through a futuristic transportation network, connecting 8 bustling metropolises - from a cutting-edge logistics hub to a far-reaching distribution center. This network is not ordinary; it's a complex web of superhighways",
+            "answer": 63.0,
+            "prediction": "63000.0",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "missing_integrality_or_binary",
+              "numeric_too_high"
+            ],
+            "relative_error": 999.0
+          },
+          {
+            "question": "There are two special nodes marked as S (likely the start) and T (likely the target or terminal). The other nodes are numbered from 2 to 7. Edges connect these nodes and each edge is labeled with a number indicating its weight. Node S is co",
+            "answer": 9.0,
+            "prediction": "0.0",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "numeric_too_low"
+            ],
+            "relative_error": 1.0
+          },
+          {
+            "question": "My diet requires that all the food I eat come from one of the four 'basic food groups' (chocolate cake, ice cream, soda, and cheesecake). At present, the following four foods are available for consumption: brownies, chocolate ice cream, col",
+            "answer": 90.0,
+            "prediction": "0.9000000000000001",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "possible_missing_capacity/budget/resource",
+              "possible_missing_upper/lower bounds",
+              "numeric_too_low"
+            ],
+            "relative_error": 0.99
+          }
+        ],
+        "execution/runtime_error": [
+          {
+            "question": "In the heart of a bustling metropolis, an expansive network of waterways and canals forms the lifeline for its residents, connecting 9 critical distribution centers that manage the flow of water from the city's reservoirs to its farthest su",
+            "answer": 43.0,
+            "prediction": null,
+            "state": "Execution Failed: 2026-04-03 09:43:25 [INFO] checks license for COPT v8.0.3 20260113\n2026-04-03 09:43:25 [WARN] no license files in current working folder: /mnt/workspace0/WWWWWWWWWWWW/OR-R1\n2026-04-03 09:43:25 [WARN] no license files in binary folder: /home/wan/enter/bin\n2026-04-03 09:43:25 [WARN] no license files in HOME folder: /home/wan/copt\n2026-04-03 09:43:25 [INFO] empty environment variable: COPT_LICENSE_DIR\n2026-04-03 09:43:25 [WARN] no license files in EV 'COPT_LICENSE_DIR': \n\nNo license found. Starting COPT with size limitations for non-commercial use\nPlease apply for a license from www.shanshu.ai/copt\n\nCardinal Optimizer v8.0.3. Build date Jan 13 2026\nCopyright Cardinal Operations 2026. All Rights Reserved\n\n",
+            "tags": [
+              "runtime_error"
+            ],
+            "relative_error": null
+          },
+          {
+            "question": "Welcome to the heart of an intricate transportation network, designed to efficiently distribute a critical resource across 8 bustling hubs of a futuristic city. Each hub, from a massive distribution center to the ultimate delivery point, is",
+            "answer": 62.0,
+            "prediction": null,
+            "state": "Execution Failed: 2026-04-03 09:43:25 [INFO] checks license for COPT v8.0.3 20260113\n2026-04-03 09:43:25 [WARN] no license files in current working folder: /mnt/workspace0/WWWWWWWWWWWW/OR-R1\n2026-04-03 09:43:25 [WARN] no license files in binary folder: /home/wan/enter/bin\n2026-04-03 09:43:25 [WARN] no license files in HOME folder: /home/wan/copt\n2026-04-03 09:43:25 [INFO] empty environment variable: COPT_LICENSE_DIR\n2026-04-03 09:43:25 [WARN] no license files in EV 'COPT_LICENSE_DIR': \n\nNo license found. Starting COPT with size limitations for non-commercial use\nPlease apply for a license from www.shanshu.ai/copt\n\nCardinal Optimizer v8.0.3. Build date Jan 13 2026\nCopyright Cardinal Operations 2026. All Rights Reserved\n\n",
+            "tags": [
+              "runtime_error"
+            ],
+            "relative_error": null
+          },
+          {
+            "question": "The Chinese University of Hong Kong, Shenzhen decides to build a circular fountain on the campus. The school wants the fountain to be round and as large as possible but it must be restricted in a polygonal construction field, which is given",
+            "answer": 4.6,
+            "prediction": null,
+            "state": "Execution Failed: 2026-04-03 09:43:27 [INFO] checks license for COPT v8.0.3 20260113\n2026-04-03 09:43:27 [WARN] no license files in current working folder: /mnt/workspace0/WWWWWWWWWWWW/OR-R1\n2026-04-03 09:43:27 [WARN] no license files in binary folder: /home/wan/enter/bin\n2026-04-03 09:43:27 [WARN] no license files in HOME folder: /home/wan/copt\n2026-04-03 09:43:27 [INFO] empty environment variable: COPT_LICENSE_DIR\n2026-04-03 09:43:27 [WARN] no license files in EV 'COPT_LICENSE_DIR': \n\nNo license found. Starting COPT with size limitations for non-commercial use\nPlease apply for a license from www.shanshu.ai/copt\n\nCardinal Optimizer v8.0.3. Build date Jan 13 2026\nCopyright Cardinal Operations 2026. All Rights Reserved\n\n",
+            "tags": [
+              "runtime_error"
+            ],
+            "relative_error": null
+          }
+        ],
+        "solver/non_optimal": [
+          {
+            "question": "Consider a delivery company that needs to deliver packages to five different cities, named E, F, G, H, and I. The delivery truck can start its route from any of these cities, but needs to visit each city exactly once and then return to the ",
+            "answer": 165.0,
+            "prediction": "No Best Solution",
+            "state": "Execution Successful but No Best Solution Found",
+            "tags": [
+              "infeasible"
+            ],
+            "relative_error": null
+          },
+          {
+            "question": "Consider four cities: E, F, G, and H. A delivery driver is tasked with delivering packages to each of these cities. The driver can start their route from any one of these cities. However, the driver must ensure that they visit each city exa",
+            "answer": 142.0,
+            "prediction": "No Best Solution",
+            "state": "Execution Successful but No Best Solution Found",
+            "tags": [
+              "infeasible"
+            ],
+            "relative_error": null
+          },
+          {
+            "question": "Imagine you are tasked with coordinating the distribution of emergency food supplies across six different regions following a natural disaster. Each region started with a certain amount of supplies but now has specific needs to adequately s",
+            "answer": 3609.0,
+            "prediction": "No Best Solution",
+            "state": "Execution Successful but No Best Solution Found",
+            "tags": [
+              "infeasible"
+            ],
+            "relative_error": null
+          }
+        ]
+      }
+    },
+    {
+      "dataset": "MAMO_EasyLP",
+      "file": "output/full_grpo_sft_qwen3_8b_dir_3Ksample_1epoch_localfull/eval.MAMO_EasyLP.pass1/executed.jsonl",
+      "total": 652,
+      "correct": 589,
+      "wrong": 63,
+      "pass@1": 0.9033742331288344,
+      "wrong_category_counts": {
+        "numeric/wrong_answer": 58,
+        "solver/non_optimal": 5
+      },
+      "wrong_tag_counts": {
+        "numeric_too_low": 29,
+        "possible_missing_capacity/budget/resource": 17,
+        "possible_missing_upper/lower bounds": 32,
+        "objective_direction_mismatch": 2,
+        "possible_missing_demand/minimum": 26,
+        "numeric_too_high": 26,
+        "possible_missing_inventory/time balance": 16,
+        "possible_missing_flow/supply-demand": 4,
+        "infeasible": 5,
+        "near_miss": 3,
+        "possible_missing_assignment/selection": 7
+      },
+      "wrong_numeric_relative_error_median": 0.999,
+      "examples_by_category": {
+        "numeric/wrong_answer": [
+          {
+            "question": "In a human resources planning scenario, a company needs to allocate employees across three departments: $X1$, $X2$, and $X3$. These departments could represent different business units or functions within the organization. The total number ",
+            "answer": 630000.0,
+            "prediction": "63.0",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "numeric_too_low"
+            ],
+            "relative_error": 0.9999
+          },
+          {
+            "question": "A financial advisor is managing a portfolio and plans to invest in three different assets: X, Y, and Z. The total investment across all three assets cannot exceed \\$1000 due to budget constraints. Asset X requires a minimum investment of \\$",
+            "answer": 320000.0,
+            "prediction": "1500.0",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "possible_missing_capacity/budget/resource",
+              "possible_missing_upper/lower bounds",
+              "numeric_too_low"
+            ],
+            "relative_error": 0.9953125
+          },
+          {
+            "question": "A marketing firm is planning to distribute its budget between two advertising channels: X and Y. The total budget for both channels combined cannot exceed \\$5000. Furthermore, the allocation of twice the budget to channel X over that alloca",
+            "answer": 1000.0,
+            "prediction": "500000.0",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "objective_direction_mismatch",
+              "possible_missing_demand/minimum",
+              "numeric_too_high"
+            ],
+            "relative_error": 499.0
+          }
+        ],
+        "solver/non_optimal": [
+          {
+            "question": "A farmer has four fields where he can grow Corn, Wheat, Soybean and Rice. Each field can be planted with one type of crop for the season. The planting restrictions are as follows: \\n\\n- The combined area of the fields planted with Corn and ",
+            "answer": 1200.0,
+            "prediction": "No Best Solution",
+            "state": "Execution Successful but No Best Solution Found",
+            "tags": [
+              "infeasible"
+            ],
+            "relative_error": null
+          },
+          {
+            "question": "In a human resources scenario, a company is planning to allocate its training budget between two groups of employees: group $X$ and group $Y$. The total budget available for both groups combined cannot exceed $\\$50,000$, and the company wan",
+            "answer": 5000.0,
+            "prediction": "No Best Solution",
+            "state": "Execution Successful but No Best Solution Found",
+            "tags": [
+              "infeasible"
+            ],
+            "relative_error": null
+          },
+          {
+            "question": "A real estate investor is planning to invest in three types of properties: residential (x1), commercial (x2), and industrial (x3). The objective is to minimize the total investment cost, which is $500 for x1, $300 for x2, and $400 for x3 pe",
+            "answer": 62000.0,
+            "prediction": "No Best Solution",
+            "state": "Execution Successful but No Best Solution Found",
+            "tags": [
+              "infeasible"
+            ],
+            "relative_error": null
+          }
+        ]
+      }
+    },
+    {
+      "dataset": "NL4OPT",
+      "file": "output/full_grpo_sft_qwen3_8b_dir_3Ksample_1epoch_localfull/eval.NL4OPT.pass1/executed.jsonl",
+      "total": 230,
+      "correct": 216,
+      "wrong": 14,
+      "pass@1": 0.9391304347826087,
+      "wrong_category_counts": {
+        "numeric/wrong_answer": 14
+      },
+      "wrong_tag_counts": {
+        "possible_missing_demand/minimum": 6,
+        "possible_missing_inventory/time balance": 1,
+        "near_miss": 3,
+        "possible_missing_capacity/budget/resource": 6,
+        "possible_missing_upper/lower bounds": 6,
+        "numeric_too_high": 5,
+        "possible_missing_flow/supply-demand": 2,
+        "numeric_too_low": 6,
+        "missing_integrality_or_binary": 4
+      },
+      "wrong_numeric_relative_error_median": 0.185185185185185,
+      "examples_by_category": {
+        "numeric/wrong_answer": [
+          {
+            "question": "A chair produced by Elm Furniture yields a profit of $43, while every dresser yields a $52 profit. Each week, 17 gallons of stain and 11 lengths of oak wood are available. Each chair requires 1.4 gallons of stain and 2 lengths of oak wood, ",
+            "answer": 224.0,
+            "prediction": "236.5",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "possible_missing_demand/minimum",
+              "possible_missing_inventory/time balance",
+              "near_miss"
+            ],
+            "relative_error": 0.05580357142857143
+          },
+          {
+            "question": "A cleaning company uses a cleansing chemical and odor-removing chemical to clean a house. Each unit of the cleansing chemical takes 4 minutes to be effective while each unit of the odor-removing chemical takes 6 minutes to be effective. The",
+            "answer": 700.0,
+            "prediction": "1400.0",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "possible_missing_capacity/budget/resource",
+              "possible_missing_demand/minimum",
+              "possible_missing_upper/lower bounds",
+              "numeric_too_high"
+            ],
+            "relative_error": 1.0
+          },
+          {
+            "question": "A concert organizer has to transport equipment using carts or trolleys. Carts can transport 5 kg/min of equipment and requires 2 workers. Trolleys can transport 7 kg/min of equipment and requires 4 workers. There must be at least 12 trolley",
+            "answer": 100.0,
+            "prediction": "84.0",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "possible_missing_flow/supply-demand",
+              "possible_missing_upper/lower bounds",
+              "numeric_too_low"
+            ],
+            "relative_error": 0.16
+          }
+        ]
+      }
+    },
+    {
+      "dataset": "NLP4LP",
+      "file": "output/full_grpo_sft_qwen3_8b_dir_3Ksample_1epoch_localfull/eval.NLP4LP.pass1/executed.jsonl",
+      "total": 242,
+      "correct": 206,
+      "wrong": 36,
+      "pass@1": 0.8512396694214877,
+      "wrong_category_counts": {
+        "numeric/wrong_answer": 34,
+        "solver/non_optimal": 2
+      },
+      "wrong_tag_counts": {
+        "possible_missing_upper/lower bounds": 23,
+        "numeric_too_low": 7,
+        "missing_integrality_or_binary": 9,
+        "possible_missing_capacity/budget/resource": 13,
+        "possible_missing_demand/minimum": 10,
+        "numeric_too_high": 23,
+        "infeasible": 2,
+        "possible_missing_flow/supply-demand": 5,
+        "possible_missing_inventory/time balance": 2,
+        "near_miss": 4
+      },
+      "wrong_numeric_relative_error_median": 1.0,
+      "examples_by_category": {
+        "numeric/wrong_answer": [
+          {
+            "question": "A bakery makes fiber supplemented brownies and lemon squares. Each brownie requires 5 units of chocolate mix and 4 units of fiber. Each lemon square requires 7 units of lemon mix and 6 units of fiber. Lemon squares sell much faster and thus",
+            "answer": 26.0,
+            "prediction": "0.0",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "possible_missing_upper/lower bounds",
+              "numeric_too_low"
+            ],
+            "relative_error": 1.0
+          },
+          {
+            "question": "A cleaning company uses a cleansing chemical and odor-removing chemical to clean a house. Each unit of the cleansing chemical takes 4 units to be effective while each unit of the odor-removing chemical takes 6 minutes to be effective. The c",
+            "answer": 700.0,
+            "prediction": "1400.0",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "missing_integrality_or_binary",
+              "possible_missing_capacity/budget/resource",
+              "possible_missing_demand/minimum",
+              "possible_missing_upper/lower bounds",
+              "numeric_too_high"
+            ],
+            "relative_error": 1.0
+          },
+          {
+            "question": "A chemistry teacher teaches her students two experiments, experiment 1 and experiment 2. In experiment 1, 3 units of the red liquid and 4 units of the blue liquid mix to create 5 units of green gas. In experiment 2, 5 units of the red liqui",
+            "answer": 11.0,
+            "prediction": "50.0",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "numeric_too_high"
+            ],
+            "relative_error": 3.5454545454545454
+          }
+        ],
+        "solver/non_optimal": [
+          {
+            "question": "Both chorine and water softener need to be added to a pool. One unit of chlorine takes 1 minute to be effective while one unit of water softener takes 2 minutes to be effective. Because too much chlorine can burn your eyes, there has to at ",
+            "answer": 0.0,
+            "prediction": "No Best Solution",
+            "state": "Execution Successful but No Best Solution Found",
+            "tags": [
+              "infeasible"
+            ],
+            "relative_error": null
+          },
+          {
+            "question": "A chicken farmer has sold his chicken and they need to be transported either by bus or by car. A bus can take 100 chicken and takes 2 hours per trip. A car can take 40 chicken and takes 1.5 hours per trip. There can be at most 10 bus trips ",
+            "answer": 33.5,
+            "prediction": "No Best Solution",
+            "state": "Execution Successful but No Best Solution Found",
+            "tags": [
+              "infeasible"
+            ],
+            "relative_error": null
+          }
+        ]
+      }
+    },
+    {
+      "dataset": "OptiBench",
+      "file": "output/full_grpo_sft_qwen3_8b_dir_3Ksample_1epoch_localfull/eval.OptiBench.pass1/executed.jsonl",
+      "total": 605,
+      "correct": 382,
+      "wrong": 223,
+      "pass@1": 0.631404958677686,
+      "wrong_category_counts": {
+        "numeric/wrong_answer": 119,
+        "execution/runtime_error": 93,
+        "solver/non_optimal": 11
+      },
+      "wrong_tag_counts": {
+        "numeric_too_high": 57,
+        "possible_missing_upper/lower bounds": 63,
+        "numeric_too_low": 55,
+        "runtime_error": 93,
+        "possible_missing_demand/minimum": 38,
+        "missing_integrality_or_binary": 27,
+        "possible_missing_flow/supply-demand": 18,
+        "infeasible": 9,
+        "very_few_constraints": 4,
+        "possible_missing_capacity/budget/resource": 18,
+        "near_miss": 7,
+        "possible_missing_inventory/time balance": 25,
+        "objective_direction_mismatch": 3,
+        "unbounded": 2,
+        "possible_missing_assignment/selection": 8
+      },
+      "wrong_numeric_relative_error_median": 1.0,
+      "examples_by_category": {
+        "numeric/wrong_answer": [
+          {
+            "question": "A fashion company sells regular handbags and premium handbags made of higher quality material. They can sell regular handbags at a profit of $30 each and premium handbags at a profit of $180 each. The total monthly cost of manufacturing is ",
+            "answer": 85500.0,
+            "prediction": "642675.0",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "numeric_too_high"
+            ],
+            "relative_error": 6.516666666666667
+          },
+          {
+            "question": "A smoothie shop has a promotion for their two smoothies; an acai berry smoothie and a banana chocolate smoothie. It takes 7 units of acai berries and 3 units of water to make the acai berry smoothie. It takes 6 units of banana chocolate and",
+            "answer": 18.0,
+            "prediction": "0.0",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "possible_missing_upper/lower bounds",
+              "numeric_too_low"
+            ],
+            "relative_error": 1.0
+          },
+          {
+            "question": "There are six cities (cities 1-6) in Kilroy County. The county must determine where to build fire stations. The county wants to build the minimum number of fire stations needed to ensure that at least one fire station is within 15 minutes (",
+            "answer": 0.0,
+            "prediction": "2.0",
+            "state": "Execution Successful and Best Solution Found",
+            "tags": [
+              "possible_missing_demand/minimum",
+              "possible_missing_upper/lower bounds",
+              "numeric_too_high"
+            ],
+            "relative_error": 2.0
+          }
+        ],
+        "execution/runtime_error": [
+          {
+            "question": "Of all rectangles of area 100, which has the smallest perimeter?",
+            "answer": 40.0,
+            "prediction": null,
+            "state": "Execution Failed: 2026-04-03 09:53:59 [INFO] checks license for COPT v8.0.3 20260113\n2026-04-03 09:53:59 [WARN] no license files in current working folder: /mnt/workspace0/WWWWWWWWWWWW/OR-R1\n2026-04-03 09:53:59 [WARN] no license files in binary folder: /home/wan/enter/bin\n2026-04-03 09:53:59 [WARN] no license files in HOME folder: /home/wan/copt\n2026-04-03 09:53:59 [INFO] empty environment variable: COPT_LICENSE_DIR\n2026-04-03 09:53:59 [WARN] no license files in EV 'COPT_LICENSE_DIR': \n\nNo license found. Starting COPT with size limitations for non-commercial use\nPlease apply for a license from www.shanshu.ai/copt\n\nCardinal Optimizer v8.0.3. Build date Jan 13 2026\nCopyright Cardinal Operations 2026. All Rights Reserved\n\n",
+            "tags": [
+              "runtime_error"
+            ],
+            "relative_error": null
+          },
+          {
+            "question": "A bakery produces five types of cakes: C1, C2, C3, C4, and C5. They need to determine the quantities of each cake to produce. For C2, the revenue per unit is $40, the production time per unit is 2 hours, and the ingredient cost per unit is ",
+            "answer": 20.0,
+            "prediction": null,
+            "state": "Execution Failed: 2026-04-03 09:53:59 [INFO] checks license for COPT v8.0.3 20260113\n2026-04-03 09:53:59 [WARN] no license files in current working folder: /mnt/workspace0/WWWWWWWWWWWW/OR-R1\n2026-04-03 09:53:59 [WARN] no license files in binary folder: /home/wan/enter/bin\n2026-04-03 09:53:59 [WARN] no license files in HOME folder: /home/wan/copt\n2026-04-03 09:53:59 [INFO] empty environment variable: COPT_LICENSE_DIR\n2026-04-03 09:53:59 [WARN] no license files in EV 'COPT_LICENSE_DIR': \n\nNo license found. Starting COPT with size limitations for non-commercial use\nPlease apply for a license from www.shanshu.ai/copt\n\nCardinal Optimizer v8.0.3. Build date Jan 13 2026\nCopyright Cardinal Operations 2026. All Rights Reserved\n\nNo license found. The size is limited to 2000 variables and 2000 constraints\nPlease apply for a license from www.shanshu.ai/copt\n\nModel fingerprint: cd3f8529\n\nWarning: MINLP problem is not supported\n",
+            "tags": [
+              "runtime_error"
+            ],
+            "relative_error": null
+          },
+          {
+            "question": "A logistics company is managing the distribution of three types of goods: GoodsX, GoodsY, and GoodsZ. The company needs to determine the number of trucks allocated to each type of goods and the number of trips per truck for each type of goo",
+            "answer": 395000.0,
+            "prediction": null,
+            "state": "Execution Failed: 2026-04-03 09:53:59 [INFO] checks license for COPT v8.0.3 20260113\n2026-04-03 09:53:59 [WARN] no license files in current working folder: /mnt/workspace0/WWWWWWWWWWWW/OR-R1\n2026-04-03 09:53:59 [WARN] no license files in binary folder: /home/wan/enter/bin\n2026-04-03 09:53:59 [WARN] no license files in HOME folder: /home/wan/copt\n2026-04-03 09:53:59 [INFO] empty environment variable: COPT_LICENSE_DIR\n2026-04-03 09:53:59 [WARN] no license files in EV 'COPT_LICENSE_DIR': \n\nNo license found. Starting COPT with size limitations for non-commercial use\nPlease apply for a license from www.shanshu.ai/copt\n\nCardinal Optimizer v8.0.3. Build date Jan 13 2026\nCopyright Cardinal Operations 2026. All Rights Reserved\n\n",
+            "tags": [
+              "runtime_error"
+            ],
+            "relative_error": null
+          }
+        ],
+        "solver/non_optimal": [
+          {
+            "question": "A manufacturing company produces three types of electronic devices: smartphones, tablets, and laptops. The company has four different production lines, each with varying efficiency and capacity. On production line 1, each worker produces 10",
+            "answer": 2.69,
+            "prediction": "No Best Solution",
+            "state": "Execution Successful but No Best Solution Found",
+            "tags": [
+              "infeasible"
+            ],
+            "relative_error": null
+          },
+          {
+            "question": "A high rise building is buying two types of furnaces, a new model and an old model. A new model furnace can heat 10 apartments and consumes 200 kWh per day. An old model can heat 15 apartments and consumes 250 kWh per day. Since the old mod",
+            "answer": 15.0,
+            "prediction": "No Best Solution",
+            "state": "Execution Successful but No Best Solution Found",
+            "tags": [
+              "infeasible"
+            ],
+            "relative_error": null
+          },
+          {
+            "question": "A manufacturing company produces three types of electronic components: A, B, and C. The company has four different production lines, each capable of producing these components with varying efficiencies. Each worker on line 2 can produce 8 u",
+            "answer": 2.18,
+            "prediction": "No Best Solution",
+            "state": "Execution Successful but No Best Solution Found",
+            "tags": [
+              "infeasible"
+            ],
+            "relative_error": null
+          }
+        ]
+      }
+    }
+  ],
+  "aggregate_wrong_category_counts": {
+    "numeric/wrong_answer": 400,
+    "solver/non_optimal": 82,
+    "execution/runtime_error": 111
+  },
+  "aggregate_wrong_tag_counts": {
+    "numeric_too_high": 189,
+    "missing_integrality_or_binary": 77,
+    "possible_missing_capacity/budget/resource": 80,
+    "numeric_too_low": 171,
+    "possible_missing_upper/lower bounds": 194,
+    "near_miss": 40,
+    "infeasible": 74,
+    "possible_missing_demand/minimum": 123,
+    "possible_missing_inventory/time balance": 80,
+    "possible_missing_flow/supply-demand": 53,
+    "runtime_error": 111,
+    "possible_missing_assignment/selection": 34,
+    "objective_direction_mismatch": 7,
+    "unbounded": 8,
+    "very_few_constraints": 6
+  }
+}

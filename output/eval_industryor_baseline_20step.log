@@ -1,0 +1,1133 @@
+INFO 04-03 16:30:42 [__init__.py:216] Automatically detected platform cuda.
+load dataset from `./datasets/testset/industryor.jsonl` done. sample size: 100
+INFO 04-03 16:30:46 [utils.py:233] non-default args: {'tensor_parallel_size': 4, 'disable_log_stats': True, 'model': './output/full_grpo_sft_qwen3_8b_dir_3Ksample_1epoch_baseline_20step'}
+INFO 04-03 16:30:46 [model.py:547] Resolved architecture: Qwen3ForCausalLM
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO 04-03 16:30:46 [model.py:1730] Downcasting torch.float32 to torch.bfloat16.
+INFO 04-03 16:30:46 [model.py:1510] Using max model len 40960
+INFO 04-03 16:30:46 [scheduler.py:205] Chunked prefill is enabled with max_num_batched_tokens=8192.
+WARNING 04-03 16:30:47 [__init__.py:3036] We must use the `spawn` multiprocessing start method. Overriding VLLM_WORKER_MULTIPROC_METHOD to 'spawn'. See https://docs.vllm.ai/en/latest/usage/troubleshooting.html#python-multiprocessing for more information. Reasons: CUDA is initialized
+INFO 04-03 16:30:50 [__init__.py:216] Automatically detected platform cuda.
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:30:53 [core.py:644] Waiting for init message from front-end.
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:30:53 [core.py:77] Initializing a V1 LLM engine (v0.11.0) with config: model='./output/full_grpo_sft_qwen3_8b_dir_3Ksample_1epoch_baseline_20step', speculative_config=None, tokenizer='./output/full_grpo_sft_qwen3_8b_dir_3Ksample_1epoch_baseline_20step', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=40960, download_dir=None, load_format=auto, tensor_parallel_size=4, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=./output/full_grpo_sft_qwen3_8b_dir_3Ksample_1epoch_baseline_20step, enable_prefix_caching=True, chunked_prefill_enabled=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.mamba_mixer2","vllm.mamba_mixer","vllm.short_conv","vllm.linear_attention","vllm.plamo2_mamba_mixer","vllm.gdn_attention","vllm.sparse_attn_indexer"],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":[2,1],"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"use_inductor_graph_partition":false,"pass_config":{},"max_capture_size":512,"local_cache_dir":null}
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m WARNING 04-03 16:30:53 [multiproc_executor.py:720] Reducing Torch parallelism from 96 threads to 1 to avoid unnecessary CPU contention. Set OMP_NUM_THREADS in the external environment to tune this value as needed.
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:30:53 [shm_broadcast.py:289] vLLM message queue communication handle: Handle(local_reader_ranks=[0, 1, 2, 3], buffer_handle=(4, 16777216, 10, 'psm_8d22158a'), local_subscribe_addr='ipc:///tmp/746364aa-2109-4668-9ae7-b6816fc68dfc', remote_subscribe_addr=None, remote_addr_ipv6=False)
+INFO 04-03 16:30:55 [__init__.py:216] Automatically detected platform cuda.
+INFO 04-03 16:30:55 [__init__.py:216] Automatically detected platform cuda.
+INFO 04-03 16:30:55 [__init__.py:216] Automatically detected platform cuda.
+INFO 04-03 16:30:55 [__init__.py:216] Automatically detected platform cuda.
+INFO 04-03 16:30:59 [shm_broadcast.py:289] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_fac934e2'), local_subscribe_addr='ipc:///tmp/e6689fde-23ed-46c1-8e75-3096115daaa7', remote_subscribe_addr=None, remote_addr_ipv6=False)
+INFO 04-03 16:30:59 [shm_broadcast.py:289] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_4416470d'), local_subscribe_addr='ipc:///tmp/a17cdb78-f279-44c4-89c2-140ff57d5cf6', remote_subscribe_addr=None, remote_addr_ipv6=False)
+INFO 04-03 16:30:59 [shm_broadcast.py:289] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_d0ae3e63'), local_subscribe_addr='ipc:///tmp/420ef724-15e7-464c-8e1a-91095e13ee81', remote_subscribe_addr=None, remote_addr_ipv6=False)
+INFO 04-03 16:30:59 [shm_broadcast.py:289] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_b44ea5e3'), local_subscribe_addr='ipc:///tmp/a7530faf-7a8a-4deb-88c8-c2b01df7f795', remote_subscribe_addr=None, remote_addr_ipv6=False)
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+INFO 04-03 16:31:00 [__init__.py:1384] Found nccl from library libnccl.so.2
+INFO 04-03 16:31:00 [__init__.py:1384] Found nccl from library libnccl.so.2
+INFO 04-03 16:31:00 [__init__.py:1384] Found nccl from library libnccl.so.2
+INFO 04-03 16:31:00 [__init__.py:1384] Found nccl from library libnccl.so.2
+INFO 04-03 16:31:00 [pynccl.py:103] vLLM is using nccl==2.27.3
+INFO 04-03 16:31:00 [pynccl.py:103] vLLM is using nccl==2.27.3
+INFO 04-03 16:31:00 [pynccl.py:103] vLLM is using nccl==2.27.3
+INFO 04-03 16:31:00 [pynccl.py:103] vLLM is using nccl==2.27.3
+WARNING 04-03 16:31:00 [symm_mem.py:58] SymmMemCommunicator: Device capability 8.9 not supported, communicator is not available.
+WARNING 04-03 16:31:00 [symm_mem.py:58] SymmMemCommunicator: Device capability 8.9 not supported, communicator is not available.
+WARNING 04-03 16:31:00 [symm_mem.py:58] SymmMemCommunicator: Device capability 8.9 not supported, communicator is not available.
+WARNING 04-03 16:31:00 [symm_mem.py:58] SymmMemCommunicator: Device capability 8.9 not supported, communicator is not available.
+WARNING 04-03 16:31:00 [custom_all_reduce.py:144] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+WARNING 04-03 16:31:00 [custom_all_reduce.py:144] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+WARNING 04-03 16:31:00 [custom_all_reduce.py:144] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+WARNING 04-03 16:31:00 [custom_all_reduce.py:144] Custom allreduce is disabled because it's not supported on more than two PCIe-only GPUs. To silence this warning, specify disable_custom_all_reduce=True explicitly.
+INFO 04-03 16:31:00 [shm_broadcast.py:289] vLLM message queue communication handle: Handle(local_reader_ranks=[1, 2, 3], buffer_handle=(3, 4194304, 6, 'psm_550c8492'), local_subscribe_addr='ipc:///tmp/a52c1651-7d2e-45ae-843b-db164fdc8986', remote_subscribe_addr=None, remote_addr_ipv6=False)
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+INFO 04-03 16:31:00 [__init__.py:1384] Found nccl from library libnccl.so.2
+INFO 04-03 16:31:00 [__init__.py:1384] Found nccl from library libnccl.so.2
+INFO 04-03 16:31:00 [pynccl.py:103] vLLM is using nccl==2.27.3
+INFO 04-03 16:31:00 [pynccl.py:103] vLLM is using nccl==2.27.3
+INFO 04-03 16:31:00 [__init__.py:1384] Found nccl from library libnccl.so.2
+INFO 04-03 16:31:00 [__init__.py:1384] Found nccl from library libnccl.so.2
+INFO 04-03 16:31:00 [pynccl.py:103] vLLM is using nccl==2.27.3
+INFO 04-03 16:31:00 [pynccl.py:103] vLLM is using nccl==2.27.3
+INFO 04-03 16:31:00 [parallel_state.py:1208] rank 2 in world size 4 is assigned as DP rank 0, PP rank 0, TP rank 2, EP rank 2
+INFO 04-03 16:31:00 [parallel_state.py:1208] rank 0 in world size 4 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 04-03 16:31:00 [parallel_state.py:1208] rank 1 in world size 4 is assigned as DP rank 0, PP rank 0, TP rank 1, EP rank 1
+INFO 04-03 16:31:00 [parallel_state.py:1208] rank 3 in world size 4 is assigned as DP rank 0, PP rank 0, TP rank 3, EP rank 3
+WARNING 04-03 16:31:01 [topk_topp_sampler.py:66] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+WARNING 04-03 16:31:01 [topk_topp_sampler.py:66] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+WARNING 04-03 16:31:01 [topk_topp_sampler.py:66] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+WARNING 04-03 16:31:01 [topk_topp_sampler.py:66] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[1;36m(Worker_TP3 pid=2845806)[0;0m INFO 04-03 16:31:01 [gpu_model_runner.py:2602] Starting to load model ./output/full_grpo_sft_qwen3_8b_dir_3Ksample_1epoch_baseline_20step...
+[1;36m(Worker_TP2 pid=2845805)[0;0m INFO 04-03 16:31:01 [gpu_model_runner.py:2602] Starting to load model ./output/full_grpo_sft_qwen3_8b_dir_3Ksample_1epoch_baseline_20step...
+[1;36m(Worker_TP1 pid=2845804)[0;0m INFO 04-03 16:31:01 [gpu_model_runner.py:2602] Starting to load model ./output/full_grpo_sft_qwen3_8b_dir_3Ksample_1epoch_baseline_20step...
+[1;36m(Worker_TP0 pid=2845803)[0;0m INFO 04-03 16:31:01 [gpu_model_runner.py:2602] Starting to load model ./output/full_grpo_sft_qwen3_8b_dir_3Ksample_1epoch_baseline_20step...
+[1;36m(Worker_TP2 pid=2845805)[0;0m INFO 04-03 16:31:01 [gpu_model_runner.py:2634] Loading model from scratch...
+[1;36m(Worker_TP3 pid=2845806)[0;0m INFO 04-03 16:31:01 [gpu_model_runner.py:2634] Loading model from scratch...
+[1;36m(Worker_TP1 pid=2845804)[0;0m INFO 04-03 16:31:01 [gpu_model_runner.py:2634] Loading model from scratch...
+[1;36m(Worker_TP0 pid=2845803)[0;0m INFO 04-03 16:31:01 [gpu_model_runner.py:2634] Loading model from scratch...
+[1;36m(Worker_TP2 pid=2845805)[0;0m INFO 04-03 16:31:01 [cuda.py:366] Using Flash Attention backend on V1 engine.
+[1;36m(Worker_TP3 pid=2845806)[0;0m INFO 04-03 16:31:01 [cuda.py:366] Using Flash Attention backend on V1 engine.
+[1;36m(Worker_TP0 pid=2845803)[0;0m INFO 04-03 16:31:01 [cuda.py:366] Using Flash Attention backend on V1 engine.
+[1;36m(Worker_TP1 pid=2845804)[0;0m INFO 04-03 16:31:01 [cuda.py:366] Using Flash Attention backend on V1 engine.
+[1;36m(Worker_TP0 pid=2845803)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/7 [00:00<?, ?it/s]
+[1;36m(Worker_TP0 pid=2845803)[0;0m Loading safetensors checkpoint shards:  14% Completed | 1/7 [00:00<00:03,  1.56it/s]
+[1;36m(Worker_TP0 pid=2845803)[0;0m Loading safetensors checkpoint shards:  29% Completed | 2/7 [00:01<00:04,  1.05it/s]
+[1;36m(Worker_TP0 pid=2845803)[0;0m Loading safetensors checkpoint shards:  43% Completed | 3/7 [00:02<00:03,  1.13it/s]
+[1;36m(Worker_TP0 pid=2845803)[0;0m Loading safetensors checkpoint shards:  57% Completed | 4/7 [00:03<00:02,  1.32it/s]
+[1;36m(Worker_TP0 pid=2845803)[0;0m Loading safetensors checkpoint shards:  71% Completed | 5/7 [00:03<00:01,  1.55it/s]
+[1;36m(Worker_TP0 pid=2845803)[0;0m Loading safetensors checkpoint shards:  86% Completed | 6/7 [00:04<00:00,  1.47it/s]
+[1;36m(Worker_TP2 pid=2845805)[0;0m INFO 04-03 16:31:05 [default_loader.py:267] Loading weights took 4.46 seconds
+[1;36m(Worker_TP1 pid=2845804)[0;0m INFO 04-03 16:31:05 [default_loader.py:267] Loading weights took 4.47 seconds
+[1;36m(Worker_TP3 pid=2845806)[0;0m INFO 04-03 16:31:06 [default_loader.py:267] Loading weights took 4.83 seconds
+[1;36m(Worker_TP0 pid=2845803)[0;0m Loading safetensors checkpoint shards: 100% Completed | 7/7 [00:04<00:00,  1.59it/s]
+[1;36m(Worker_TP0 pid=2845803)[0;0m Loading safetensors checkpoint shards: 100% Completed | 7/7 [00:04<00:00,  1.43it/s]
+[1;36m(Worker_TP0 pid=2845803)[0;0m 
+[1;36m(Worker_TP0 pid=2845803)[0;0m INFO 04-03 16:31:06 [default_loader.py:267] Loading weights took 4.94 seconds
+[1;36m(Worker_TP1 pid=2845804)[0;0m INFO 04-03 16:31:06 [gpu_model_runner.py:2653] Model loading took 3.8235 GiB and 4.620696 seconds
+[1;36m(Worker_TP2 pid=2845805)[0;0m INFO 04-03 16:31:06 [gpu_model_runner.py:2653] Model loading took 3.8235 GiB and 4.612350 seconds
+[1;36m(Worker_TP3 pid=2845806)[0;0m INFO 04-03 16:31:06 [gpu_model_runner.py:2653] Model loading took 3.8235 GiB and 4.980810 seconds
+[1;36m(Worker_TP0 pid=2845803)[0;0m INFO 04-03 16:31:06 [gpu_model_runner.py:2653] Model loading took 3.8235 GiB and 5.091587 seconds
+[1;36m(Worker_TP0 pid=2845803)[0;0m INFO 04-03 16:31:13 [backends.py:548] Using cache directory: /home/wan/.cache/vllm/torch_compile_cache/eae14273ab/rank_0_0/backbone for vLLM's torch.compile
+[1;36m(Worker_TP0 pid=2845803)[0;0m INFO 04-03 16:31:13 [backends.py:559] Dynamo bytecode transform time: 5.84 s
+[1;36m(Worker_TP3 pid=2845806)[0;0m INFO 04-03 16:31:13 [backends.py:548] Using cache directory: /home/wan/.cache/vllm/torch_compile_cache/eae14273ab/rank_3_0/backbone for vLLM's torch.compile
+[1;36m(Worker_TP3 pid=2845806)[0;0m INFO 04-03 16:31:13 [backends.py:559] Dynamo bytecode transform time: 5.83 s
+[1;36m(Worker_TP2 pid=2845805)[0;0m INFO 04-03 16:31:13 [backends.py:548] Using cache directory: /home/wan/.cache/vllm/torch_compile_cache/eae14273ab/rank_2_0/backbone for vLLM's torch.compile
+[1;36m(Worker_TP2 pid=2845805)[0;0m INFO 04-03 16:31:13 [backends.py:559] Dynamo bytecode transform time: 5.83 s
+[1;36m(Worker_TP1 pid=2845804)[0;0m INFO 04-03 16:31:13 [backends.py:548] Using cache directory: /home/wan/.cache/vllm/torch_compile_cache/eae14273ab/rank_1_0/backbone for vLLM's torch.compile
+[1;36m(Worker_TP1 pid=2845804)[0;0m INFO 04-03 16:31:13 [backends.py:559] Dynamo bytecode transform time: 5.86 s
+[1;36m(Worker_TP0 pid=2845803)[0;0m INFO 04-03 16:31:17 [backends.py:197] Cache the graph for dynamic shape for later use
+[1;36m(Worker_TP1 pid=2845804)[0;0m INFO 04-03 16:31:17 [backends.py:197] Cache the graph for dynamic shape for later use
+[1;36m(Worker_TP2 pid=2845805)[0;0m INFO 04-03 16:31:17 [backends.py:197] Cache the graph for dynamic shape for later use
+[1;36m(Worker_TP3 pid=2845806)[0;0m INFO 04-03 16:31:17 [backends.py:197] Cache the graph for dynamic shape for later use
+[1;36m(Worker_TP0 pid=2845803)[0;0m INFO 04-03 16:31:36 [backends.py:218] Compiling a graph for dynamic shape takes 22.34 s
+[1;36m(Worker_TP2 pid=2845805)[0;0m INFO 04-03 16:31:36 [backends.py:218] Compiling a graph for dynamic shape takes 22.39 s
+[1;36m(Worker_TP3 pid=2845806)[0;0m INFO 04-03 16:31:37 [backends.py:218] Compiling a graph for dynamic shape takes 23.23 s
+[1;36m(Worker_TP1 pid=2845804)[0;0m INFO 04-03 16:31:37 [backends.py:218] Compiling a graph for dynamic shape takes 23.42 s
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:32:06 [shm_broadcast.py:466] No available shared memory broadcast block found in 60 seconds. This typically happens when some processes are hanging or doing some time-consuming work (e.g. compilation).
+[1;36m(Worker_TP0 pid=2845803)[0;0m INFO 04-03 16:32:12 [monitor.py:34] torch.compile takes 28.18 s in total
+[1;36m(Worker_TP1 pid=2845804)[0;0m INFO 04-03 16:32:12 [monitor.py:34] torch.compile takes 29.28 s in total
+[1;36m(Worker_TP3 pid=2845806)[0;0m INFO 04-03 16:32:12 [monitor.py:34] torch.compile takes 29.06 s in total
+[1;36m(Worker_TP2 pid=2845805)[0;0m INFO 04-03 16:32:12 [monitor.py:34] torch.compile takes 28.22 s in total
+[1;36m(Worker_TP0 pid=2845803)[0;0m INFO 04-03 16:32:13 [gpu_worker.py:298] Available KV cache memory: 10.54 GiB
+[1;36m(Worker_TP2 pid=2845805)[0;0m INFO 04-03 16:32:13 [gpu_worker.py:298] Available KV cache memory: 10.08 GiB
+[1;36m(Worker_TP1 pid=2845804)[0;0m INFO 04-03 16:32:13 [gpu_worker.py:298] Available KV cache memory: 10.08 GiB
+[1;36m(Worker_TP3 pid=2845806)[0;0m INFO 04-03 16:32:13 [gpu_worker.py:298] Available KV cache memory: 10.08 GiB
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:32:14 [kv_cache_utils.py:1087] GPU KV cache size: 306,944 tokens
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:32:14 [kv_cache_utils.py:1091] Maximum concurrency for 40,960 tokens per request: 7.49x
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:32:14 [kv_cache_utils.py:1087] GPU KV cache size: 293,488 tokens
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:32:14 [kv_cache_utils.py:1091] Maximum concurrency for 40,960 tokens per request: 7.17x
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:32:14 [kv_cache_utils.py:1087] GPU KV cache size: 293,488 tokens
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:32:14 [kv_cache_utils.py:1091] Maximum concurrency for 40,960 tokens per request: 7.17x
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:32:14 [kv_cache_utils.py:1087] GPU KV cache size: 293,488 tokens
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:32:14 [kv_cache_utils.py:1091] Maximum concurrency for 40,960 tokens per request: 7.17x
+[1;36m(Worker_TP0 pid=2845803)[0;0m Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%| | 0/67 [00:00<?,Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   1%| | 1/67 [00:00<00[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] WorkerProc hit an exception.
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] Traceback (most recent call last):
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_graph.py", line 166, in __call__
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     output = self.runnable(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_piecewise_backend.py", line 96, in __call__
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.compiled_graph_for_general_shape(*args)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py", line 929, in _fn
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return fn(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/aot_autograd.py", line 1241, in forward
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return compiled_fn(full_args)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 384, in runtime_wrapper
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     all_outs = call_func_at_runtime_with_args(
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         compiled_fn, args, disable_amp=disable_amp, steal_args=True
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     )
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/utils.py", line 126, in call_func_at_runtime_with_args
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     out = normalize_as_list(f(args))
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ~^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 750, in inner_fn
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     outs = compiled_fn(args)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 556, in wrapper
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return compiled_fn(runtime_args)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_inductor/output_code.py", line 584, in __call__
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.current_callable(inputs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_inductor/utils.py", line 2716, in run
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     out = model(new_inputs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/.cache/vllm/torch_compile_cache/eae14273ab/rank_3_0/inductor_cache/27/c27hq57iftis24frsgyglioro4ez7vzfi7xv5fswrbtidzouo4o7.py", line 610, in call
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     buf1 = torch.ops.vllm.all_reduce.default(buf0, 'tp:0')
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_ops.py", line 829, in __call__
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._op(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/parallel_state.py", line 112, in all_reduce
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return group._all_reduce_out_place(tensor)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/parallel_state.py", line 367, in _all_reduce_out_place
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.device_communicator.all_reduce(input_)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/cuda_communicator.py", line 151, in all_reduce
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     out = pynccl_comm.all_reduce(input_)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/pynccl.py", line 162, in all_reduce
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self.nccl.ncclAllReduce(buffer_type(in_tensor.data_ptr()),
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             buffer_type(out_tensor.data_ptr()),
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ...<2 lines>...
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ncclRedOpTypeEnum.from_torch(op), self.comm,
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             cudaStream_t(stream.cuda_stream))
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/pynccl_wrapper.py", line 337, in ncclAllReduce
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self.NCCL_CHECK(self._funcs["ncclAllReduce"](sendbuff, recvbuff, count,
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  datatype, op, comm,
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  ^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  stream))
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  ^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/pynccl_wrapper.py", line 291, in NCCL_CHECK
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     raise RuntimeError(f"NCCL error: {error_str}")
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] RuntimeError: NCCL error: unhandled cuda error (run with NCCL_DEBUG=INFO for details)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] 
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] During handling of the above exception, another exception occurred:
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] 
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] Traceback (most recent call last):
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/executor/multiproc_executor.py", line 666, in worker_busy_loop
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     output = func(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_worker.py", line 344, in compile_or_warm_up_model
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     cuda_graph_memory_bytes = self.model_runner.capture_model()
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_model_runner.py", line 3446, in capture_model
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self._capture_cudagraphs(
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~~~~~~^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         compilation_cases,
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         ^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         cudagraph_runtime_mode=cudagraph_runtime_mode,
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         uniform_decode=False)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         ^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_model_runner.py", line 3530, in _capture_cudagraphs
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self._dummy_run(num_tokens,
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     cudagraph_runtime_mode=cudagraph_runtime_mode,
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ...<2 lines>...
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     skip_eplb=True,
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     ^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     remove_lora=False)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     ^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return func(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_model_runner.py", line 3152, in _dummy_run
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     outputs = self.model(
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         input_ids=input_ids,
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ...<3 lines>...
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         **model_kwargs,
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     )
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_graph.py", line 121, in __call__
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.runnable(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._call_impl(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return forward_call(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/model_executor/models/qwen3.py", line 323, in forward
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     hidden_states = self.model(input_ids, positions, intermediate_tensors,
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                inputs_embeds)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/decorators.py", line 317, in __call__
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     model_output = self.forward(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/model_executor/models/qwen2.py", line 341, in forward
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     def forward(
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py", line 375, in __call__
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return super().__call__(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._call_impl(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return forward_call(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py", line 929, in _fn
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return fn(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/fx/graph_module.py", line 848, in call_wrapped
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._wrapped_call(self, *args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/fx/graph_module.py", line 424, in __call__
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     raise e
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/fx/graph_module.py", line 411, in __call__
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return super(self.cls, obj).__call__(*args, **kwargs)  # type: ignore[misc]
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._call_impl(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return forward_call(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "<eval_with_key>.74", line 361, in forward
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     submod_18 = self.submod_18(getitem_43, s72, l_self_modules_layers_modules_8_modules_self_attn_modules_o_proj_parameters_weight_, getitem_44, l_self_modules_layers_modules_8_modules_post_attention_layernorm_parameters_weight_, l_self_modules_layers_modules_8_modules_mlp_modules_gate_up_proj_parameters_weight_, l_self_modules_layers_modules_8_modules_mlp_modules_down_proj_parameters_weight_, l_self_modules_layers_modules_9_modules_input_layernorm_parameters_weight_, l_self_modules_layers_modules_9_modules_self_attn_modules_qkv_proj_parameters_weight_, l_self_modules_layers_modules_9_modules_self_attn_modules_q_norm_parameters_weight_, l_self_modules_layers_modules_9_modules_self_attn_modules_k_norm_parameters_weight_, l_positions_, l_self_modules_layers_modules_0_modules_self_attn_modules_rotary_emb_buffers_cos_sin_cache_);  getitem_43 = l_self_modules_layers_modules_8_modules_self_attn_modules_o_proj_parameters_weight_ = getitem_44 = l_self_modules_layers_modules_8_modules_post_attention_layernorm_parameters_weight_ = l_self_modules_layers_modules_8_modules_mlp_modules_gate_up_proj_parameters_weight_ = l_self_modules_layers_modules_8_modules_mlp_modules_down_proj_parameters_weight_ = l_self_modules_layers_modules_9_modules_input_layernorm_parameters_weight_ = l_self_modules_layers_modules_9_modules_self_attn_modules_qkv_proj_parameters_weight_ = l_self_modules_layers_modules_9_modules_self_attn_modules_q_norm_parameters_weight_ = l_self_modules_layers_modules_9_modules_self_attn_modules_k_norm_parameters_weight_ = None
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_graph.py", line 164, in __call__
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     with torch.cuda.graph(cudagraph, pool=self.graph_pool):
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/cuda/graphs.py", line 222, in __exit__
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self.cuda_graph.capture_end()
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/cuda/graphs.py", line 104, in capture_end
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     super().capture_end()
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] torch.AcceleratorError: CUDA error: out of memory
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] 
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] Traceback (most recent call last):
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_graph.py", line 166, in __call__
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     output = self.runnable(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_piecewise_backend.py", line 96, in __call__
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.compiled_graph_for_general_shape(*args)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py", line 929, in _fn
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return fn(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/aot_autograd.py", line 1241, in forward
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return compiled_fn(full_args)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 384, in runtime_wrapper
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     all_outs = call_func_at_runtime_with_args(
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         compiled_fn, args, disable_amp=disable_amp, steal_args=True
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     )
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/utils.py", line 126, in call_func_at_runtime_with_args
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     out = normalize_as_list(f(args))
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ~^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 750, in inner_fn
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     outs = compiled_fn(args)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 556, in wrapper
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return compiled_fn(runtime_args)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_inductor/output_code.py", line 584, in __call__
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.current_callable(inputs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_inductor/utils.py", line 2716, in run
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     out = model(new_inputs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/.cache/vllm/torch_compile_cache/eae14273ab/rank_3_0/inductor_cache/27/c27hq57iftis24frsgyglioro4ez7vzfi7xv5fswrbtidzouo4o7.py", line 610, in call
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     buf1 = torch.ops.vllm.all_reduce.default(buf0, 'tp:0')
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_ops.py", line 829, in __call__
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._op(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/parallel_state.py", line 112, in all_reduce
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return group._all_reduce_out_place(tensor)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/parallel_state.py", line 367, in _all_reduce_out_place
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.device_communicator.all_reduce(input_)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/cuda_communicator.py", line 151, in all_reduce
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     out = pynccl_comm.all_reduce(input_)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/pynccl.py", line 162, in all_reduce
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self.nccl.ncclAllReduce(buffer_type(in_tensor.data_ptr()),
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             buffer_type(out_tensor.data_ptr()),
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ...<2 lines>...
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ncclRedOpTypeEnum.from_torch(op), self.comm,
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             cudaStream_t(stream.cuda_stream))
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/pynccl_wrapper.py", line 337, in ncclAllReduce
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self.NCCL_CHECK(self._funcs["ncclAllReduce"](sendbuff, recvbuff, count,
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  datatype, op, comm,
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  ^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  stream))
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  ^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/pynccl_wrapper.py", line 291, in NCCL_CHECK
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     raise RuntimeError(f"NCCL error: {error_str}")
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] RuntimeError: NCCL error: unhandled cuda error (run with NCCL_DEBUG=INFO for details)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] 
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] During handling of the above exception, another exception occurred:
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] 
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] Traceback (most recent call last):
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/executor/multiproc_executor.py", line 666, in worker_busy_loop
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     output = func(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_worker.py", line 344, in compile_or_warm_up_model
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     cuda_graph_memory_bytes = self.model_runner.capture_model()
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_model_runner.py", line 3446, in capture_model
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self._capture_cudagraphs(
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~~~~~~^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         compilation_cases,
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         ^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         cudagraph_runtime_mode=cudagraph_runtime_mode,
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         uniform_decode=False)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         ^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_model_runner.py", line 3530, in _capture_cudagraphs
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self._dummy_run(num_tokens,
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     cudagraph_runtime_mode=cudagraph_runtime_mode,
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ...<2 lines>...
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     skip_eplb=True,
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     ^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     remove_lora=False)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     ^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return func(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_model_runner.py", line 3152, in _dummy_run
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     outputs = self.model(
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         input_ids=input_ids,
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ...<3 lines>...
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         **model_kwargs,
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     )
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_graph.py", line 121, in __call__
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.runnable(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._call_impl(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return forward_call(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/model_executor/models/qwen3.py", line 323, in forward
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     hidden_states = self.model(input_ids, positions, intermediate_tensors,
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                inputs_embeds)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/decorators.py", line 317, in __call__
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     model_output = self.forward(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/model_executor/models/qwen2.py", line 341, in forward
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     def forward(
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py", line 375, in __call__
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return super().__call__(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._call_impl(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return forward_call(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py", line 929, in _fn
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return fn(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/fx/graph_module.py", line 848, in call_wrapped
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._wrapped_call(self, *args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/fx/graph_module.py", line 424, in __call__
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     raise e
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/fx/graph_module.py", line 411, in __call__
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return super(self.cls, obj).__call__(*args, **kwargs)  # type: ignore[misc]
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._call_impl(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return forward_call(*args, **kwargs)
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "<eval_with_key>.74", line 361, in forward
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     submod_18 = self.submod_18(getitem_43, s72, l_self_modules_layers_modules_8_modules_self_attn_modules_o_proj_parameters_weight_, getitem_44, l_self_modules_layers_modules_8_modules_post_attention_layernorm_parameters_weight_, l_self_modules_layers_modules_8_modules_mlp_modules_gate_up_proj_parameters_weight_, l_self_modules_layers_modules_8_modules_mlp_modules_down_proj_parameters_weight_, l_self_modules_layers_modules_9_modules_input_layernorm_parameters_weight_, l_self_modules_layers_modules_9_modules_self_attn_modules_qkv_proj_parameters_weight_, l_self_modules_layers_modules_9_modules_self_attn_modules_q_norm_parameters_weight_, l_self_modules_layers_modules_9_modules_self_attn_modules_k_norm_parameters_weight_, l_positions_, l_self_modules_layers_modules_0_modules_self_attn_modules_rotary_emb_buffers_cos_sin_cache_);  getitem_43 = l_self_modules_layers_modules_8_modules_self_attn_modules_o_proj_parameters_weight_ = getitem_44 = l_self_modules_layers_modules_8_modules_post_attention_layernorm_parameters_weight_ = l_self_modules_layers_modules_8_modules_mlp_modules_gate_up_proj_parameters_weight_ = l_self_modules_layers_modules_8_modules_mlp_modules_down_proj_parameters_weight_ = l_self_modules_layers_modules_9_modules_input_layernorm_parameters_weight_ = l_self_modules_layers_modules_9_modules_self_attn_modules_qkv_proj_parameters_weight_ = l_self_modules_layers_modules_9_modules_self_attn_modules_q_norm_parameters_weight_ = l_self_modules_layers_modules_9_modules_self_attn_modules_k_norm_parameters_weight_ = None
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_graph.py", line 164, in __call__
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     with torch.cuda.graph(cudagraph, pool=self.graph_pool):
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/cuda/graphs.py", line 222, in __exit__
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self.cuda_graph.capture_end()
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/cuda/graphs.py", line 104, in capture_end
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     super().capture_end()
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~^^
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] torch.AcceleratorError: CUDA error: out of memory
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] 
+[1;36m(Worker_TP3 pid=2845806)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] 
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] WorkerProc hit an exception.
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] Traceback (most recent call last):
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_graph.py", line 166, in __call__
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     output = self.runnable(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_piecewise_backend.py", line 96, in __call__
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.compiled_graph_for_general_shape(*args)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py", line 929, in _fn
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return fn(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/aot_autograd.py", line 1241, in forward
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return compiled_fn(full_args)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 384, in runtime_wrapper
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     all_outs = call_func_at_runtime_with_args(
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         compiled_fn, args, disable_amp=disable_amp, steal_args=True
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     )
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/utils.py", line 126, in call_func_at_runtime_with_args
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     out = normalize_as_list(f(args))
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ~^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 750, in inner_fn
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     outs = compiled_fn(args)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 556, in wrapper
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return compiled_fn(runtime_args)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_inductor/output_code.py", line 584, in __call__
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.current_callable(inputs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_inductor/utils.py", line 2716, in run
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     out = model(new_inputs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/.cache/vllm/torch_compile_cache/eae14273ab/rank_1_0/inductor_cache/it/citrpidnw5wi3c27kp3gd22gcj3ur5mquijtwcabquzyikb3zqsx.py", line 610, in call
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     buf1 = torch.ops.vllm.all_reduce.default(buf0, 'tp:0')
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_ops.py", line 829, in __call__
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._op(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/parallel_state.py", line 112, in all_reduce
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return group._all_reduce_out_place(tensor)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/parallel_state.py", line 367, in _all_reduce_out_place
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.device_communicator.all_reduce(input_)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/cuda_communicator.py", line 151, in all_reduce
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     out = pynccl_comm.all_reduce(input_)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/pynccl.py", line 162, in all_reduce
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self.nccl.ncclAllReduce(buffer_type(in_tensor.data_ptr()),
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             buffer_type(out_tensor.data_ptr()),
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ...<2 lines>...
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ncclRedOpTypeEnum.from_torch(op), self.comm,
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             cudaStream_t(stream.cuda_stream))
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/pynccl_wrapper.py", line 337, in ncclAllReduce
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self.NCCL_CHECK(self._funcs["ncclAllReduce"](sendbuff, recvbuff, count,
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  datatype, op, comm,
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  ^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  stream))
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  ^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/pynccl_wrapper.py", line 291, in NCCL_CHECK
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     raise RuntimeError(f"NCCL error: {error_str}")
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] RuntimeError: NCCL error: unhandled cuda error (run with NCCL_DEBUG=INFO for details)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] 
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] During handling of the above exception, another exception occurred:
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] 
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] Traceback (most recent call last):
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/executor/multiproc_executor.py", line 666, in worker_busy_loop
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     output = func(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_worker.py", line 344, in compile_or_warm_up_model
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     cuda_graph_memory_bytes = self.model_runner.capture_model()
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_model_runner.py", line 3446, in capture_model
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self._capture_cudagraphs(
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~~~~~~^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         compilation_cases,
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         ^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         cudagraph_runtime_mode=cudagraph_runtime_mode,
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         uniform_decode=False)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         ^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_model_runner.py", line 3530, in _capture_cudagraphs
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self._dummy_run(num_tokens,
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     cudagraph_runtime_mode=cudagraph_runtime_mode,
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ...<2 lines>...
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     skip_eplb=True,
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     ^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     remove_lora=False)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     ^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return func(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_model_runner.py", line 3152, in _dummy_run
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     outputs = self.model(
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         input_ids=input_ids,
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ...<3 lines>...
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         **model_kwargs,
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     )
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_graph.py", line 121, in __call__
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.runnable(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._call_impl(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return forward_call(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/model_executor/models/qwen3.py", line 323, in forward
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     hidden_states = self.model(input_ids, positions, intermediate_tensors,
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                inputs_embeds)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/decorators.py", line 317, in __call__
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     model_output = self.forward(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/model_executor/models/qwen2.py", line 341, in forward
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     def forward(
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py", line 375, in __call__
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return super().__call__(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._call_impl(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return forward_call(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py", line 929, in _fn
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return fn(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/fx/graph_module.py", line 848, in call_wrapped
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._wrapped_call(self, *args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/fx/graph_module.py", line 424, in __call__
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     raise e
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/fx/graph_module.py", line 411, in __call__
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return super(self.cls, obj).__call__(*args, **kwargs)  # type: ignore[misc]
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._call_impl(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return forward_call(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "<eval_with_key>.74", line 361, in forward
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     submod_18 = self.submod_18(getitem_43, s72, l_self_modules_layers_modules_8_modules_self_attn_modules_o_proj_parameters_weight_, getitem_44, l_self_modules_layers_modules_8_modules_post_attention_layernorm_parameters_weight_, l_self_modules_layers_modules_8_modules_mlp_modules_gate_up_proj_parameters_weight_, l_self_modules_layers_modules_8_modules_mlp_modules_down_proj_parameters_weight_, l_self_modules_layers_modules_9_modules_input_layernorm_parameters_weight_, l_self_modules_layers_modules_9_modules_self_attn_modules_qkv_proj_parameters_weight_, l_self_modules_layers_modules_9_modules_self_attn_modules_q_norm_parameters_weight_, l_self_modules_layers_modules_9_modules_self_attn_modules_k_norm_parameters_weight_, l_positions_, l_self_modules_layers_modules_0_modules_self_attn_modules_rotary_emb_buffers_cos_sin_cache_);  getitem_43 = l_self_modules_layers_modules_8_modules_self_attn_modules_o_proj_parameters_weight_ = getitem_44 = l_self_modules_layers_modules_8_modules_post_attention_layernorm_parameters_weight_ = l_self_modules_layers_modules_8_modules_mlp_modules_gate_up_proj_parameters_weight_ = l_self_modules_layers_modules_8_modules_mlp_modules_down_proj_parameters_weight_ = l_self_modules_layers_modules_9_modules_input_layernorm_parameters_weight_ = l_self_modules_layers_modules_9_modules_self_attn_modules_qkv_proj_parameters_weight_ = l_self_modules_layers_modules_9_modules_self_attn_modules_q_norm_parameters_weight_ = l_self_modules_layers_modules_9_modules_self_attn_modules_k_norm_parameters_weight_ = None
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_graph.py", line 164, in __call__
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     with torch.cuda.graph(cudagraph, pool=self.graph_pool):
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/cuda/graphs.py", line 222, in __exit__
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self.cuda_graph.capture_end()
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/cuda/graphs.py", line 104, in capture_end
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     super().capture_end()
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] torch.AcceleratorError: CUDA error: out of memory
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] 
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] Traceback (most recent call last):
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_graph.py", line 166, in __call__
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     output = self.runnable(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_piecewise_backend.py", line 96, in __call__
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.compiled_graph_for_general_shape(*args)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py", line 929, in _fn
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return fn(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/aot_autograd.py", line 1241, in forward
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return compiled_fn(full_args)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 384, in runtime_wrapper
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     all_outs = call_func_at_runtime_with_args(
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         compiled_fn, args, disable_amp=disable_amp, steal_args=True
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     )
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/utils.py", line 126, in call_func_at_runtime_with_args
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     out = normalize_as_list(f(args))
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ~^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 750, in inner_fn
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     outs = compiled_fn(args)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 556, in wrapper
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return compiled_fn(runtime_args)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_inductor/output_code.py", line 584, in __call__
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.current_callable(inputs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_inductor/utils.py", line 2716, in run
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     out = model(new_inputs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/.cache/vllm/torch_compile_cache/eae14273ab/rank_1_0/inductor_cache/it/citrpidnw5wi3c27kp3gd22gcj3ur5mquijtwcabquzyikb3zqsx.py", line 610, in call
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     buf1 = torch.ops.vllm.all_reduce.default(buf0, 'tp:0')
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_ops.py", line 829, in __call__
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._op(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/parallel_state.py", line 112, in all_reduce
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return group._all_reduce_out_place(tensor)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/parallel_state.py", line 367, in _all_reduce_out_place
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.device_communicator.all_reduce(input_)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/cuda_communicator.py", line 151, in all_reduce
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     out = pynccl_comm.all_reduce(input_)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/pynccl.py", line 162, in all_reduce
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self.nccl.ncclAllReduce(buffer_type(in_tensor.data_ptr()),
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             buffer_type(out_tensor.data_ptr()),
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ...<2 lines>...
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ncclRedOpTypeEnum.from_torch(op), self.comm,
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             cudaStream_t(stream.cuda_stream))
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/pynccl_wrapper.py", line 337, in ncclAllReduce
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self.NCCL_CHECK(self._funcs["ncclAllReduce"](sendbuff, recvbuff, count,
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  datatype, op, comm,
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  ^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  stream))
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  ^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/pynccl_wrapper.py", line 291, in NCCL_CHECK
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     raise RuntimeError(f"NCCL error: {error_str}")
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] RuntimeError: NCCL error: unhandled cuda error (run with NCCL_DEBUG=INFO for details)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] 
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] During handling of the above exception, another exception occurred:
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] 
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] Traceback (most recent call last):
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/executor/multiproc_executor.py", line 666, in worker_busy_loop
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     output = func(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_worker.py", line 344, in compile_or_warm_up_model
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     cuda_graph_memory_bytes = self.model_runner.capture_model()
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_model_runner.py", line 3446, in capture_model
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self._capture_cudagraphs(
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~~~~~~^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         compilation_cases,
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         ^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         cudagraph_runtime_mode=cudagraph_runtime_mode,
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         uniform_decode=False)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         ^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_model_runner.py", line 3530, in _capture_cudagraphs
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self._dummy_run(num_tokens,
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     cudagraph_runtime_mode=cudagraph_runtime_mode,
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ...<2 lines>...
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     skip_eplb=True,
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     ^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     remove_lora=False)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     ^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return func(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_model_runner.py", line 3152, in _dummy_run
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     outputs = self.model(
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         input_ids=input_ids,
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ...<3 lines>...
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         **model_kwargs,
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     )
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_graph.py", line 121, in __call__
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.runnable(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._call_impl(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return forward_call(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/model_executor/models/qwen3.py", line 323, in forward
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     hidden_states = self.model(input_ids, positions, intermediate_tensors,
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                inputs_embeds)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/decorators.py", line 317, in __call__
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     model_output = self.forward(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/model_executor/models/qwen2.py", line 341, in forward
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     def forward(
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py", line 375, in __call__
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return super().__call__(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._call_impl(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return forward_call(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py", line 929, in _fn
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return fn(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/fx/graph_module.py", line 848, in call_wrapped
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._wrapped_call(self, *args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/fx/graph_module.py", line 424, in __call__
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     raise e
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/fx/graph_module.py", line 411, in __call__
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return super(self.cls, obj).__call__(*args, **kwargs)  # type: ignore[misc]
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._call_impl(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return forward_call(*args, **kwargs)
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "<eval_with_key>.74", line 361, in forward
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     submod_18 = self.submod_18(getitem_43, s72, l_self_modules_layers_modules_8_modules_self_attn_modules_o_proj_parameters_weight_, getitem_44, l_self_modules_layers_modules_8_modules_post_attention_layernorm_parameters_weight_, l_self_modules_layers_modules_8_modules_mlp_modules_gate_up_proj_parameters_weight_, l_self_modules_layers_modules_8_modules_mlp_modules_down_proj_parameters_weight_, l_self_modules_layers_modules_9_modules_input_layernorm_parameters_weight_, l_self_modules_layers_modules_9_modules_self_attn_modules_qkv_proj_parameters_weight_, l_self_modules_layers_modules_9_modules_self_attn_modules_q_norm_parameters_weight_, l_self_modules_layers_modules_9_modules_self_attn_modules_k_norm_parameters_weight_, l_positions_, l_self_modules_layers_modules_0_modules_self_attn_modules_rotary_emb_buffers_cos_sin_cache_);  getitem_43 = l_self_modules_layers_modules_8_modules_self_attn_modules_o_proj_parameters_weight_ = getitem_44 = l_self_modules_layers_modules_8_modules_post_attention_layernorm_parameters_weight_ = l_self_modules_layers_modules_8_modules_mlp_modules_gate_up_proj_parameters_weight_ = l_self_modules_layers_modules_8_modules_mlp_modules_down_proj_parameters_weight_ = l_self_modules_layers_modules_9_modules_input_layernorm_parameters_weight_ = l_self_modules_layers_modules_9_modules_self_attn_modules_qkv_proj_parameters_weight_ = l_self_modules_layers_modules_9_modules_self_attn_modules_q_norm_parameters_weight_ = l_self_modules_layers_modules_9_modules_self_attn_modules_k_norm_parameters_weight_ = None
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_graph.py", line 164, in __call__
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     with torch.cuda.graph(cudagraph, pool=self.graph_pool):
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/cuda/graphs.py", line 222, in __exit__
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self.cuda_graph.capture_end()
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/cuda/graphs.py", line 104, in capture_end
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     super().capture_end()
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~^^
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] torch.AcceleratorError: CUDA error: out of memory
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] 
+[1;36m(Worker_TP1 pid=2845804)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] 
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] WorkerProc hit an exception.
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] Traceback (most recent call last):
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_graph.py", line 166, in __call__
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     output = self.runnable(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_piecewise_backend.py", line 96, in __call__
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.compiled_graph_for_general_shape(*args)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py", line 929, in _fn
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return fn(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/aot_autograd.py", line 1241, in forward
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return compiled_fn(full_args)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 384, in runtime_wrapper
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     all_outs = call_func_at_runtime_with_args(
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         compiled_fn, args, disable_amp=disable_amp, steal_args=True
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     )
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/utils.py", line 126, in call_func_at_runtime_with_args
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     out = normalize_as_list(f(args))
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ~^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 750, in inner_fn
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     outs = compiled_fn(args)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 556, in wrapper
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return compiled_fn(runtime_args)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_inductor/output_code.py", line 584, in __call__
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.current_callable(inputs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_inductor/utils.py", line 2716, in run
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     out = model(new_inputs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/.cache/vllm/torch_compile_cache/eae14273ab/rank_2_0/inductor_cache/hd/chd3hot5kbqj7gpyrwa4guvzla27z7i2jd7krdqinvk74o3fzp4i.py", line 610, in call
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     buf1 = torch.ops.vllm.all_reduce.default(buf0, 'tp:0')
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_ops.py", line 829, in __call__
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._op(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/parallel_state.py", line 112, in all_reduce
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return group._all_reduce_out_place(tensor)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/parallel_state.py", line 367, in _all_reduce_out_place
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.device_communicator.all_reduce(input_)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/cuda_communicator.py", line 151, in all_reduce
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     out = pynccl_comm.all_reduce(input_)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/pynccl.py", line 162, in all_reduce
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self.nccl.ncclAllReduce(buffer_type(in_tensor.data_ptr()),
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             buffer_type(out_tensor.data_ptr()),
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ...<2 lines>...
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ncclRedOpTypeEnum.from_torch(op), self.comm,
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             cudaStream_t(stream.cuda_stream))
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/pynccl_wrapper.py", line 337, in ncclAllReduce
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self.NCCL_CHECK(self._funcs["ncclAllReduce"](sendbuff, recvbuff, count,
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  datatype, op, comm,
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  ^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  stream))
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  ^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/pynccl_wrapper.py", line 291, in NCCL_CHECK
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     raise RuntimeError(f"NCCL error: {error_str}")
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] RuntimeError: NCCL error: unhandled cuda error (run with NCCL_DEBUG=INFO for details)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] 
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] During handling of the above exception, another exception occurred:
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] 
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] Traceback (most recent call last):
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/executor/multiproc_executor.py", line 666, in worker_busy_loop
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     output = func(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_worker.py", line 344, in compile_or_warm_up_model
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     cuda_graph_memory_bytes = self.model_runner.capture_model()
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_model_runner.py", line 3446, in capture_model
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self._capture_cudagraphs(
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~~~~~~^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         compilation_cases,
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         ^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         cudagraph_runtime_mode=cudagraph_runtime_mode,
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         uniform_decode=False)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         ^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_model_runner.py", line 3530, in _capture_cudagraphs
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self._dummy_run(num_tokens,
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     cudagraph_runtime_mode=cudagraph_runtime_mode,
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ...<2 lines>...
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     skip_eplb=True,
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     ^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     remove_lora=False)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     ^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return func(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_model_runner.py", line 3152, in _dummy_run
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     outputs = self.model(
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         input_ids=input_ids,
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ...<3 lines>...
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         **model_kwargs,
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     )
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_graph.py", line 121, in __call__
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.runnable(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._call_impl(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return forward_call(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/model_executor/models/qwen3.py", line 323, in forward
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     hidden_states = self.model(input_ids, positions, intermediate_tensors,
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                inputs_embeds)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/decorators.py", line 317, in __call__
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     model_output = self.forward(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/model_executor/models/qwen2.py", line 341, in forward
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     def forward(
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py", line 375, in __call__
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return super().__call__(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._call_impl(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return forward_call(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py", line 929, in _fn
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return fn(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/fx/graph_module.py", line 848, in call_wrapped
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._wrapped_call(self, *args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/fx/graph_module.py", line 424, in __call__
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     raise e
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/fx/graph_module.py", line 411, in __call__
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return super(self.cls, obj).__call__(*args, **kwargs)  # type: ignore[misc]
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._call_impl(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return forward_call(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "<eval_with_key>.74", line 361, in forward
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     submod_18 = self.submod_18(getitem_43, s72, l_self_modules_layers_modules_8_modules_self_attn_modules_o_proj_parameters_weight_, getitem_44, l_self_modules_layers_modules_8_modules_post_attention_layernorm_parameters_weight_, l_self_modules_layers_modules_8_modules_mlp_modules_gate_up_proj_parameters_weight_, l_self_modules_layers_modules_8_modules_mlp_modules_down_proj_parameters_weight_, l_self_modules_layers_modules_9_modules_input_layernorm_parameters_weight_, l_self_modules_layers_modules_9_modules_self_attn_modules_qkv_proj_parameters_weight_, l_self_modules_layers_modules_9_modules_self_attn_modules_q_norm_parameters_weight_, l_self_modules_layers_modules_9_modules_self_attn_modules_k_norm_parameters_weight_, l_positions_, l_self_modules_layers_modules_0_modules_self_attn_modules_rotary_emb_buffers_cos_sin_cache_);  getitem_43 = l_self_modules_layers_modules_8_modules_self_attn_modules_o_proj_parameters_weight_ = getitem_44 = l_self_modules_layers_modules_8_modules_post_attention_layernorm_parameters_weight_ = l_self_modules_layers_modules_8_modules_mlp_modules_gate_up_proj_parameters_weight_ = l_self_modules_layers_modules_8_modules_mlp_modules_down_proj_parameters_weight_ = l_self_modules_layers_modules_9_modules_input_layernorm_parameters_weight_ = l_self_modules_layers_modules_9_modules_self_attn_modules_qkv_proj_parameters_weight_ = l_self_modules_layers_modules_9_modules_self_attn_modules_q_norm_parameters_weight_ = l_self_modules_layers_modules_9_modules_self_attn_modules_k_norm_parameters_weight_ = None
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_graph.py", line 164, in __call__
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     with torch.cuda.graph(cudagraph, pool=self.graph_pool):
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/cuda/graphs.py", line 222, in __exit__
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self.cuda_graph.capture_end()
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/cuda/graphs.py", line 104, in capture_end
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     super().capture_end()
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] torch.AcceleratorError: CUDA error: out of memory
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] 
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] Traceback (most recent call last):
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_graph.py", line 166, in __call__
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     output = self.runnable(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_piecewise_backend.py", line 96, in __call__
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.compiled_graph_for_general_shape(*args)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py", line 929, in _fn
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return fn(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/aot_autograd.py", line 1241, in forward
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return compiled_fn(full_args)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 384, in runtime_wrapper
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     all_outs = call_func_at_runtime_with_args(
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         compiled_fn, args, disable_amp=disable_amp, steal_args=True
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     )
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/utils.py", line 126, in call_func_at_runtime_with_args
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     out = normalize_as_list(f(args))
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ~^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 750, in inner_fn
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     outs = compiled_fn(args)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_functorch/_aot_autograd/runtime_wrappers.py", line 556, in wrapper
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return compiled_fn(runtime_args)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_inductor/output_code.py", line 584, in __call__
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.current_callable(inputs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_inductor/utils.py", line 2716, in run
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     out = model(new_inputs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/.cache/vllm/torch_compile_cache/eae14273ab/rank_2_0/inductor_cache/hd/chd3hot5kbqj7gpyrwa4guvzla27z7i2jd7krdqinvk74o3fzp4i.py", line 610, in call
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     buf1 = torch.ops.vllm.all_reduce.default(buf0, 'tp:0')
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_ops.py", line 829, in __call__
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._op(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/parallel_state.py", line 112, in all_reduce
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return group._all_reduce_out_place(tensor)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/parallel_state.py", line 367, in _all_reduce_out_place
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.device_communicator.all_reduce(input_)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/cuda_communicator.py", line 151, in all_reduce
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     out = pynccl_comm.all_reduce(input_)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/pynccl.py", line 162, in all_reduce
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self.nccl.ncclAllReduce(buffer_type(in_tensor.data_ptr()),
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             buffer_type(out_tensor.data_ptr()),
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ...<2 lines>...
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ncclRedOpTypeEnum.from_torch(op), self.comm,
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             cudaStream_t(stream.cuda_stream))
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/pynccl_wrapper.py", line 337, in ncclAllReduce
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self.NCCL_CHECK(self._funcs["ncclAllReduce"](sendbuff, recvbuff, count,
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  datatype, op, comm,
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  ^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  stream))
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                                  ^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/pynccl_wrapper.py", line 291, in NCCL_CHECK
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     raise RuntimeError(f"NCCL error: {error_str}")
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] RuntimeError: NCCL error: unhandled cuda error (run with NCCL_DEBUG=INFO for details)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] 
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] During handling of the above exception, another exception occurred:
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] 
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] Traceback (most recent call last):
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/executor/multiproc_executor.py", line 666, in worker_busy_loop
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     output = func(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_worker.py", line 344, in compile_or_warm_up_model
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     cuda_graph_memory_bytes = self.model_runner.capture_model()
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_model_runner.py", line 3446, in capture_model
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self._capture_cudagraphs(
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~~~~~~^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         compilation_cases,
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         ^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         cudagraph_runtime_mode=cudagraph_runtime_mode,
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         uniform_decode=False)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         ^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_model_runner.py", line 3530, in _capture_cudagraphs
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self._dummy_run(num_tokens,
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     cudagraph_runtime_mode=cudagraph_runtime_mode,
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ...<2 lines>...
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     skip_eplb=True,
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     ^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     remove_lora=False)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                     ^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return func(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/worker/gpu_model_runner.py", line 3152, in _dummy_run
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     outputs = self.model(
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         input_ids=input_ids,
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ...<3 lines>...
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]         **model_kwargs,
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     )
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_graph.py", line 121, in __call__
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self.runnable(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._call_impl(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return forward_call(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/model_executor/models/qwen3.py", line 323, in forward
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     hidden_states = self.model(input_ids, positions, intermediate_tensors,
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]                                inputs_embeds)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/decorators.py", line 317, in __call__
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     model_output = self.forward(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/model_executor/models/qwen2.py", line 341, in forward
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     def forward(
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py", line 375, in __call__
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return super().__call__(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._call_impl(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return forward_call(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/_dynamo/eval_frame.py", line 929, in _fn
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return fn(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/fx/graph_module.py", line 848, in call_wrapped
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._wrapped_call(self, *args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/fx/graph_module.py", line 424, in __call__
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     raise e
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/fx/graph_module.py", line 411, in __call__
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return super(self.cls, obj).__call__(*args, **kwargs)  # type: ignore[misc]
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return self._call_impl(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     return forward_call(*args, **kwargs)
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "<eval_with_key>.74", line 361, in forward
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     submod_18 = self.submod_18(getitem_43, s72, l_self_modules_layers_modules_8_modules_self_attn_modules_o_proj_parameters_weight_, getitem_44, l_self_modules_layers_modules_8_modules_post_attention_layernorm_parameters_weight_, l_self_modules_layers_modules_8_modules_mlp_modules_gate_up_proj_parameters_weight_, l_self_modules_layers_modules_8_modules_mlp_modules_down_proj_parameters_weight_, l_self_modules_layers_modules_9_modules_input_layernorm_parameters_weight_, l_self_modules_layers_modules_9_modules_self_attn_modules_qkv_proj_parameters_weight_, l_self_modules_layers_modules_9_modules_self_attn_modules_q_norm_parameters_weight_, l_self_modules_layers_modules_9_modules_self_attn_modules_k_norm_parameters_weight_, l_positions_, l_self_modules_layers_modules_0_modules_self_attn_modules_rotary_emb_buffers_cos_sin_cache_);  getitem_43 = l_self_modules_layers_modules_8_modules_self_attn_modules_o_proj_parameters_weight_ = getitem_44 = l_self_modules_layers_modules_8_modules_post_attention_layernorm_parameters_weight_ = l_self_modules_layers_modules_8_modules_mlp_modules_gate_up_proj_parameters_weight_ = l_self_modules_layers_modules_8_modules_mlp_modules_down_proj_parameters_weight_ = l_self_modules_layers_modules_9_modules_input_layernorm_parameters_weight_ = l_self_modules_layers_modules_9_modules_self_attn_modules_qkv_proj_parameters_weight_ = l_self_modules_layers_modules_9_modules_self_attn_modules_q_norm_parameters_weight_ = l_self_modules_layers_modules_9_modules_self_attn_modules_k_norm_parameters_weight_ = None
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/compilation/cuda_graph.py", line 164, in __call__
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     with torch.cuda.graph(cudagraph, pool=self.graph_pool):
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]          ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/cuda/graphs.py", line 222, in __exit__
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     self.cuda_graph.capture_end()
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]   File "/home/wan/enter/lib/python3.13/site-packages/torch/cuda/graphs.py", line 104, in capture_end
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     super().capture_end()
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671]     ~~~~~~~~~~~~~~~~~~~^^
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] torch.AcceleratorError: CUDA error: out of memory
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] 
+[1;36m(Worker_TP2 pid=2845805)[0;0m ERROR 04-03 16:32:15 [multiproc_executor.py:671] 
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:33:14 [shm_broadcast.py:466] No available shared memory broadcast block found in 60 seconds. This typically happens when some processes are hanging or doing some time-consuming work (e.g. compilation).
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:34:14 [shm_broadcast.py:466] No available shared memory broadcast block found in 60 seconds. This typically happens when some processes are hanging or doing some time-consuming work (e.g. compilation).
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:35:14 [shm_broadcast.py:466] No available shared memory broadcast block found in 60 seconds. This typically happens when some processes are hanging or doing some time-consuming work (e.g. compilation).
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:36:14 [shm_broadcast.py:466] No available shared memory broadcast block found in 60 seconds. This typically happens when some processes are hanging or doing some time-consuming work (e.g. compilation).
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:37:14 [shm_broadcast.py:466] No available shared memory broadcast block found in 60 seconds. This typically happens when some processes are hanging or doing some time-consuming work (e.g. compilation).
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:38:14 [shm_broadcast.py:466] No available shared memory broadcast block found in 60 seconds. This typically happens when some processes are hanging or doing some time-consuming work (e.g. compilation).
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:39:14 [shm_broadcast.py:466] No available shared memory broadcast block found in 60 seconds. This typically happens when some processes are hanging or doing some time-consuming work (e.g. compilation).
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:40:14 [shm_broadcast.py:466] No available shared memory broadcast block found in 60 seconds. This typically happens when some processes are hanging or doing some time-consuming work (e.g. compilation).
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:41:14 [shm_broadcast.py:466] No available shared memory broadcast block found in 60 seconds. This typically happens when some processes are hanging or doing some time-consuming work (e.g. compilation).
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:42:14 [shm_broadcast.py:466] No available shared memory broadcast block found in 60 seconds. This typically happens when some processes are hanging or doing some time-consuming work (e.g. compilation).
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:43:14 [shm_broadcast.py:466] No available shared memory broadcast block found in 60 seconds. This typically happens when some processes are hanging or doing some time-consuming work (e.g. compilation).
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:44:14 [shm_broadcast.py:466] No available shared memory broadcast block found in 60 seconds. This typically happens when some processes are hanging or doing some time-consuming work (e.g. compilation).
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m INFO 04-03 16:45:14 [shm_broadcast.py:466] No available shared memory broadcast block found in 60 seconds. This typically happens when some processes are hanging or doing some time-consuming work (e.g. compilation).
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:04 [multiproc_executor.py:154] Worker proc VllmWorker-2 died unexpectedly, shutting down executor.
+[1;36m(Worker_TP1 pid=2845804)[0;0m INFO 04-03 16:46:04 [multiproc_executor.py:558] Parent process exited, terminating worker
+[1;36m(Worker_TP0 pid=2845803)[0;0m INFO 04-03 16:46:04 [multiproc_executor.py:558] Parent process exited, terminating worker
+[1;36m(Worker_TP3 pid=2845806)[0;0m INFO 04-03 16:46:04 [multiproc_executor.py:558] Parent process exited, terminating worker
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708] EngineCore failed to start.
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708] Traceback (most recent call last):
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/engine/core.py", line 699, in run_engine_core
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]     engine_core = EngineCoreProc(*args, **kwargs)
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/engine/core.py", line 498, in __init__
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]     super().__init__(vllm_config, executor_class, log_stats,
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]                      executor_fail_callback)
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]                      ^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/engine/core.py", line 92, in __init__
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]     self._initialize_kv_caches(vllm_config)
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]     ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/engine/core.py", line 207, in _initialize_kv_caches
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]     self.model_executor.initialize_from_config(kv_cache_configs)
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/executor/abstract.py", line 75, in initialize_from_config
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]     self.collective_rpc("compile_or_warm_up_model")
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/executor/multiproc_executor.py", line 264, in collective_rpc
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]     result = get_response(w, dequeue_timeout,
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]                           self.shutdown_event)
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/executor/multiproc_executor.py", line 244, in get_response
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]     status, result = w.worker_response_mq.dequeue(
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]         timeout=dequeue_timeout, cancel=cancel_event)
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/shm_broadcast.py", line 511, in dequeue
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]     with self.acquire_read(timeout, cancel, indefinite) as buf:
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]   File "/home/wan/enter/lib/python3.13/contextlib.py", line 141, in __enter__
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]     return next(self.gen)
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/shm_broadcast.py", line 455, in acquire_read
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708]     raise RuntimeError("cancelled")
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m ERROR 04-03 16:46:08 [core.py:708] RuntimeError: cancelled
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m Process EngineCore_DP0:
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m Traceback (most recent call last):
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m   File "/home/wan/enter/lib/python3.13/multiprocessing/process.py", line 313, in _bootstrap
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m     self.run()
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m     ~~~~~~~~^^
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m   File "/home/wan/enter/lib/python3.13/multiprocessing/process.py", line 108, in run
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m     self._target(*self._args, **self._kwargs)
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/engine/core.py", line 712, in run_engine_core
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m     raise e
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/engine/core.py", line 699, in run_engine_core
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m     engine_core = EngineCoreProc(*args, **kwargs)
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/engine/core.py", line 498, in __init__
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m     super().__init__(vllm_config, executor_class, log_stats,
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m     ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m                      executor_fail_callback)
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m                      ^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/engine/core.py", line 92, in __init__
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m     self._initialize_kv_caches(vllm_config)
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m     ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/engine/core.py", line 207, in _initialize_kv_caches
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m     self.model_executor.initialize_from_config(kv_cache_configs)
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/executor/abstract.py", line 75, in initialize_from_config
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m     self.collective_rpc("compile_or_warm_up_model")
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/executor/multiproc_executor.py", line 264, in collective_rpc
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m     result = get_response(w, dequeue_timeout,
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m                           self.shutdown_event)
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m   File "/home/wan/enter/lib/python3.13/site-packages/vllm/v1/executor/multiproc_executor.py", line 244, in get_response
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m     status, result = w.worker_response_mq.dequeue(
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m         timeout=dequeue_timeout, cancel=cancel_event)
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/shm_broadcast.py", line 511, in dequeue
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m     with self.acquire_read(timeout, cancel, indefinite) as buf:
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m   File "/home/wan/enter/lib/python3.13/contextlib.py", line 141, in __enter__
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m     return next(self.gen)
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m   File "/home/wan/enter/lib/python3.13/site-packages/vllm/distributed/device_communicators/shm_broadcast.py", line 455, in acquire_read
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m     raise RuntimeError("cancelled")
+[1;36m(EngineCore_DP0 pid=2845422)[0;0m RuntimeError: cancelled
+/home/wan/enter/lib/python3.13/multiprocessing/resource_tracker.py:277: UserWarning: resource_tracker: There appear to be 3 leaked semaphore objects to clean up at shutdown: {'/loky-2845806-54hk0cpf', '/loky-2845804-lvxfxtl2', '/loky-2845803-2xmnp49y'}
+  warnings.warn(
+/home/wan/enter/lib/python3.13/multiprocessing/resource_tracker.py:277: UserWarning: resource_tracker: There appear to be 2 leaked shared_memory objects to clean up at shutdown: {'/psm_fac934e2', '/psm_550c8492'}
+  warnings.warn(

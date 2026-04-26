@@ -1,0 +1,500 @@
+INFO 04-15 19:02:10 [__init__.py:216] Automatically detected platform cuda.
+load dataset from `./datasets/testset/complexor.jsonl` done. sample size: 18
+INFO 04-15 19:02:13 [utils.py:233] non-default args: {'max_model_len': 8192, 'tensor_parallel_size': 4, 'gpu_memory_utilization': 0.65, 'max_num_seqs': 2, 'disable_log_stats': True, 'enforce_eager': True, 'disable_custom_all_reduce': True, 'model': './output/full_self_repair_sft_lora_train100'}
+INFO 04-15 19:02:13 [model.py:547] Resolved architecture: Qwen3ForCausalLM
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO 04-15 19:02:13 [model.py:1730] Downcasting torch.float32 to torch.bfloat16.
+INFO 04-15 19:02:13 [model.py:1510] Using max model len 8192
+INFO 04-15 19:02:13 [scheduler.py:205] Chunked prefill is enabled with max_num_batched_tokens=8192.
+INFO 04-15 19:02:13 [__init__.py:381] Cudagraph is disabled under eager mode
+WARNING 04-15 19:02:13 [__init__.py:3036] We must use the `spawn` multiprocessing start method. Overriding VLLM_WORKER_MULTIPROC_METHOD to 'spawn'. See https://docs.vllm.ai/en/latest/usage/troubleshooting.html#python-multiprocessing for more information. Reasons: CUDA is initialized
+INFO 04-15 19:02:18 [__init__.py:216] Automatically detected platform cuda.
+[1;36m(EngineCore_DP0 pid=3462985)[0;0m INFO 04-15 19:02:19 [core.py:644] Waiting for init message from front-end.
+[1;36m(EngineCore_DP0 pid=3462985)[0;0m INFO 04-15 19:02:20 [core.py:77] Initializing a V1 LLM engine (v0.11.0) with config: model='./output/full_self_repair_sft_lora_train100', speculative_config=None, tokenizer='./output/full_self_repair_sft_lora_train100', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=8192, download_dir=None, load_format=auto, tensor_parallel_size=4, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=True, quantization=None, enforce_eager=True, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=./output/full_self_repair_sft_lora_train100, enable_prefix_caching=True, chunked_prefill_enabled=True, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":null,"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":0,"use_cudagraph":true,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"use_inductor_graph_partition":false,"pass_config":{},"max_capture_size":0,"local_cache_dir":null}
+[1;36m(EngineCore_DP0 pid=3462985)[0;0m WARNING 04-15 19:02:20 [multiproc_executor.py:720] Reducing Torch parallelism from 96 threads to 1 to avoid unnecessary CPU contention. Set OMP_NUM_THREADS in the external environment to tune this value as needed.
+[1;36m(EngineCore_DP0 pid=3462985)[0;0m INFO 04-15 19:02:20 [shm_broadcast.py:289] vLLM message queue communication handle: Handle(local_reader_ranks=[0, 1, 2, 3], buffer_handle=(4, 16777216, 10, 'psm_53e6101b'), local_subscribe_addr='ipc:///tmp/7d9e81c2-f2fa-46be-b7ef-c676acf87876', remote_subscribe_addr=None, remote_addr_ipv6=False)
+INFO 04-15 19:02:23 [__init__.py:216] Automatically detected platform cuda.
+INFO 04-15 19:02:23 [__init__.py:216] Automatically detected platform cuda.
+INFO 04-15 19:02:23 [__init__.py:216] Automatically detected platform cuda.
+INFO 04-15 19:02:23 [__init__.py:216] Automatically detected platform cuda.
+INFO 04-15 19:02:26 [shm_broadcast.py:289] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_bbbe705d'), local_subscribe_addr='ipc:///tmp/97e75863-d2e6-49f2-8e46-ac5afe55aed9', remote_subscribe_addr=None, remote_addr_ipv6=False)
+INFO 04-15 19:02:26 [shm_broadcast.py:289] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_98b62e5e'), local_subscribe_addr='ipc:///tmp/ab09d852-73d3-4090-89d9-1b0e4e675a1e', remote_subscribe_addr=None, remote_addr_ipv6=False)
+INFO 04-15 19:02:27 [shm_broadcast.py:289] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_5c32f3de'), local_subscribe_addr='ipc:///tmp/1bc55898-70c6-4bc3-9800-aa234dda1547', remote_subscribe_addr=None, remote_addr_ipv6=False)
+INFO 04-15 19:02:27 [shm_broadcast.py:289] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_ccc14df0'), local_subscribe_addr='ipc:///tmp/55571b46-68cb-4e22-b054-d04594910e5b', remote_subscribe_addr=None, remote_addr_ipv6=False)
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+INFO 04-15 19:02:28 [__init__.py:1384] Found nccl from library libnccl.so.2
+INFO 04-15 19:02:28 [pynccl.py:103] vLLM is using nccl==2.27.3
+INFO 04-15 19:02:28 [__init__.py:1384] Found nccl from library libnccl.so.2
+INFO 04-15 19:02:28 [__init__.py:1384] Found nccl from library libnccl.so.2
+INFO 04-15 19:02:28 [pynccl.py:103] vLLM is using nccl==2.27.3
+INFO 04-15 19:02:28 [pynccl.py:103] vLLM is using nccl==2.27.3
+INFO 04-15 19:02:28 [__init__.py:1384] Found nccl from library libnccl.so.2
+INFO 04-15 19:02:28 [pynccl.py:103] vLLM is using nccl==2.27.3
+WARNING 04-15 19:02:28 [symm_mem.py:58] SymmMemCommunicator: Device capability 8.9 not supported, communicator is not available.
+WARNING 04-15 19:02:28 [symm_mem.py:58] SymmMemCommunicator: Device capability 8.9 not supported, communicator is not available.
+WARNING 04-15 19:02:28 [symm_mem.py:58] SymmMemCommunicator: Device capability 8.9 not supported, communicator is not available.
+WARNING 04-15 19:02:28 [symm_mem.py:58] SymmMemCommunicator: Device capability 8.9 not supported, communicator is not available.
+INFO 04-15 19:02:28 [shm_broadcast.py:289] vLLM message queue communication handle: Handle(local_reader_ranks=[1, 2, 3], buffer_handle=(3, 4194304, 6, 'psm_5c5c5932'), local_subscribe_addr='ipc:///tmp/e742d9c5-19e8-4118-b817-c1e6c183a5b2', remote_subscribe_addr=None, remote_addr_ipv6=False)
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+INFO 04-15 19:02:28 [__init__.py:1384] Found nccl from library libnccl.so.2
+INFO 04-15 19:02:28 [pynccl.py:103] vLLM is using nccl==2.27.3
+INFO 04-15 19:02:28 [__init__.py:1384] Found nccl from library libnccl.so.2
+INFO 04-15 19:02:28 [pynccl.py:103] vLLM is using nccl==2.27.3
+INFO 04-15 19:02:28 [__init__.py:1384] Found nccl from library libnccl.so.2
+INFO 04-15 19:02:28 [__init__.py:1384] Found nccl from library libnccl.so.2
+INFO 04-15 19:02:28 [pynccl.py:103] vLLM is using nccl==2.27.3
+INFO 04-15 19:02:28 [pynccl.py:103] vLLM is using nccl==2.27.3
+INFO 04-15 19:02:28 [parallel_state.py:1208] rank 2 in world size 4 is assigned as DP rank 0, PP rank 0, TP rank 2, EP rank 2
+INFO 04-15 19:02:28 [parallel_state.py:1208] rank 0 in world size 4 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 04-15 19:02:28 [parallel_state.py:1208] rank 3 in world size 4 is assigned as DP rank 0, PP rank 0, TP rank 3, EP rank 3
+INFO 04-15 19:02:28 [parallel_state.py:1208] rank 1 in world size 4 is assigned as DP rank 0, PP rank 0, TP rank 1, EP rank 1
+WARNING 04-15 19:02:28 [topk_topp_sampler.py:66] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+WARNING 04-15 19:02:28 [topk_topp_sampler.py:66] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[1;36m(Worker_TP2 pid=3463277)[0;0m INFO 04-15 19:02:28 [gpu_model_runner.py:2602] Starting to load model ./output/full_self_repair_sft_lora_train100...
+[1;36m(Worker_TP1 pid=3463276)[0;0m INFO 04-15 19:02:28 [gpu_model_runner.py:2602] Starting to load model ./output/full_self_repair_sft_lora_train100...
+WARNING 04-15 19:02:29 [topk_topp_sampler.py:66] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+WARNING 04-15 19:02:29 [topk_topp_sampler.py:66] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[1;36m(Worker_TP3 pid=3463278)[0;0m INFO 04-15 19:02:29 [gpu_model_runner.py:2602] Starting to load model ./output/full_self_repair_sft_lora_train100...
+[1;36m(Worker_TP0 pid=3463275)[0;0m INFO 04-15 19:02:29 [gpu_model_runner.py:2602] Starting to load model ./output/full_self_repair_sft_lora_train100...
+[1;36m(Worker_TP2 pid=3463277)[0;0m INFO 04-15 19:02:29 [gpu_model_runner.py:2634] Loading model from scratch...
+[1;36m(Worker_TP1 pid=3463276)[0;0m INFO 04-15 19:02:29 [gpu_model_runner.py:2634] Loading model from scratch...
+[1;36m(Worker_TP2 pid=3463277)[0;0m INFO 04-15 19:02:29 [cuda.py:366] Using Flash Attention backend on V1 engine.
+[1;36m(Worker_TP1 pid=3463276)[0;0m INFO 04-15 19:02:29 [cuda.py:366] Using Flash Attention backend on V1 engine.
+[1;36m(Worker_TP3 pid=3463278)[0;0m INFO 04-15 19:02:29 [gpu_model_runner.py:2634] Loading model from scratch...
+[1;36m(Worker_TP3 pid=3463278)[0;0m INFO 04-15 19:02:29 [cuda.py:366] Using Flash Attention backend on V1 engine.
+[1;36m(Worker_TP0 pid=3463275)[0;0m INFO 04-15 19:02:29 [gpu_model_runner.py:2634] Loading model from scratch...
+[1;36m(Worker_TP0 pid=3463275)[0;0m INFO 04-15 19:02:29 [cuda.py:366] Using Flash Attention backend on V1 engine.
+[1;36m(Worker_TP0 pid=3463275)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/7 [00:00<?, ?it/s]
+[1;36m(Worker_TP0 pid=3463275)[0;0m Loading safetensors checkpoint shards:  14% Completed | 1/7 [00:00<00:03,  1.77it/s]
+[1;36m(Worker_TP0 pid=3463275)[0;0m Loading safetensors checkpoint shards:  29% Completed | 2/7 [00:01<00:02,  2.04it/s]
+[1;36m(Worker_TP0 pid=3463275)[0;0m Loading safetensors checkpoint shards:  43% Completed | 3/7 [00:01<00:01,  2.04it/s]
+[1;36m(Worker_TP0 pid=3463275)[0;0m Loading safetensors checkpoint shards:  57% Completed | 4/7 [00:02<00:01,  1.98it/s]
+[1;36m(Worker_TP0 pid=3463275)[0;0m Loading safetensors checkpoint shards:  71% Completed | 5/7 [00:02<00:00,  2.15it/s]
+[1;36m(Worker_TP0 pid=3463275)[0;0m Loading safetensors checkpoint shards:  86% Completed | 6/7 [00:02<00:00,  2.43it/s]
+[1;36m(Worker_TP0 pid=3463275)[0;0m Loading safetensors checkpoint shards: 100% Completed | 7/7 [00:03<00:00,  2.44it/s]
+[1;36m(Worker_TP0 pid=3463275)[0;0m Loading safetensors checkpoint shards: 100% Completed | 7/7 [00:03<00:00,  2.24it/s]
+[1;36m(Worker_TP0 pid=3463275)[0;0m 
+[1;36m(Worker_TP0 pid=3463275)[0;0m INFO 04-15 19:02:32 [default_loader.py:267] Loading weights took 3.18 seconds
+[1;36m(Worker_TP1 pid=3463276)[0;0m INFO 04-15 19:02:32 [default_loader.py:267] Loading weights took 3.40 seconds
+[1;36m(Worker_TP2 pid=3463277)[0;0m INFO 04-15 19:02:32 [default_loader.py:267] Loading weights took 3.67 seconds
+[1;36m(Worker_TP3 pid=3463278)[0;0m INFO 04-15 19:02:32 [default_loader.py:267] Loading weights took 3.57 seconds
+[1;36m(Worker_TP0 pid=3463275)[0;0m INFO 04-15 19:02:33 [gpu_model_runner.py:2653] Model loading took 3.8235 GiB and 3.292869 seconds
+[1;36m(Worker_TP1 pid=3463276)[0;0m INFO 04-15 19:02:33 [gpu_model_runner.py:2653] Model loading took 3.8235 GiB and 3.524500 seconds
+[1;36m(Worker_TP2 pid=3463277)[0;0m INFO 04-15 19:02:33 [gpu_model_runner.py:2653] Model loading took 3.8235 GiB and 3.788741 seconds
+[1;36m(Worker_TP3 pid=3463278)[0;0m INFO 04-15 19:02:33 [gpu_model_runner.py:2653] Model loading took 3.8235 GiB and 3.688464 seconds
+[1;36m(Worker_TP3 pid=3463278)[0;0m INFO 04-15 19:02:36 [gpu_worker.py:298] Available KV cache memory: 10.95 GiB
+[1;36m(Worker_TP0 pid=3463275)[0;0m INFO 04-15 19:02:36 [gpu_worker.py:298] Available KV cache memory: 10.95 GiB
+[1;36m(Worker_TP1 pid=3463276)[0;0m INFO 04-15 19:02:36 [gpu_worker.py:298] Available KV cache memory: 10.95 GiB
+[1;36m(Worker_TP2 pid=3463277)[0;0m INFO 04-15 19:02:36 [gpu_worker.py:298] Available KV cache memory: 10.95 GiB
+[1;36m(EngineCore_DP0 pid=3462985)[0;0m INFO 04-15 19:02:36 [kv_cache_utils.py:1087] GPU KV cache size: 319,040 tokens
+[1;36m(EngineCore_DP0 pid=3462985)[0;0m INFO 04-15 19:02:36 [kv_cache_utils.py:1091] Maximum concurrency for 8,192 tokens per request: 38.95x
+[1;36m(EngineCore_DP0 pid=3462985)[0;0m INFO 04-15 19:02:36 [kv_cache_utils.py:1087] GPU KV cache size: 319,040 tokens
+[1;36m(EngineCore_DP0 pid=3462985)[0;0m INFO 04-15 19:02:36 [kv_cache_utils.py:1091] Maximum concurrency for 8,192 tokens per request: 38.95x
+[1;36m(EngineCore_DP0 pid=3462985)[0;0m INFO 04-15 19:02:36 [kv_cache_utils.py:1087] GPU KV cache size: 319,040 tokens
+[1;36m(EngineCore_DP0 pid=3462985)[0;0m INFO 04-15 19:02:36 [kv_cache_utils.py:1091] Maximum concurrency for 8,192 tokens per request: 38.95x
+[1;36m(EngineCore_DP0 pid=3462985)[0;0m INFO 04-15 19:02:36 [kv_cache_utils.py:1087] GPU KV cache size: 319,040 tokens
+[1;36m(EngineCore_DP0 pid=3462985)[0;0m INFO 04-15 19:02:36 [kv_cache_utils.py:1091] Maximum concurrency for 8,192 tokens per request: 38.95x
+[1;36m(Worker_TP2 pid=3463277)[0;0m WARNING 04-15 19:02:36 [cudagraph_dispatcher.py:106] cudagraph dispatching keys are not initialized. No cudagraph will be used.
+[1;36m(Worker_TP3 pid=3463278)[0;0m WARNING 04-15 19:02:36 [cudagraph_dispatcher.py:106] cudagraph dispatching keys are not initialized. No cudagraph will be used.
+[1;36m(Worker_TP1 pid=3463276)[0;0m WARNING 04-15 19:02:36 [cudagraph_dispatcher.py:106] cudagraph dispatching keys are not initialized. No cudagraph will be used.
+[1;36m(Worker_TP0 pid=3463275)[0;0m WARNING 04-15 19:02:36 [cudagraph_dispatcher.py:106] cudagraph dispatching keys are not initialized. No cudagraph will be used.
+[1;36m(EngineCore_DP0 pid=3462985)[0;0m INFO 04-15 19:02:37 [core.py:210] init engine (profile, create kv cache, warmup model) took 3.64 seconds
+[1;36m(EngineCore_DP0 pid=3462985)[0;0m INFO 04-15 19:02:37 [__init__.py:381] Cudagraph is disabled under eager mode
+INFO 04-15 19:02:37 [llm.py:306] Supported_tasks: ['generate']
+init model done.
+Adding requests:   0%|          | 0/18 [00:00<?, ?it/s]Adding requests: 100%|██████████| 18/18 [00:00<00:00, 535.09it/s]
+Processed prompts:   0%|          | 0/18 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts:   6%|▌         | 1/18 [00:13<03:50, 13.58s/it, est. speed input: 23.71 toks/s, output: 62.44 toks/s]Processed prompts:  11%|█         | 2/18 [00:14<01:41,  6.32s/it, est. speed input: 41.02 toks/s, output: 119.88 toks/s]Processed prompts:  17%|█▋        | 3/18 [00:26<02:14,  8.94s/it, est. speed input: 34.89 toks/s, output: 96.52 toks/s] Processed prompts:  22%|██▏       | 4/18 [00:29<01:28,  6.32s/it, est. speed input: 40.19 toks/s, output: 124.99 toks/s]Processed prompts:  28%|██▊       | 5/18 [00:42<01:53,  8.70s/it, est. speed input: 33.40 toks/s, output: 106.00 toks/s]Processed prompts:  33%|███▎      | 6/18 [00:43<01:13,  6.11s/it, est. speed input: 40.41 toks/s, output: 127.26 toks/s]Processed prompts:  39%|███▉      | 7/18 [00:55<01:27,  8.00s/it, est. speed input: 37.78 toks/s, output: 114.09 toks/s]Processed prompts:  44%|████▍     | 8/18 [00:59<01:07,  6.76s/it, est. speed input: 43.42 toks/s, output: 125.21 toks/s]Processed prompts:  50%|█████     | 9/18 [01:10<01:12,  8.07s/it, est. speed input: 43.82 toks/s, output: 120.07 toks/s]Processed prompts:  56%|█████▌    | 10/18 [01:11<00:49,  6.14s/it, est. speed input: 47.97 toks/s, output: 128.86 toks/s]Processed prompts:  61%|██████    | 11/18 [01:25<00:58,  8.39s/it, est. speed input: 43.56 toks/s, output: 118.74 toks/s]Processed prompts:  67%|██████▋   | 12/18 [01:25<00:35,  5.94s/it, est. speed input: 47.73 toks/s, output: 130.01 toks/s]Processed prompts:  72%|███████▏  | 13/18 [01:41<00:44,  8.89s/it, est. speed input: 44.60 toks/s, output: 120.32 toks/s]Processed prompts:  78%|███████▊  | 14/18 [01:42<00:26,  6.65s/it, est. speed input: 48.38 toks/s, output: 129.92 toks/s]Processed prompts:  83%|████████▎ | 15/18 [01:57<00:26,  8.95s/it, est. speed input: 46.46 toks/s, output: 122.91 toks/s]Processed prompts:  89%|████████▉ | 16/18 [01:58<00:13,  6.76s/it, est. speed input: 48.99 toks/s, output: 129.99 toks/s]Processed prompts:  94%|█████████▍| 17/18 [02:12<00:08,  8.69s/it, est. speed input: 46.79 toks/s, output: 124.03 toks/s]Processed prompts: 100%|██████████| 18/18 [02:14<00:00,  6.94s/it, est. speed input: 48.26 toks/s, output: 128.98 toks/s]Processed prompts: 100%|██████████| 18/18 [02:14<00:00,  6.94s/it, est. speed input: 48.26 toks/s, output: 128.98 toks/s]Processed prompts: 100%|██████████| 18/18 [02:14<00:00,  7.50s/it, est. speed input: 48.26 toks/s, output: 128.98 toks/s]
+[1;36m(Worker_TP0 pid=3463275)[0;0m INFO 04-15 19:04:52 [multiproc_executor.py:558] Parent process exited, terminating worker
+[1;36m(Worker_TP0 pid=3463275)[0;0m INFO 04-15 19:04:52 [multiproc_executor.py:599] WorkerProc shutting down.
+[1;36m(Worker_TP1 pid=3463276)[0;0m INFO 04-15 19:04:52 [multiproc_executor.py:558] Parent process exited, terminating worker
+[1;36m(Worker_TP2 pid=3463277)[0;0m INFO 04-15 19:04:52 [multiproc_executor.py:558] Parent process exited, terminating worker
+[1;36m(Worker_TP1 pid=3463276)[0;0m INFO 04-15 19:04:52 [multiproc_executor.py:599] WorkerProc shutting down.
+[1;36m(Worker_TP3 pid=3463278)[0;0m INFO 04-15 19:04:52 [multiproc_executor.py:558] Parent process exited, terminating worker
+Python 3.13.2
+
+
+check coptpy installed.
+len(to_run): 18
+Execution completed.
+------------------------------------------------------------
+--------------------question--------------------
+The Knapsack Problem is a classic optimization problem in operations research and computer science. The problem is to determine the most valuable combination of items to include in a knapsack, given a set of items with different values and weights, and a maximum weight capacity of the knapsack. The goal is to maximize the total value of the items in the knapsack without exceeding its weight capacity.
+
+The following parameters are included in this problem:
+item_values: a list of integers, indicating the value of each item
+item_weights: a list of integers, indicating the weight of each item
+max_weight_knapsack: an integer, denotes the maximum weight capacity of the knapsack
+
+
+The following data is included in this problem:
+{'item_values': [60, 100, 120], 'item_weights': [10, 20, 30], 'max_weight_knapsack': 50}
+--------------------pred_answers--------------------
+['220.0']
+--------------------gt_answer--------------------
+220
+--------------------judge--------------------
+True
+------------------------------------------------------------
+--------------------question--------------------
+Consider a transportation problem. Given a set of origins `Origins` and a set of destinations `Destinations`. Each origin `i` has a certain supply of goods `Supply_{i}` and each destination `j` has a certain demand for goods `Demand_{j}`. The cost of shipping one unit of goods from origin `i` to destination `j` is `Rate_{i, j}`. However, the number of units shipped can't exceed the limit `Limit_{i, j}`. The problem aims to minimize the total cost of shipping goods from the origins to the destinations. How to decide the number of units to be shipped from each origin `i` to each destination `j`?
+
+The following parameters are included in this problem:
+supply: a list of integers, each indicates the amount of goods available at an origin
+demand: a list of integers, each indicates the amount of goods required at a destination
+rate: a 2D list of integers, the shipment costs per unit from each origin to each destination
+limit: a 2D list of integers, the limit on units shipped from each origin to each destination
+
+
+The following data is included in this problem:
+{'supply': [20, 30], 'demand': [30, 20], 'rate': [[8, 6], [5, 10]], 'limit': [[15, 25], [25, 20]]}
+--------------------pred_answers--------------------
+['305.0']
+--------------------gt_answer--------------------
+305
+--------------------judge--------------------
+True
+------------------------------------------------------------
+--------------------question--------------------
+A telecom company needs to build a set of cell towers to provide signal coverage for the inhabitants of a given city. A number of potential locations where the towers could be built have been identified. The towers have a fixed range, and due to budget constraints only a limited number of them can be built. Given these restrictions, the company wishes to provide coverage to the largest percentage of the population possible. To simplify the problem, the company has split the area it wishes to cover into a set of regions, each of which has a known population. The goal is then to choose which of the potential locations the company should build cell towers on in order to provide coverage to as many people as possible.
+
+The following parameters are included in this problem:
+delta: A matrix (list of lists) where delta[i][j] is 1 if site `i` covers region `j`, otherwise 0
+cost: A list where cost[i] is the cost of building the tower at site `i`
+population: A list where population[j] is the population of region `j`
+budget: An integer, the total budget allowed for building the towers
+
+
+The following data is included in this problem:
+{'delta': [[1, 0, 1], [0, 1, 0]], 'cost': [3, 4], 'population': [100, 200, 150], 'budget': 4}
+--------------------pred_answers--------------------
+['250.0']
+--------------------gt_answer--------------------
+200
+--------------------judge--------------------
+False
+------------------------------------------------------------
+--------------------question--------------------
+Consider a project assignment problem. Given a set of people `People` and a set of projects `Projects`. Each person `i` has a certain number of available hours `Supply_{i}` and each project `j` requires a certain number of hours `Demand_{j}`. The cost per hour of work for person `i` on project `j` is `Cost_{i, j}`. Each person `i` can contribute to project `j` up to a maximum limit `Limit_{i, j}`. The problem aims to minimize the total cost of assigning people to projects. It is constrained that the total number of hours assigned from each person `i` equals its supply and the total number of hours assigned to each project `j` equals its demand. How to decide the number of hours to be assigned from each person `i` to each project `j`?
+
+The following parameters are included in this problem:
+supply: list, hours each person is available, length is number of people
+demand: list, hours each project requires, length is number of projects
+cost: 2D list, cost per hour of work for each person on each project, dimensions are number of people x number of projects
+limit: 2D list, maximum contributions to projects for each person on each project, dimensions are number of people x number of projects
+
+
+The following data is included in this problem:
+{'supply': [8, 7], 'demand': [5, 10], 'cost': [[10, 20], [15, 25]], 'limit': [[5, 6], [4, 7]]}
+--------------------pred_answers--------------------
+['285.0']
+--------------------gt_answer--------------------
+285
+--------------------judge--------------------
+True
+------------------------------------------------------------
+--------------------question--------------------
+We have a set of flight legs (one-way non-stop flight) with a limited passenger capacity. According to market research, we defined a set of flight itineraries to sell as a package with a given price. For each package, we have an estimated demand. How many units of each package should we sell to maximize the revenue? We reserve the passenger seats according to the number of packages we want to sell.
+
+The following parameters are included in this problem:
+available_seats: List of integers, available seats for each flight leg
+demand: List of integers, estimated demand for each package
+revenue: List of integers, revenue gained for selling a unit of each package
+delta: 2D list of integers, 1 if package uses a specific flight leg, otherwise 0
+
+
+The following data is included in this problem:
+{'available_seats': [50, 60, 70], 'demand': [30, 40], 'revenue': [100, 150], 'delta': [[1, 1, 0], [0, 1, 1]]}
+--------------------pred_answers--------------------
+['8000.0']
+--------------------gt_answer--------------------
+8000
+--------------------judge--------------------
+True
+------------------------------------------------------------
+--------------------question--------------------
+This is a multi-commodity transportation problem. Given a set of origins `Origins`, a set of destinations `Destinations`, and a set of products `Products`. Each origin `i` has a certain supply of each product `p` `Supply_{i,p}` and each destination `j` has a certain demand for each product `p` `Demand_{j,p}`. The cost of shipping one unit of product `p` from origin `i` to destination `j` is `ShippingCost_{i, j, p}`. The problem aims to minimize the total cost of shipping all products from the origins to the destinations. It is constrained that the total amount of each product `p` shipped from each origin `i` equals its supply, the total amount of each product `p` shipped to each destination `j` equals its demand, and the total amount of all products shipped from each origin `i` to each destination `j` does not exceed a certain limit `Limit_{i,j}`. How to decide the number of units of each product `p` to be shipped from each origin `i` to each destination `j`?
+
+The following parameters are included in this problem:
+supply: a 2D list, supply[i][p] indicates the amount of product p available at origin i
+demand: a 2D list, demand[p][j] indicates the amount of product p required at destination j
+limit: a 2D list, limit[i][j] indicates the maximum total amount of all products that can be shipped from origin i to destination j
+cost: a 3D list, cost[i][j][p] indicates the shipment cost per unit of product p from origin i to destination j
+
+
+The following data is included in this problem:
+{'supply': [[20, 30], [40, 10]], 'demand': [[30, 30], [30, 10]], 'limit': [[35, 25], [20, 30]], 'cost': [[[2, 3], [4, 1]], [[3, 2], [2, 4]]]}
+--------------------pred_answers--------------------
+['No Best Solution']
+--------------------gt_answer--------------------
+235
+--------------------judge--------------------
+False
+------------------------------------------------------------
+--------------------question--------------------
+Consider a diet problem. Given a set of nutrients `Nutrients` and a set of foods `Foods`. Each food `j` has a cost `Cost_{j}` and a range of amount that can be bought `[MinAmount_{j}, MaxAmount_{j}]`. Each nutrient `i` has a range of amount that should be included in the diet `[MinNutrient_{i}, MaxNutrient_{i}]`. The amount of nutrient `i` in food `j` is `NutrientAmount_{i, j}`. The problem aims to minimize the total cost of buying foods. It is constrained that the total amount of each nutrient `i` in the bought foods should be within its range. How to decide the amount of each food `j` to buy?
+
+The following parameters are included in this problem:
+food_set: List of strings, each representing a type of food.
+nutrient_set: List of strings, each representing a type of nutrient.
+food_cost: List of floats, cost of each type of food, indexed by food_set.
+min_food_amount: List of floats, minimum amount we can buy for each type of food, indexed by food_set.
+max_food_amount: List of floats, maximum amount we can buy for each type of food, indexed by food_set.
+min_nutrient_amount: List of floats, minimum required amount for each type of nutrient, indexed by nutrient_set.
+max_nutrient_amount: List of floats, maximum allowed amount for each type of nutrient, indexed by nutrient_set.
+nutrient_amount: 2D list of floats, nutrient content in each type of food, indexed by [food_set][nutrient_set].
+
+
+The following data is included in this problem:
+{'food_set': ['Apple', 'Banana'], 'nutrient_set': ['VitaminC', 'Fiber'], 'food_cost': [2.0, 1.5], 'min_food_amount': [0, 0], 'max_food_amount': [10, 10], 'min_nutrient_amount': [50, 30], 'max_nutrient_amount': [100, 60], 'nutrient_amount': [[10, 5], [5, 10]]}
+--------------------pred_answers--------------------
+['10.333333333333332']
+--------------------gt_answer--------------------
+10
+--------------------judge--------------------
+True
+------------------------------------------------------------
+--------------------question--------------------
+This is a cutting stock problem. Given a roll of width `RollWidth` and a set of widths `Width` to be cut. Each width `i` has a certain number of Orders `Orders_{i}`. There are `NumPatterns` patterns and each pattern `j` has a certain number of rolls of each width `i` `NumRollsWidth_{i, j}`. The problem aims to minimize the total number of raw rolls cut. It is constrained that for each width `i`, the total number of rolls cut meets the total Orders. How to decide the number of rolls cut using each pattern `j`?
+
+The following parameters are included in this problem:
+roll_width: An integer, the width of the raw rolls.
+widths: A list of integers, the set of widths to be cut.
+orders: A list of integers, the number of orders for each width.
+num_patterns: An integer, the number of different patterns.
+num_rolls_width: A list of lists, where each inner list contains the number of rolls of a particular width in a given pattern.
+
+
+The following data is included in this problem:
+{'roll_width': 10, 'widths': [2, 3, 5], 'orders': [4, 2, 2], 'num_patterns': 2, 'num_rolls_width': [[1, 2, 0], [0, 0, 1]]}
+--------------------pred_answers--------------------
+['No Best Solution']
+--------------------gt_answer--------------------
+6
+--------------------judge--------------------
+False
+------------------------------------------------------------
+--------------------question--------------------
+The Car Selection Problem is a mixed integer programming model that aims to assign participants to cars in a way that maximizes the total number of assignments. The problem involves a set of participants and a set of cars, where each participant is interested in a subset of cars. The objective is to find the optimal assignment of participants to cars that satisfies certain constraints.
+
+The following parameters are included in this problem:
+participants: list, the set of all participants.
+cars: list, the set of all cars.
+possible_assignments: 2D list, PossibleAssignments[i][j] indicates whether participant i is interested in car j.
+
+
+The following data is included in this problem:
+{'participants': ['P1', 'P2', 'P3'], 'cars': ['C1', 'C2', 'C3'], 'possible_assignments': [[1, 0, 1], [0, 1, 0], [1, 1, 1]]}
+--------------------pred_answers--------------------
+['3.0']
+--------------------gt_answer--------------------
+3
+--------------------judge--------------------
+True
+------------------------------------------------------------
+--------------------question--------------------
+A set of jobs `Jobs` need to be processed on a set of machines `Machines` in series. All jobs have the same processing order through all the machines from machine 1 to machine M. Each machine can work in parallel. The workflow is the following: the first job of the sequence goes to the first machine to be processed; meanwhile, other jobs wait; when the first machine has processed the first job, the first job goes to the second machine and the second job of the sequence starts to be processed by the first machine; and so on. The time required to process job `j` on machine `m` is `ProcesTime_{j, m}`. The problem aims to minimize the total makespan. The goal is to find a sequence of jobs that minimize the makespan: the time when all jobs have been processed.
+
+The following parameters are included in this problem:
+jobs: list of ints, represents a set of all Jobs
+schedules: list of ints, represents a set of all schedules, range [1, S]
+machines: list of ints, represents a set of all machines, range [1, M]
+proces_time: 2D list of ints, time required to process job `j` on machine `m`, domain size [Jobs x Machines]
+
+
+The following data is included in this problem:
+{'jobs': [1, 2, 3], 'schedules': [1, 2, 3], 'machines': [1, 2], 'proces_time': [[1, 3], [2, 2], [3, 1]]}
+--------------------pred_answers--------------------
+['27.0']
+--------------------gt_answer--------------------
+7
+--------------------judge--------------------
+False
+------------------------------------------------------------
+--------------------question--------------------
+The Aircraft Landing Problem (ALP) is the problem of deciding a landing time on an appropriate runway for each aircraft in a given set of aircraft such that each aircraft lands within a predetermined time window; and separation criteria between the landing of an aircraft, and the landing of all successive aircraft, are respected. We are given the earliest landing time, latest landing time, target landing time, and penalties for landing before or after the target landing time for each aircraft. There is also a separation time that represents the minimum time required between the landing of two aircraft. The objective of the problem is to minimize the total penalties of landing before or after the target time for each aircraft. The problem includes several constraints. The order constraint ensures that the aircrafts land in a specific order. The separation constraint ensures that there is enough separation time between the landing of aircraft. The lower and upper time window constraints ensure that each aircraft lands within its respective earliest and latest time windows.
+
+The following parameters are included in this problem:
+EarliestLanding: list of integers, earliest landing times for each aircraft.
+LatestLanding: list of integers, latest landing times for each aircraft.
+TargetLanding: list of integers, target landing times for each aircraft.
+PenaltyAfterTarget: list of integers, penalties for landing after target times for each aircraft.
+PenaltyBeforeTarget: list of integers, penalties for landing before target times for each aircraft.
+SeparationTime: 2D list of integers, separation times between each pair of aircraft.
+
+
+The following data is included in this problem:
+{'EarliestLanding': [1, 3, 5], 'LatestLanding': [10, 12, 15], 'TargetLanding': [4, 8, 14], 'PenaltyAfterTarget': [10, 20, 30], 'PenaltyBeforeTarget': [5, 10, 15], 'SeparationTime': [[0, 2, 3], [2, 0, 4], [3, 4, 0]]}
+--------------------pred_answers--------------------
+['-170.0']
+--------------------gt_answer--------------------
+0
+--------------------judge--------------------
+False
+------------------------------------------------------------
+--------------------question--------------------
+Consider a production problem. Given a set of products `Products` and a set of stages `Stages`. Each product `p` has a certain production rate `Rate_{p, s}` in each stage `s` and a certain profit `Profit_{p}` per ton. Each stage `s` has a certain number of hours `Available_{s}` available per week. There are also lower and upper limits on the tons of each product sold in a week, `Commit_{p}` and `Market_{p}` respectively. The problem aims to maximize the total profit from all products. It is constrained that the total number of hours used by all products in each stage `s` may not exceed the hours available. How to decide the number of tons to be produced for each product `p`?
+
+The following parameters are included in this problem:
+products: list of products
+stages: list of stages
+rate: 2D list indicating the production rate of each product at each stage
+profit: list indicating profit per ton for each product
+commit: list indicating minimum production (lower limit) for each product
+market: list indicating maximum production (upper limit) for each product
+avail: list indicating hours available per week at each stage
+
+
+The following data is included in this problem:
+{'products': ['P1', 'P2'], 'stages': ['S1', 'S2'], 'rate': [[2, 3], [3, 2]], 'profit': [10, 20], 'commit': [1, 2], 'market': [5, 4], 'avail': [10, 8]}
+--------------------pred_answers--------------------
+['50.0']
+--------------------gt_answer--------------------
+110
+--------------------judge--------------------
+False
+------------------------------------------------------------
+--------------------question--------------------
+Consider a diet problem. Given a set of foods `Foods` and a set of nutrients `Nutrients` which is the union of nutrients with minimum requirements `MinRequirements` and nutrients with maximum requirements `MaxRequirements`. Each food `j` has a cost `Cost_{j}` and the amount of each nutrient `i` it contains is `NutrientAmount_{i, j}`. The problem aims to minimize the total cost of buying foods. It is constrained that the total amount of each nutrient `i` with minimum requirements in the foods bought is at least `MinRequirement_{i}` and the total amount of each nutrient `i` with maximum requirements in the foods bought is at most `MaxRequirement_{i}`. How to decide the amount of each food `j` to buy?
+
+The following parameters are included in this problem:
+cost: list of costs for each food item, length is the number of foods
+f_min: list of minimum amounts to buy for each food item, length is the number of foods
+f_max: list of maximum amounts to buy for each food item, length is the number of foods
+n_min: list of minimum nutrient requirements, length is the number of nutrients
+n_max: list of maximum nutrient requirements, length is the number of nutrients
+amt: 2D list where amt[i][j] is the amount of nutrient i in food j, dimensions are nutrients x foods
+
+
+The following data is included in this problem:
+{'cost': [2, 3, 1.5], 'f_min': [0, 0, 0], 'f_max': [100, 100, 100], 'n_min': [50, 60], 'n_max': [200, 250], 'amt': [[2, 1, 3], [3, 4, 2]]}
+--------------------pred_answers--------------------
+['41.0']
+--------------------gt_answer--------------------
+45
+--------------------judge--------------------
+False
+------------------------------------------------------------
+--------------------question--------------------
+Consider a transportation problem with multiple products. Given a set of cities `Cities` and a set of links `Links` between the cities. Each city `i` has a certain supply of each product `p` `Supply_{i,p}` and a certain demand for each product `p` `Demand_{i,p}`. The cost of shipping one package of product `p` from city `i` to city `j` is `ShipmentCost_{i, j, p}`. Each link `(i, j)` has a certain capacity for each product `p` `Capacity_{i,j,p}` and a joint capacity `JointCapacity_{i, j}` for all products. The problem aims to minimize the total cost of shipping products from the cities to the cities. The total number of packages to be shipped on each link `(i, j)` should not exceed its joint capacity. How to decide the number of packages of each product `p` to be shipped from each city `i` to each city `j`?
+
+The following parameters are included in this problem:
+Cities: list, a list of cities
+Links: list, a list of links between the cities
+Products: list, a list of products
+Supply: list of lists, the supply of each product at each city
+Demand: list of lists, the demand of each product at each city
+ShipmentCost: list of lists of lists, the cost of shipping each product from each city to each city
+Capacity: list of lists of lists, the capacity of shipping each product from each city to each city
+JointCapacity: list of lists, the joint capacity of each link
+
+
+The following data is included in this problem:
+{'Cities': ['A', 'B'], 'Links': [['A', 'B']], 'Products': ['Product1'], 'Supply': [[10], [0]], 'Demand': [[0], [10]], 'ShipmentCost': [[[1]]], 'Capacity': [[[10]]], 'JointCapacity': [[10]]}
+--------------------pred_answers--------------------
+[None]
+--------------------gt_answer--------------------
+10
+--------------------judge--------------------
+False
+------------------------------------------------------------
+--------------------question--------------------
+The main media selection problem is a problem of allocating advertising budgets between possible advertising outlets. Given a set of media options, it aims to determine which media should be selected so that all audiences are reached with minimum campaign cost. It does not matter if an audience is covered more than once, as long as it is covered at least once. Moreover, the company does not wish to spend more money on the campaign than necessary.
+
+The following parameters are included in this problem:
+target_audiences: List of target audiences (typically a list of integers)
+advertising_media: List of advertising media (typically a list of integers)
+incidence_matrix: 2D list where incidence_matrix[t][m] indicates if audience t is covered by media m
+media_costs: List of costs associated with each advertising media
+
+
+The following data is included in this problem:
+{'target_audiences': [0, 1, 2], 'advertising_media': [0, 1, 2], 'incidence_matrix': [[1, 0, 1], [1, 1, 0], [0, 1, 1]], 'media_costs': [10, 15, 20]}
+--------------------pred_answers--------------------
+['25.0']
+--------------------gt_answer--------------------
+25
+--------------------judge--------------------
+True
+------------------------------------------------------------
+--------------------question--------------------
+Consider a problem where we have a set `P`. For each element `j` in `P`, we have a parameter `a[j]`, a parameter `c[j]`, and a parameter `u[j]`. We also have a global parameter `b`. We have a variable `X[j]` for each `j` in `P`. The goal is to maximize the total profit, which is the sum of `c[j] * X[j]` for all `j` in `P`. The constraints are that the sum of `(1/a[j]) * X[j]` for all `j` in `P` should be less than or equal to `b`, and `X[j]` should be between 0 and `u[j]` for all `j` in `P`.
+
+The following parameters are included in this problem:
+a: a list of integers, parameter for each element in set P
+c: a list of integers, profit coefficient for each element in set P
+u: a list of integers, upper limit for each element in set P
+b: an integer, the global constraint parameter
+
+
+The following data is included in this problem:
+{'a': [3, 1, 2], 'c': [5, 10, 8], 'u': [4, 6, 3], 'b': 4}
+--------------------pred_answers--------------------
+['55.66666666666667']
+--------------------gt_answer--------------------
+66
+--------------------judge--------------------
+False
+------------------------------------------------------------
+--------------------question--------------------
+The problem aims to determine the optimal amounts of alloys to purchase in order to achieve a desired blend of required elements at the minimum cost. We are given a set of alloys available on the market and a set of required elements for the blend, the percentage composition data of each required element in each alloy, the desired blend percentage of each required element, the price of each alloy. The decision is the amount of each alloy to be purchased, which is continuous. The objective is to minimize the total cost of the alloy purchased. There are two constraints. The first set of constraints ensures that the desired blend percentage of each required element is met. The second constraint ensures that the total amount of alloys purchased is equal to 1.
+
+The following parameters are included in this problem:
+alloys_on_market: list of integers, IDs of available alloys on the market
+required_elements: list of strings, IDs of required elements
+composition_data: 2D list of floats, percentage of each required element in each alloy
+desired_blend_percentage: list of floats, desired blend percentage for each element
+alloy_price: list of floats, price of each alloy
+
+
+The following data is included in this problem:
+{'alloys_on_market': [0, 1], 'required_elements': ['A', 'B'], 'composition_data': [[0.5, 0.1], [0.5, 0.9]], 'desired_blend_percentage': [0.5, 0.5], 'alloy_price': [10.0, 20.0]}
+--------------------pred_answers--------------------
+['15.0']
+--------------------gt_answer--------------------
+10
+--------------------judge--------------------
+False
+------------------------------------------------------------
+--------------------question--------------------
+The Aircraft Assignment Problem aims to assign aircraft to routes in order to minimize the total cost while satisfying demand constraints with available aircraft. The problem involves a set of aircraft and a set of routes. Given the costs of assigning an aircraft to a route. The objective is to minimize the total cost of the assignment. There are limited available aircraft. It is constrained that the number of each aircraft allocated does not exceed its available number. Given the demand of each route and the capabilities (the largest number of people can be carried) of an aircraft for a route. The demand constraint ensures that the total allocation for each route satisfies the demand. The problem seeks to find the most cost-effective assignment of aircraft to routes.
+
+The following parameters are included in this problem:
+availability: list, availability of each aircraft
+demand: list, demand for each route
+capabilities: 2D list, capabilities of each aircraft for each route
+costs: 2D list, costs of assigning each aircraft to each route
+
+
+The following data is included in this problem:
+{'availability': [2, 3, 1], 'demand': [100, 150], 'capabilities': [[50, 70], [60, 80], [70, 90]], 'costs': [[100, 200], [150, 250], [200, 300]]}
+--------------------pred_answers--------------------
+['700.0']
+--------------------gt_answer--------------------
+700
+--------------------judge--------------------
+True
+{
+    "pass@1": 0.4444444444444444
+}

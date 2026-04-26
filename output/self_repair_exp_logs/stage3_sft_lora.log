@@ -1,0 +1,848 @@
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+[2026-04-15 18:54:49,094] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-04-15 18:54:49,486] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-04-15 18:54:49,673] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-04-15 18:54:49,762] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-04-15 18:54:49,862] [INFO] [comm.py:652:init_distributed] cdb=None
+WARNING:__main__:Process rank: 1, device: cuda:1, n_gpu: 1distributed training: True, 16-bits training: False
+[2026-04-15 18:54:50,401] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-04-15 18:54:50,431] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-04-15 18:54:50,431] [INFO] [comm.py:683:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2026-04-15 18:54:50,488] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 4
+[2026-04-15 18:54:50,537] [INFO] [comm.py:652:init_distributed] cdb=None
+WARNING:__main__:Process rank: 3, device: cuda:3, n_gpu: 1distributed training: True, 16-bits training: False
+WARNING:__main__:Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: False
+INFO:__main__:Training parameters TrainingArguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+average_tokens_across_devices=True,
+batch_eval_metrics=False,
+bf16=True,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=14400,
+debug=[],
+deepspeed=config/sft_config.json,
+disable_tqdm=False,
+do_eval=False,
+do_predict=False,
+do_train=False,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=IntervalStrategy.NO,
+eval_use_gather_object=False,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=4,
+gradient_checkpointing=True,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_revision=None,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=no,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=5e-05,
+length_column_name=length,
+liger_kernel_config=None,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=./output/self_repair_sft_lora_train100/runs/Apr15_18-54-49_ubuntu-14,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=1.0,
+logging_strategy=IntervalStrategy.STEPS,
+lr_scheduler_kwargs={},
+lr_scheduler_type=SchedulerType.COSINE,
+max_grad_norm=1.0,
+max_steps=20,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=1.0,
+optim=OptimizerNames.ADAMW_TORCH_FUSED,
+optim_args=None,
+optim_target_modules=None,
+output_dir=./output/self_repair_sft_lora_train100,
+overwrite_output_dir=True,
+parallelism_config=None,
+past_index=-1,
+per_device_eval_batch_size=1,
+per_device_train_batch_size=1,
+prediction_loss_only=False,
+project=huggingface,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=['tensorboard'],
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+run_name=None,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=SaveStrategy.NO,
+save_total_limit=None,
+seed=42,
+skip_memory_metrics=True,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+trackio_space_id=trackio,
+use_cpu=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+warmup_ratio=0.03,
+warmup_steps=0,
+weight_decay=0.0,
+)
+[INFO|configuration_utils.py:763] 2026-04-15 18:54:50,892 >> loading configuration file ./output/sft_qwen3_8b_dir_3Ksample_1epoch/config.json
+[INFO|configuration_utils.py:839] 2026-04-15 18:54:50,894 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "dtype": "bfloat16",
+  "eos_token_id": 151645,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 12288,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 40960,
+  "max_window_layers": 36,
+  "model_type": "qwen3",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 36,
+  "num_key_value_heads": 8,
+  "pad_token_id": 151643,
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": null,
+  "rope_theta": 1000000,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "transformers_version": "4.57.1",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151669
+}
+
+[INFO|tokenization_utils_base.py:2093] 2026-04-15 18:54:50,897 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2093] 2026-04-15 18:54:50,897 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2093] 2026-04-15 18:54:50,897 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2093] 2026-04-15 18:54:50,897 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2093] 2026-04-15 18:54:50,897 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2093] 2026-04-15 18:54:50,897 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2093] 2026-04-15 18:54:50,897 >> loading file chat_template.jinja
+WARNING:__main__:Process rank: 2, device: cuda:2, n_gpu: 1distributed training: True, 16-bits training: False
+[2026-04-15 18:54:51,238] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 4
+[2026-04-15 18:54:51,268] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 4
+[INFO|tokenization_utils_base.py:2364] 2026-04-15 18:54:51,394 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|modeling_utils.py:1169] 2026-04-15 18:54:51,400 >> loading weights file ./output/sft_qwen3_8b_dir_3Ksample_1epoch/model.safetensors.index.json
+[INFO|modeling_utils.py:4373] 2026-04-15 18:54:51,400 >> Detected DeepSpeed ZeRO-3: activating zero.init() for this model
+[2026-04-15 18:54:51,401] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 4
+[INFO|configuration_utils.py:986] 2026-04-15 18:54:51,409 >> Generate config GenerationConfig {
+  "eos_token_id": 151645,
+  "pad_token_id": 151643
+}
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s][2026-04-15 18:54:56,359] [INFO] [partition_parameters.py:348:__exit__] finished initializing model - num_params = 399, num_elems = 8.19B
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:08,  2.70s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:07,  2.64s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:08,  2.72s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:08,  2.84s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:05<00:05,  2.72s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:05<00:05,  2.74s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:05<00:05,  2.75s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:05<00:05,  2.77s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:08<00:02,  2.73s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:08<00:02,  2.72s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:08<00:02,  2.71s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:08<00:02,  2.73s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.02s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.28s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.02s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.28s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.01s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.26s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.01s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.29s/it]
+[INFO|configuration_utils.py:939] 2026-04-15 18:55:05,526 >> loading configuration file ./output/sft_qwen3_8b_dir_3Ksample_1epoch/generation_config.json
+[INFO|configuration_utils.py:986] 2026-04-15 18:55:05,527 >> Generate config GenerationConfig {
+  "do_sample": true,
+  "eos_token_id": [
+    151645,
+    151643
+  ],
+  "pad_token_id": 151643,
+  "temperature": 0.6,
+  "top_k": 20,
+  "top_p": 0.95
+}
+
+[INFO|dynamic_module_utils.py:423] 2026-04-15 18:55:05,527 >> Could not locate the custom_generate/generate.py inside ./output/sft_qwen3_8b_dir_3Ksample_1epoch.
+[INFO|modeling_utils.py:3326] 2026-04-15 18:55:05,527 >> You are resizing the embedding layer without providing a `pad_to_multiple_of` parameter. This means that the new embedding dimension will be 151669. This might induce some performance reduction as *Tensor Cores* will not be available. For more details about this, or help on choosing the correct value for resizing, refer to this guide: https://docs.nvidia.com/deeplearning/performance/dl-performance-matrix-multiplication/index.html#requirements-tc
+INFO:__main__:Initializing LORA model...
+INFO:__main__:LoraConfig: LoraConfig(task_type=<TaskType.CAUSAL_LM: 'CAUSAL_LM'>, peft_type=<PeftType.LORA: 'LORA'>, auto_mapping=None, base_model_name_or_path=None, revision=None, inference_mode=False, r=16, target_modules={'k_proj', 'up_proj', 'q_proj', 'v_proj', 'o_proj', 'down_proj', 'gate_proj'}, exclude_modules=None, lora_alpha=32, lora_dropout=0.05, fan_in_fan_out=False, bias='none', use_rslora=False, modules_to_save=None, init_lora_weights=True, layers_to_transform=None, layers_pattern=None, rank_pattern={}, alpha_pattern={}, megatron_config=None, megatron_core='megatron.core', trainable_token_indices=None, loftq_config={}, eva_config=None, corda_config=None, use_dora=False, use_qalora=False, qalora_group_size=16, layer_replication=None, runtime_config=LoraRuntimeConfig(ephemeral_gpu_offload=False), lora_bias=False, target_parameters=None)
+trainable params: 43,646,976 || all params: 8,232,195,072 || trainable%: 0.5302
+trainable params: 43,646,976 || all params: 8,232,195,072 || trainable%: 0.5302
+trainable params: 43,646,976 || all params: 8,232,195,072 || trainable%: 0.5302
+trainable params: 43,646,976 || all params: 8,232,195,072 || trainable%: 0.5302
+Generating train split: 0 examples [00:00, ? examples/s]Generating train split: 1 examples [00:00, 857.91 examples/s]
+/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py:181: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+Using custom data configuration default-c5069021098e12f7
+INFO:datasets.builder:Using custom data configuration default-c5069021098e12f7
+Found cached dataset json (/home/wan/.cache/huggingface/datasets/json/default-c5069021098e12f7/0.0.0/95cd12cb79bdd40ece813ca76cc5f709067bfb719d56048dc7651d7403a4c3d2)
+INFO:datasets.builder:Found cached dataset json (/home/wan/.cache/huggingface/datasets/json/default-c5069021098e12f7/0.0.0/95cd12cb79bdd40ece813ca76cc5f709067bfb719d56048dc7651d7403a4c3d2)
+/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py:181: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+[INFO|trainer.py:699] 2026-04-15 18:55:09,930 >> max_steps is given, it will override any value given in num_train_epochs
+[INFO|trainer.py:749] 2026-04-15 18:55:09,930 >> Using auto half precision backend
+INFO:__main__:*** Train ***
+/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py:181: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py:181: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+WARNING:accelerate.accelerator:Gradient accumulation steps mismatch: GradientAccumulationPlugin has 1, DeepSpeed config has 4. Using DeepSpeed's value.
+[2026-04-15 18:55:10,302] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed info: version=0.15.1+unknown, git-hash=unknown, git-branch=unknown
+[2026-04-15 18:55:10,302] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 4
+[2026-04-15 18:55:10,330] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+ninja: no work to do.
+Time to load cpu_adam op: 2.4594075679779053 seconds
+ninja: no work to do.
+Time to load cpu_adam op: 2.4555118083953857 seconds
+Adam Optimizer #0 is created with AVX512 arithmetic capability.
+Config: alpha=0.000050, betas=(0.900000, 0.999000), weight_decay=0.000000, adam_w=1
+[2026-04-15 18:55:14,067] [INFO] [logging.py:96:log_dist] [Rank 0] Using DeepSpeed Optimizer param name adamw as basic optimizer
+[2026-04-15 18:55:14,067] [INFO] [logging.py:96:log_dist] [Rank 0] Removing param_group that has no 'params' in the basic Optimizer
+[2026-04-15 18:55:14,096] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Basic Optimizer = DeepSpeedCPUAdam
+[2026-04-15 18:55:14,096] [INFO] [utils.py:59:is_zero_supported_optimizer] Checking ZeRO support for optimizer=DeepSpeedCPUAdam type=<class 'deepspeed.ops.adam.cpu_adam.DeepSpeedCPUAdam'>
+[2026-04-15 18:55:14,096] [INFO] [logging.py:96:log_dist] [Rank 0] Creating fp16 ZeRO stage 3 optimizer, MiCS is enabled False, Hierarchical params gather False
+[2026-04-15 18:55:14,097] [INFO] [logging.py:96:log_dist] [Rank 0] Creating torch.bfloat16 ZeRO stage 3 optimizer
+ninja: no work to do.
+Time to load cpu_adam op: 2.5054566860198975 seconds
+ninja: no work to do.
+Time to load cpu_adam op: 2.5926084518432617 seconds
+[2026-04-15 18:55:14,305] [INFO] [utils.py:781:see_memory_usage] Stage 3 initialize beginning
+[2026-04-15 18:55:14,306] [INFO] [utils.py:782:see_memory_usage] MA 2.4 GB         Max_MA 4.63 GB         CA 2.49 GB         Max_CA 5 GB 
+[2026-04-15 18:55:14,306] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 63.27 GB, percent = 12.6%
+[2026-04-15 18:55:14,312] [INFO] [stage3.py:164:__init__] Reduce bucket size 16777216
+[2026-04-15 18:55:14,312] [INFO] [stage3.py:165:__init__] Prefetch bucket size 15099494
+[2026-04-15 18:55:14,444] [INFO] [utils.py:781:see_memory_usage] DeepSpeedZeRoOffload initialize [begin]
+[2026-04-15 18:55:14,445] [INFO] [utils.py:782:see_memory_usage] MA 2.4 GB         Max_MA 2.4 GB         CA 2.49 GB         Max_CA 2 GB 
+[2026-04-15 18:55:14,445] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 63.27 GB, percent = 12.6%
+Parameter Offload: Total persistent parameters: 1487872 in 217 params
+/home/wan/enter/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/wan/enter/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/wan/enter/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[2026-04-15 18:55:15,270] [INFO] [utils.py:781:see_memory_usage] DeepSpeedZeRoOffload initialize [end]
+[2026-04-15 18:55:15,271] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 2.4 GB         CA 2.49 GB         Max_CA 2 GB 
+[2026-04-15 18:55:15,271] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 63.43 GB, percent = 12.6%
+[2026-04-15 18:55:15,414] [INFO] [utils.py:781:see_memory_usage] Before creating fp16 partitions
+[2026-04-15 18:55:15,415] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 2.49 GB         Max_CA 2 GB 
+[2026-04-15 18:55:15,415] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 63.42 GB, percent = 12.6%
+/home/wan/enter/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[2026-04-15 18:55:15,606] [INFO] [utils.py:781:see_memory_usage] After creating fp16 partitions: 1
+[2026-04-15 18:55:15,607] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 2.49 GB         Max_CA 2 GB 
+[2026-04-15 18:55:15,607] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 63.75 GB, percent = 12.7%
+[2026-04-15 18:55:15,751] [INFO] [utils.py:781:see_memory_usage] Before creating fp32 partitions
+[2026-04-15 18:55:15,752] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 2.49 GB         Max_CA 2 GB 
+[2026-04-15 18:55:15,752] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 63.75 GB, percent = 12.7%
+[2026-04-15 18:55:15,948] [INFO] [utils.py:781:see_memory_usage] After creating fp32 partitions
+[2026-04-15 18:55:15,948] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 2.49 GB         Max_CA 2 GB 
+[2026-04-15 18:55:15,948] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 63.81 GB, percent = 12.7%
+[2026-04-15 18:55:16,135] [INFO] [utils.py:781:see_memory_usage] Before initializing optimizer states
+[2026-04-15 18:55:16,136] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 2.49 GB         Max_CA 2 GB 
+[2026-04-15 18:55:16,136] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 62.73 GB, percent = 12.5%
+[2026-04-15 18:55:16,363] [INFO] [utils.py:781:see_memory_usage] After initializing optimizer states
+[2026-04-15 18:55:16,364] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 2.49 GB         Max_CA 2 GB 
+[2026-04-15 18:55:16,364] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 62.81 GB, percent = 12.5%
+[2026-04-15 18:55:16,364] [INFO] [stage3.py:517:_setup_for_real_optimizer] optimizer state initialized
+/home/wan/enter/lib/python3.13/site-packages/transformers/data/data_collator.py:740: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /pytorch/torch/csrc/utils/tensor_new.cpp:253.)
+  batch["labels"] = torch.tensor(batch["labels"], dtype=torch.int64)
+/home/wan/enter/lib/python3.13/site-packages/transformers/data/data_collator.py:740: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /pytorch/torch/csrc/utils/tensor_new.cpp:253.)
+  batch["labels"] = torch.tensor(batch["labels"], dtype=torch.int64)
+[WARNING|logging.py:328] 2026-04-15 18:55:16,683 >> `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+[WARNING|logging.py:328] 2026-04-15 18:55:16,686 >> `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+/home/wan/enter/lib/python3.13/site-packages/transformers/data/data_collator.py:740: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /pytorch/torch/csrc/utils/tensor_new.cpp:253.)
+  batch["labels"] = torch.tensor(batch["labels"], dtype=torch.int64)
+[WARNING|logging.py:328] 2026-04-15 18:55:16,742 >> `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+[2026-04-15 18:55:16,743] [INFO] [utils.py:781:see_memory_usage] After initializing ZeRO optimizer
+[2026-04-15 18:55:16,744] [INFO] [utils.py:782:see_memory_usage] MA 0.03 GB         Max_MA 0.03 GB         CA 2.49 GB         Max_CA 2 GB 
+[2026-04-15 18:55:16,744] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 63.16 GB, percent = 12.5%
+[2026-04-15 18:55:16,744] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Final Optimizer = DeepSpeedZeroOptimizer_Stage3
+[2026-04-15 18:55:16,744] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed using configured LR scheduler = WarmupDecayLR
+[2026-04-15 18:55:16,744] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed LR Scheduler = <deepspeed.runtime.lr_schedules.WarmupDecayLR object at 0x70e2397b8440>
+[2026-04-15 18:55:16,744] [INFO] [logging.py:96:log_dist] [Rank 0] step=0, skipped=0, lr=[5e-05], mom=[[0.9, 0.999]]
+[2026-04-15 18:55:16,749] [INFO] [config.py:999:print] DeepSpeedEngine configuration:
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   activation_checkpointing_config  {
+    "partition_activations": false, 
+    "contiguous_memory_optimization": false, 
+    "cpu_checkpointing": false, 
+    "number_checkpoints": null, 
+    "synchronize_checkpoint_boundary": false, 
+    "profile": false
+}
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True, 'use_gds': False}
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   amp_enabled .................. False
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   amp_params ................... False
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   autotuning_config ............ {
+    "enabled": false, 
+    "start_step": null, 
+    "end_step": null, 
+    "metric_path": null, 
+    "arg_mappings": null, 
+    "metric": "throughput", 
+    "model_info": null, 
+    "results_dir": "autotuning_results", 
+    "exps_dir": "autotuning_exps", 
+    "overwrite": true, 
+    "fast": true, 
+    "start_profile_step": 3, 
+    "end_profile_step": 5, 
+    "tuner_type": "gridsearch", 
+    "tuner_early_stopping": 5, 
+    "tuner_num_trials": 50, 
+    "model_info_path": null, 
+    "mp_size": 1, 
+    "max_train_batch_size": null, 
+    "min_train_batch_size": 1, 
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+    "min_train_micro_batch_size_per_gpu": 1, 
+    "num_tuning_micro_batch_sizes": 3
+}
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   bfloat16_enabled ............. True
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   bfloat16_immediate_grad_update  False
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   checkpoint_parallel_write_pipeline  False
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   checkpoint_tag_validation_enabled  True
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   checkpoint_tag_validation_fail  False
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x70e2746d9bd0>
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   communication_data_type ...... None
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   curriculum_enabled_legacy .... False
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   curriculum_params_legacy ..... False
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   data_efficiency_enabled ...... False
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   dataloader_drop_last ......... False
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   disable_allgather ............ False
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   dump_state ................... False
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   dynamic_loss_scale_args ...... None
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   eigenvalue_enabled ........... False
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   eigenvalue_gas_boundary_resolution  1
+[2026-04-15 18:55:16,749] [INFO] [config.py:1003:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   eigenvalue_layer_num ......... 0
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   eigenvalue_max_iter .......... 100
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   eigenvalue_stability ......... 1e-06
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   eigenvalue_tol ............... 0.01
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   eigenvalue_verbose ........... False
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   elasticity_enabled ........... False
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   flops_profiler_config ........ {
+    "enabled": false, 
+    "recompute_fwd_factor": 0.0, 
+    "profile_step": 1, 
+    "module_depth": -1, 
+    "top_modules": 1, 
+    "detailed": true, 
+    "output_file": null
+}
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   fp16_auto_cast ............... None
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   fp16_enabled ................. False
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   fp16_master_weights_and_gradients  False
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   global_rank .................. 0
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   grad_accum_dtype ............. None
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   gradient_accumulation_steps .. 4
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   gradient_clipping ............ 1.0
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   gradient_predivide_factor .... 1.0
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   graph_harvesting ............. False
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   initial_dynamic_scale ........ 1
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   load_universal_checkpoint .... False
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   loss_scale ................... 1.0
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   memory_breakdown ............. False
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   mics_hierarchial_params_gather  False
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   mics_shard_size .............. -1
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') comet=CometConfig(enabled=False, samples_log_interval=100, project=None, workspace=None, api_key=None, experiment_name=None, experiment_key=None, online=None, mode=None) wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName')
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   nebula_config ................ {
+    "enabled": false, 
+    "persistent_storage_path": null, 
+    "persistent_time_interval": 100, 
+    "num_of_version_in_retention": 2, 
+    "enable_nebula_load": true, 
+    "load_path": null
+}
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   optimizer_legacy_fusion ...... False
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   optimizer_name ............... adamw
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   optimizer_params ............. {'lr': 5e-05, 'betas': [0.9, 0.999], 'eps': 1e-08, 'weight_decay': 0.0}
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0, 'pipe_partitioned': True, 'grad_partitioned': True}
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   pld_enabled .................. False
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   pld_params ................... False
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   prescale_gradients ........... False
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   scheduler_name ............... WarmupDecayLR
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   scheduler_params ............. {'total_num_steps': 20, 'warmup_min_lr': 0, 'warmup_max_lr': 5e-05, 'warmup_num_steps': 1}
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   seq_parallel_communication_data_type  torch.float32
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   sparse_attention ............. None
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   sparse_gradients_enabled ..... False
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   steps_per_print .............. inf
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   timers_config ................ enabled=True synchronized=True
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   train_batch_size ............. 16
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   train_micro_batch_size_per_gpu  1
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   use_data_before_expert_parallel_  False
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   use_node_local_storage ....... False
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   wall_clock_breakdown ......... False
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   weight_quantization_config ... None
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   world_size ................... 4
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   zero_allow_untested_optimizer  False
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   zero_config .................. stage=3 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=16777216 use_multi_rank_bucket_allreduce=True allgather_partitions=True allgather_bucket_size=500000000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=DeepSpeedZeroOffloadParamConfig(device='cpu', nvme_path=None, buffer_count=5, buffer_size=100000000, max_in_cpu=1000000000, pin_memory=True) offload_optimizer=DeepSpeedZeroOffloadOptimizerConfig(device='cpu', nvme_path=None, buffer_count=4, pin_memory=True, pipeline_read=False, pipeline_write=False, fast_init=False, ratio=1.0) sub_group_size=1000000000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=15099494 param_persistence_threshold=40960 model_persistence_threshold=9223372036854775807 max_live_parameters=1000000000 max_reuse_distance=1000000000 gather_16bit_weights_on_model_save=True use_all_reduce_for_fetch_params=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_nontrainable_weights=False zero_quantized_gradients=False mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   zero_enabled ................. True
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   zero_force_ds_cpu_optimizer .. True
+[2026-04-15 18:55:16,750] [INFO] [config.py:1003:print]   zero_optimization_stage ...... 3
+[2026-04-15 18:55:16,750] [INFO] [config.py:989:print_user_config]   json = {
+    "bf16": {
+        "enabled": true
+    }, 
+    "optimizer": {
+        "type": "AdamW", 
+        "params": {
+            "lr": 5e-05, 
+            "betas": [0.9, 0.999], 
+            "eps": 1e-08, 
+            "weight_decay": 0.0
+        }
+    }, 
+    "scheduler": {
+        "type": "WarmupDecayLR", 
+        "params": {
+            "total_num_steps": 20, 
+            "warmup_min_lr": 0, 
+            "warmup_max_lr": 5e-05, 
+            "warmup_num_steps": 1
+        }
+    }, 
+    "zero_optimization": {
+        "stage": 3, 
+        "offload_optimizer": {
+            "device": "cpu", 
+            "pin_memory": true
+        }, 
+        "offload_param": {
+            "device": "cpu", 
+            "pin_memory": true
+        }, 
+        "overlap_comm": true, 
+        "contiguous_gradients": true, 
+        "sub_group_size": 1.000000e+09, 
+        "reduce_bucket_size": 1.677722e+07, 
+        "stage3_prefetch_bucket_size": 1.509949e+07, 
+        "stage3_param_persistence_threshold": 4.096000e+04, 
+        "stage3_max_live_parameters": 1.000000e+09, 
+        "stage3_max_reuse_distance": 1.000000e+09, 
+        "stage3_gather_16bit_weights_on_model_save": true
+    }, 
+    "gradient_accumulation_steps": 4, 
+    "gradient_clipping": 1.0, 
+    "steps_per_print": inf, 
+    "train_batch_size": 16, 
+    "train_micro_batch_size_per_gpu": 1, 
+    "wall_clock_breakdown": false, 
+    "fp16": {
+        "enabled": false
+    }
+}
+[INFO|trainer.py:2519] 2026-04-15 18:55:16,752 >> ***** Running training *****
+[INFO|trainer.py:2520] 2026-04-15 18:55:16,752 >>   Num examples = 1
+[INFO|trainer.py:2521] 2026-04-15 18:55:16,752 >>   Num Epochs = 20
+[INFO|trainer.py:2522] 2026-04-15 18:55:16,752 >>   Instantaneous batch size per device = 1
+[INFO|trainer.py:2525] 2026-04-15 18:55:16,752 >>   Total train batch size (w. parallel, distributed & accumulation) = 16
+[INFO|trainer.py:2526] 2026-04-15 18:55:16,752 >>   Gradient Accumulation steps = 4
+[INFO|trainer.py:2527] 2026-04-15 18:55:16,752 >>   Total optimization steps = 20
+[INFO|trainer.py:2528] 2026-04-15 18:55:16,756 >>   Number of trainable parameters = 43,646,976
+  0%|          | 0/20 [00:00<?, ?it/s]/home/wan/enter/lib/python3.13/site-packages/transformers/data/data_collator.py:740: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /pytorch/torch/csrc/utils/tensor_new.cpp:253.)
+  batch["labels"] = torch.tensor(batch["labels"], dtype=torch.int64)
+[WARNING|logging.py:328] 2026-04-15 18:55:16,853 >> `use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`.
+/home/wan/enter/lib/python3.13/site-packages/torch/utils/checkpoint.py:85: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/home/wan/enter/lib/python3.13/site-packages/torch/utils/checkpoint.py:85: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/home/wan/enter/lib/python3.13/site-packages/torch/utils/checkpoint.py:85: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+/home/wan/enter/lib/python3.13/site-packages/torch/utils/checkpoint.py:85: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn(
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "<frozen runpy>", line 198, in _run_module_as_main
+[rank1]:   File "<frozen runpy>", line 88, in _run_code
+[rank1]:   File "/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py", line 208, in <module>
+[rank1]:     main()
+[rank1]:     ~~~~^^
+[rank1]:   File "/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py", line 197, in main
+[rank1]:     train_result = trainer.train(resume_from_checkpoint=checkpoint)
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 2325, in train
+[rank1]:     return inner_training_loop(
+[rank1]:         args=args,
+[rank1]:     ...<2 lines>...
+[rank1]:         ignore_keys_for_eval=ignore_keys_for_eval,
+[rank1]:     )
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+[rank1]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 4071, in training_step
+[rank1]:     self.accelerator.backward(loss, **kwargs)
+[rank1]:     ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/accelerate/accelerator.py", line 2732, in backward
+[rank1]:     self.deepspeed_engine_wrapped.backward(loss, sync_gradients=self.sync_gradients, **kwargs)
+[rank1]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/accelerate/utils/deepspeed.py", line 270, in backward
+[rank1]:     self.engine.backward(loss, **kwargs)
+[rank1]:     ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+[rank1]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/utils/nvtx.py", line 18, in wrapped_fn
+[rank1]:     ret_val = func(*args, **kwargs)
+[rank1]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/engine.py", line 2020, in backward
+[rank1]:     self.optimizer.backward(loss, retain_graph=retain_graph)
+[rank1]:     ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/utils/nvtx.py", line 18, in wrapped_fn
+[rank1]:     ret_val = func(*args, **kwargs)
+[rank1]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/zero/stage3.py", line 2247, in backward
+[rank1]:     self.loss_scaler.backward(loss.float(), retain_graph=retain_graph)
+[rank1]:     ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/fp16/loss_scaler.py", line 63, in backward
+[rank1]:     scaled_loss.backward(retain_graph=retain_graph)
+[rank1]:     ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/_tensor.py", line 647, in backward
+[rank1]:     torch.autograd.backward(
+[rank1]:     ~~~~~~~~~~~~~~~~~~~~~~~^
+[rank1]:         self, gradient, retain_graph, create_graph, inputs=inputs
+[rank1]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:     )
+[rank1]:     ^
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/autograd/__init__.py", line 354, in backward
+[rank1]:     _engine_run_backward(
+[rank1]:     ~~~~~~~~~~~~~~~~~~~~^
+[rank1]:         tensors,
+[rank1]:         ^^^^^^^^
+[rank1]:     ...<5 lines>...
+[rank1]:         accumulate_grad=True,
+[rank1]:         ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:     )
+[rank1]:     ^
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/autograd/graph.py", line 829, in _engine_run_backward
+[rank1]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank1]:            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:         t_outputs, *args, **kwargs
+[rank1]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:     )  # Calls into the C++ engine to run the backward pass
+[rank1]:     ^
+[rank1]: RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "<frozen runpy>", line 198, in _run_module_as_main
+[rank0]:   File "<frozen runpy>", line 88, in _run_code
+[rank0]:   File "/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py", line 208, in <module>
+[rank0]:     main()
+[rank0]:     ~~~~^^
+[rank0]:   File "/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py", line 197, in main
+[rank0]:     train_result = trainer.train(resume_from_checkpoint=checkpoint)
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 2325, in train
+[rank0]:     return inner_training_loop(
+[rank0]:         args=args,
+[rank0]:     ...<2 lines>...
+[rank0]:         ignore_keys_for_eval=ignore_keys_for_eval,
+[rank0]:     )
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+[rank0]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 4071, in training_step
+[rank0]:     self.accelerator.backward(loss, **kwargs)
+[rank0]:     ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/accelerate/accelerator.py", line 2732, in backward
+[rank0]:     self.deepspeed_engine_wrapped.backward(loss, sync_gradients=self.sync_gradients, **kwargs)
+[rank0]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/accelerate/utils/deepspeed.py", line 270, in backward
+[rank0]:     self.engine.backward(loss, **kwargs)
+[rank0]:     ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+[rank0]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/utils/nvtx.py", line 18, in wrapped_fn
+[rank0]:     ret_val = func(*args, **kwargs)
+[rank0]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/engine.py", line 2020, in backward
+[rank0]:     self.optimizer.backward(loss, retain_graph=retain_graph)
+[rank0]:     ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/utils/nvtx.py", line 18, in wrapped_fn
+[rank0]:     ret_val = func(*args, **kwargs)
+[rank0]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/zero/stage3.py", line 2247, in backward
+[rank0]:     self.loss_scaler.backward(loss.float(), retain_graph=retain_graph)
+[rank0]:     ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/fp16/loss_scaler.py", line 63, in backward
+[rank0]:     scaled_loss.backward(retain_graph=retain_graph)
+[rank0]:     ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/_tensor.py", line 647, in backward
+[rank0]:     torch.autograd.backward(
+[rank0]:     ~~~~~~~~~~~~~~~~~~~~~~~^
+[rank0]:         self, gradient, retain_graph, create_graph, inputs=inputs
+[rank0]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:     )
+[rank0]:     ^
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/autograd/__init__.py", line 354, in backward
+[rank0]:     _engine_run_backward(
+[rank0]:     ~~~~~~~~~~~~~~~~~~~~^
+[rank0]:         tensors,
+[rank0]:         ^^^^^^^^
+[rank0]:     ...<5 lines>...
+[rank0]:         accumulate_grad=True,
+[rank0]:         ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:     )
+[rank0]:     ^
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/autograd/graph.py", line 829, in _engine_run_backward
+[rank0]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank0]:            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:         t_outputs, *args, **kwargs
+[rank0]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:     )  # Calls into the C++ engine to run the backward pass
+[rank0]:     ^
+[rank0]: RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "<frozen runpy>", line 198, in _run_module_as_main
+[rank2]:   File "<frozen runpy>", line 88, in _run_code
+[rank2]:   File "/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py", line 208, in <module>
+[rank2]:     main()
+[rank2]:     ~~~~^^
+[rank2]:   File "/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py", line 197, in main
+[rank2]:     train_result = trainer.train(resume_from_checkpoint=checkpoint)
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 2325, in train
+[rank2]:     return inner_training_loop(
+[rank2]:         args=args,
+[rank2]:     ...<2 lines>...
+[rank2]:         ignore_keys_for_eval=ignore_keys_for_eval,
+[rank2]:     )
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+[rank2]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 4071, in training_step
+[rank2]:     self.accelerator.backward(loss, **kwargs)
+[rank2]:     ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/accelerate/accelerator.py", line 2732, in backward
+[rank2]:     self.deepspeed_engine_wrapped.backward(loss, sync_gradients=self.sync_gradients, **kwargs)
+[rank2]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/accelerate/utils/deepspeed.py", line 270, in backward
+[rank2]:     self.engine.backward(loss, **kwargs)
+[rank2]:     ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+[rank2]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/utils/nvtx.py", line 18, in wrapped_fn
+[rank2]:     ret_val = func(*args, **kwargs)
+[rank2]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/engine.py", line 2020, in backward
+[rank2]:     self.optimizer.backward(loss, retain_graph=retain_graph)
+[rank2]:     ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/utils/nvtx.py", line 18, in wrapped_fn
+[rank2]:     ret_val = func(*args, **kwargs)
+[rank2]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/zero/stage3.py", line 2247, in backward
+[rank2]:     self.loss_scaler.backward(loss.float(), retain_graph=retain_graph)
+[rank2]:     ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/fp16/loss_scaler.py", line 63, in backward
+[rank2]:     scaled_loss.backward(retain_graph=retain_graph)
+[rank2]:     ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/_tensor.py", line 647, in backward
+[rank2]:     torch.autograd.backward(
+[rank2]:     ~~~~~~~~~~~~~~~~~~~~~~~^
+[rank2]:         self, gradient, retain_graph, create_graph, inputs=inputs
+[rank2]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:     )
+[rank2]:     ^
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/autograd/__init__.py", line 354, in backward
+[rank2]:     _engine_run_backward(
+[rank2]:     ~~~~~~~~~~~~~~~~~~~~^
+[rank2]:         tensors,
+[rank2]:         ^^^^^^^^
+[rank2]:     ...<5 lines>...
+[rank2]:         accumulate_grad=True,
+[rank2]:         ^^^^^^^^^^^^^^^^^^^^^
+[rank2]:     )
+[rank2]:     ^
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/autograd/graph.py", line 829, in _engine_run_backward
+[rank2]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank2]:            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:         t_outputs, *args, **kwargs
+[rank2]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:     )  # Calls into the C++ engine to run the backward pass
+[rank2]:     ^
+[rank2]: RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "<frozen runpy>", line 198, in _run_module_as_main
+[rank3]:   File "<frozen runpy>", line 88, in _run_code
+[rank3]:   File "/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py", line 208, in <module>
+[rank3]:     main()
+[rank3]:     ~~~~^^
+[rank3]:   File "/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py", line 197, in main
+[rank3]:     train_result = trainer.train(resume_from_checkpoint=checkpoint)
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 2325, in train
+[rank3]:     return inner_training_loop(
+[rank3]:         args=args,
+[rank3]:     ...<2 lines>...
+[rank3]:         ignore_keys_for_eval=ignore_keys_for_eval,
+[rank3]:     )
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+[rank3]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 4071, in training_step
+[rank3]:     self.accelerator.backward(loss, **kwargs)
+[rank3]:     ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/accelerate/accelerator.py", line 2732, in backward
+[rank3]:     self.deepspeed_engine_wrapped.backward(loss, sync_gradients=self.sync_gradients, **kwargs)
+[rank3]:     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/accelerate/utils/deepspeed.py", line 270, in backward
+[rank3]:     self.engine.backward(loss, **kwargs)
+[rank3]:     ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+[rank3]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/utils/nvtx.py", line 18, in wrapped_fn
+[rank3]:     ret_val = func(*args, **kwargs)
+[rank3]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/engine.py", line 2020, in backward
+[rank3]:     self.optimizer.backward(loss, retain_graph=retain_graph)
+[rank3]:     ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/utils/nvtx.py", line 18, in wrapped_fn
+[rank3]:     ret_val = func(*args, **kwargs)
+[rank3]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/zero/stage3.py", line 2247, in backward
+[rank3]:     self.loss_scaler.backward(loss.float(), retain_graph=retain_graph)
+[rank3]:     ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/fp16/loss_scaler.py", line 63, in backward
+[rank3]:     scaled_loss.backward(retain_graph=retain_graph)
+[rank3]:     ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/_tensor.py", line 647, in backward
+[rank3]:     torch.autograd.backward(
+[rank3]:     ~~~~~~~~~~~~~~~~~~~~~~~^
+[rank3]:         self, gradient, retain_graph, create_graph, inputs=inputs
+[rank3]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:     )
+[rank3]:     ^
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/autograd/__init__.py", line 354, in backward
+[rank3]:     _engine_run_backward(
+[rank3]:     ~~~~~~~~~~~~~~~~~~~~^
+[rank3]:         tensors,
+[rank3]:         ^^^^^^^^
+[rank3]:     ...<5 lines>...
+[rank3]:         accumulate_grad=True,
+[rank3]:         ^^^^^^^^^^^^^^^^^^^^^
+[rank3]:     )
+[rank3]:     ^
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/autograd/graph.py", line 829, in _engine_run_backward
+[rank3]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank3]:            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:         t_outputs, *args, **kwargs
+[rank3]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:     )  # Calls into the C++ engine to run the backward pass
+[rank3]:     ^
+[rank3]: RuntimeError: element 0 of tensors does not require grad and does not have a grad_fn
+  0%|          | 0/20 [00:05<?, ?it/s]
+W0415 18:55:24.166000 3451610 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3451737 closing signal SIGTERM
+W0415 18:55:24.167000 3451610 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3451739 closing signal SIGTERM
+W0415 18:55:24.167000 3451610 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3451740 closing signal SIGTERM
+E0415 18:55:26.010000 3451610 site-packages/torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 1 (pid: 3451738) of binary: /mnt/workspace0/WWWWWWWWWWWW/OR-R1/.venv/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/wan/enter/lib/python3.13/site-packages/torch/distributed/run.py", line 905, in <module>
+    main()
+    ~~~~^^
+  File "/home/wan/enter/lib/python3.13/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 357, in wrapper
+    return f(*args, **kwargs)
+  File "/home/wan/enter/lib/python3.13/site-packages/torch/distributed/run.py", line 901, in main
+    run(args)
+    ~~~^^^^^^
+  File "/home/wan/enter/lib/python3.13/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+    ~~~~~~~~~~~~~~~
+        config=config,
+        ~~~~~~~~~~~~~~
+        entrypoint=cmd,
+        ~~~~~~~~~~~~~~~
+    )(*cmd_args)
+    ~^^^^^^^^^^^
+  File "/home/wan/enter/lib/python3.13/site-packages/torch/distributed/launcher/api.py", line 143, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/wan/enter/lib/python3.13/site-packages/torch/distributed/launcher/api.py", line 277, in launch_agent
+    raise ChildFailedError(
+    ...<2 lines>...
+    )
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+01_sft_train FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-04-15_18:55:24
+  host      : ubuntu-14
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 3451738)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

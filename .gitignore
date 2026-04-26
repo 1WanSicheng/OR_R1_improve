@@ -1,0 +1,19 @@
+.venv/
+.hf_probe/
+.torch_extensions/
+__pycache__/
+*/__pycache__/
+eval_execute/
+*.pyc
+
+# model weights and checkpoints
+output/**/model-*.safetensors
+output/**/*.safetensors
+output/**/*.pt
+output/**/checkpoint-*/
+output/**/global_step*/
+output/**/runs/
+output/**/events.out.tfevents.*
+
+# local runtime noise
+.DS_Store

@@ -1,0 +1,8 @@
+{
+  "num_samples": 18,
+  "initial_pass@1": 0.4444444444444444,
+  "repaired_pass@1": 0.4444444444444444,
+  "initial_optimal_rate": 0.8333333333333334,
+  "repaired_optimal_rate": 0.8333333333333334,
+  "repair_improved_rate": 0.0
+}

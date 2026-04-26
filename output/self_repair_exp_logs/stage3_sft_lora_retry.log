@@ -1,0 +1,1131 @@
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+[2026-04-15 18:55:57,197] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-04-15 18:55:57,380] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-04-15 18:55:57,561] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-04-15 18:55:57,650] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-04-15 18:55:57,933] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-04-15 18:55:58,149] [INFO] [comm.py:652:init_distributed] cdb=None
+WARNING:__main__:Process rank: 3, device: cuda:3, n_gpu: 1distributed training: True, 16-bits training: False
+[2026-04-15 18:55:58,299] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-04-15 18:55:58,471] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-04-15 18:55:58,471] [INFO] [comm.py:683:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+WARNING:__main__:Process rank: 1, device: cuda:1, n_gpu: 1distributed training: True, 16-bits training: False
+[2026-04-15 18:55:58,596] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 4
+WARNING:__main__:Process rank: 2, device: cuda:2, n_gpu: 1distributed training: True, 16-bits training: False
+WARNING:__main__:Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: False
+INFO:__main__:Training parameters TrainingArguments(
+_n_gpu=1,
+accelerator_config={'split_batches': False, 'dispatch_batches': None, 'even_batches': True, 'use_seedable_sampler': True, 'non_blocking': False, 'gradient_accumulation_kwargs': None, 'use_configured_state': False},
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+average_tokens_across_devices=True,
+batch_eval_metrics=False,
+bf16=True,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+dataloader_prefetch_factor=None,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=14400,
+debug=[],
+deepspeed=config/sft_config.json,
+disable_tqdm=False,
+do_eval=False,
+do_predict=False,
+do_train=False,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_do_concat_batches=True,
+eval_on_start=False,
+eval_steps=None,
+eval_strategy=IntervalStrategy.NO,
+eval_use_gather_object=False,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_v2': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=4,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=None,
+hub_revision=None,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_for_metrics=[],
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=no,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=5e-05,
+length_column_name=length,
+liger_kernel_config=None,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=./output/self_repair_sft_lora_train100/runs/Apr15_18-55-57_ubuntu-14,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=1.0,
+logging_strategy=IntervalStrategy.STEPS,
+lr_scheduler_kwargs={},
+lr_scheduler_type=SchedulerType.COSINE,
+max_grad_norm=1.0,
+max_steps=20,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=1.0,
+optim=OptimizerNames.ADAMW_TORCH_FUSED,
+optim_args=None,
+optim_target_modules=None,
+output_dir=./output/self_repair_sft_lora_train100,
+overwrite_output_dir=True,
+parallelism_config=None,
+past_index=-1,
+per_device_eval_batch_size=1,
+per_device_train_batch_size=1,
+prediction_loss_only=False,
+project=huggingface,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=['tensorboard'],
+restore_callback_states_from_checkpoint=False,
+resume_from_checkpoint=None,
+run_name=None,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=500,
+save_strategy=SaveStrategy.NO,
+save_total_limit=None,
+seed=42,
+skip_memory_metrics=True,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torch_empty_cache_steps=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+trackio_space_id=trackio,
+use_cpu=False,
+use_legacy_prediction_loop=False,
+use_liger_kernel=False,
+use_mps_device=False,
+warmup_ratio=0.03,
+warmup_steps=0,
+weight_decay=0.0,
+)
+[INFO|configuration_utils.py:763] 2026-04-15 18:55:58,778 >> loading configuration file ./output/sft_qwen3_8b_dir_3Ksample_1epoch/config.json
+[INFO|configuration_utils.py:839] 2026-04-15 18:55:58,780 >> Model config Qwen3Config {
+  "architectures": [
+    "Qwen3ForCausalLM"
+  ],
+  "attention_bias": false,
+  "attention_dropout": 0.0,
+  "dtype": "bfloat16",
+  "eos_token_id": 151645,
+  "head_dim": 128,
+  "hidden_act": "silu",
+  "hidden_size": 4096,
+  "initializer_range": 0.02,
+  "intermediate_size": 12288,
+  "layer_types": [
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention",
+    "full_attention"
+  ],
+  "max_position_embeddings": 40960,
+  "max_window_layers": 36,
+  "model_type": "qwen3",
+  "num_attention_heads": 32,
+  "num_hidden_layers": 36,
+  "num_key_value_heads": 8,
+  "pad_token_id": 151643,
+  "rms_norm_eps": 1e-06,
+  "rope_scaling": null,
+  "rope_theta": 1000000,
+  "sliding_window": null,
+  "tie_word_embeddings": false,
+  "transformers_version": "4.57.1",
+  "use_cache": true,
+  "use_sliding_window": false,
+  "vocab_size": 151669
+}
+
+[INFO|tokenization_utils_base.py:2093] 2026-04-15 18:55:58,781 >> loading file vocab.json
+[INFO|tokenization_utils_base.py:2093] 2026-04-15 18:55:58,781 >> loading file merges.txt
+[INFO|tokenization_utils_base.py:2093] 2026-04-15 18:55:58,781 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2093] 2026-04-15 18:55:58,781 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2093] 2026-04-15 18:55:58,781 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2093] 2026-04-15 18:55:58,781 >> loading file tokenizer.json
+[INFO|tokenization_utils_base.py:2093] 2026-04-15 18:55:58,781 >> loading file chat_template.jinja
+[2026-04-15 18:55:58,829] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 4
+[2026-04-15 18:55:59,003] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 4
+[INFO|tokenization_utils_base.py:2364] 2026-04-15 18:55:59,104 >> Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+[INFO|modeling_utils.py:1169] 2026-04-15 18:55:59,108 >> loading weights file ./output/sft_qwen3_8b_dir_3Ksample_1epoch/model.safetensors.index.json
+[INFO|modeling_utils.py:4373] 2026-04-15 18:55:59,108 >> Detected DeepSpeed ZeRO-3: activating zero.init() for this model
+[2026-04-15 18:55:59,108] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 4
+[INFO|configuration_utils.py:986] 2026-04-15 18:55:59,115 >> Generate config GenerationConfig {
+  "eos_token_id": 151645,
+  "pad_token_id": 151643
+}
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s][2026-04-15 18:56:04,006] [INFO] [partition_parameters.py:348:__exit__] finished initializing model - num_params = 399, num_elems = 8.19B
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:03<00:09,  3.07s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:08,  2.87s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:08,  2.94s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:03<00:09,  3.10s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:05<00:05,  2.97s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:05<00:05,  2.94s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:06<00:06,  3.02s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:05<00:05,  2.97s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:08<00:02,  2.80s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:08<00:02,  2.85s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:08<00:02,  2.82s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:08<00:02,  2.81s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.06s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.35s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.08s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.07s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.40s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.37s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.05s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.37s/it]
+[INFO|configuration_utils.py:939] 2026-04-15 18:56:13,521 >> loading configuration file ./output/sft_qwen3_8b_dir_3Ksample_1epoch/generation_config.json
+[INFO|configuration_utils.py:986] 2026-04-15 18:56:13,521 >> Generate config GenerationConfig {
+  "do_sample": true,
+  "eos_token_id": [
+    151645,
+    151643
+  ],
+  "pad_token_id": 151643,
+  "temperature": 0.6,
+  "top_k": 20,
+  "top_p": 0.95
+}
+
+[INFO|dynamic_module_utils.py:423] 2026-04-15 18:56:13,521 >> Could not locate the custom_generate/generate.py inside ./output/sft_qwen3_8b_dir_3Ksample_1epoch.
+[INFO|modeling_utils.py:3326] 2026-04-15 18:56:13,521 >> You are resizing the embedding layer without providing a `pad_to_multiple_of` parameter. This means that the new embedding dimension will be 151669. This might induce some performance reduction as *Tensor Cores* will not be available. For more details about this, or help on choosing the correct value for resizing, refer to this guide: https://docs.nvidia.com/deeplearning/performance/dl-performance-matrix-multiplication/index.html#requirements-tc
+INFO:__main__:Initializing LORA model...
+INFO:__main__:LoraConfig: LoraConfig(task_type=<TaskType.CAUSAL_LM: 'CAUSAL_LM'>, peft_type=<PeftType.LORA: 'LORA'>, auto_mapping=None, base_model_name_or_path=None, revision=None, inference_mode=False, r=16, target_modules={'gate_proj', 'k_proj', 'o_proj', 'down_proj', 'v_proj', 'up_proj', 'q_proj'}, exclude_modules=None, lora_alpha=32, lora_dropout=0.05, fan_in_fan_out=False, bias='none', use_rslora=False, modules_to_save=None, init_lora_weights=True, layers_to_transform=None, layers_pattern=None, rank_pattern={}, alpha_pattern={}, megatron_config=None, megatron_core='megatron.core', trainable_token_indices=None, loftq_config={}, eva_config=None, corda_config=None, use_dora=False, use_qalora=False, qalora_group_size=16, layer_replication=None, runtime_config=LoraRuntimeConfig(ephemeral_gpu_offload=False), lora_bias=False, target_parameters=None)
+trainable params: 43,646,976 || all params: 8,232,195,072 || trainable%: 0.5302
+trainable params: 43,646,976 || all params: 8,232,195,072 || trainable%: 0.5302
+trainable params: 43,646,976 || all params: 8,232,195,072 || trainable%: 0.5302
+trainable params: 43,646,976 || all params: 8,232,195,072 || trainable%: 0.5302
+/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py:181: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py:181: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+Using custom data configuration default-c5069021098e12f7
+INFO:datasets.builder:Using custom data configuration default-c5069021098e12f7
+Found cached dataset json (/home/wan/.cache/huggingface/datasets/json/default-c5069021098e12f7/0.0.0/95cd12cb79bdd40ece813ca76cc5f709067bfb719d56048dc7651d7403a4c3d2)
+INFO:datasets.builder:Found cached dataset json (/home/wan/.cache/huggingface/datasets/json/default-c5069021098e12f7/0.0.0/95cd12cb79bdd40ece813ca76cc5f709067bfb719d56048dc7651d7403a4c3d2)
+/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py:181: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py:181: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  trainer = Trainer(
+[INFO|trainer.py:699] 2026-04-15 18:56:18,013 >> max_steps is given, it will override any value given in num_train_epochs
+[INFO|trainer.py:749] 2026-04-15 18:56:18,013 >> Using auto half precision backend
+INFO:__main__:*** Train ***
+WARNING:accelerate.accelerator:Gradient accumulation steps mismatch: GradientAccumulationPlugin has 1, DeepSpeed config has 4. Using DeepSpeed's value.
+[2026-04-15 18:56:18,351] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed info: version=0.15.1+unknown, git-hash=unknown, git-branch=unknown
+[2026-04-15 18:56:18,351] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 4
+[2026-04-15 18:56:18,380] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+ninja: no work to do.
+Time to load cpu_adam op: 2.371466636657715 seconds
+ninja: no work to do.
+Time to load cpu_adam op: 2.4050581455230713 seconds
+ninja: no work to do.
+Time to load cpu_adam op: 2.418398141860962 seconds
+Adam Optimizer #0 is created with AVX512 arithmetic capability.
+Config: alpha=0.000050, betas=(0.900000, 0.999000), weight_decay=0.000000, adam_w=1
+[2026-04-15 18:56:22,009] [INFO] [logging.py:96:log_dist] [Rank 0] Using DeepSpeed Optimizer param name adamw as basic optimizer
+[2026-04-15 18:56:22,009] [INFO] [logging.py:96:log_dist] [Rank 0] Removing param_group that has no 'params' in the basic Optimizer
+[2026-04-15 18:56:22,038] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Basic Optimizer = DeepSpeedCPUAdam
+[2026-04-15 18:56:22,038] [INFO] [utils.py:59:is_zero_supported_optimizer] Checking ZeRO support for optimizer=DeepSpeedCPUAdam type=<class 'deepspeed.ops.adam.cpu_adam.DeepSpeedCPUAdam'>
+[2026-04-15 18:56:22,038] [INFO] [logging.py:96:log_dist] [Rank 0] Creating fp16 ZeRO stage 3 optimizer, MiCS is enabled False, Hierarchical params gather False
+[2026-04-15 18:56:22,038] [INFO] [logging.py:96:log_dist] [Rank 0] Creating torch.bfloat16 ZeRO stage 3 optimizer
+ninja: no work to do.
+Time to load cpu_adam op: 2.4490206241607666 seconds
+[2026-04-15 18:56:22,211] [INFO] [utils.py:781:see_memory_usage] Stage 3 initialize beginning
+[2026-04-15 18:56:22,211] [INFO] [utils.py:782:see_memory_usage] MA 2.4 GB         Max_MA 4.63 GB         CA 2.49 GB         Max_CA 5 GB 
+[2026-04-15 18:56:22,211] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 65.56 GB, percent = 13.0%
+[2026-04-15 18:56:22,218] [INFO] [stage3.py:164:__init__] Reduce bucket size 16777216
+[2026-04-15 18:56:22,218] [INFO] [stage3.py:165:__init__] Prefetch bucket size 15099494
+[2026-04-15 18:56:22,344] [INFO] [utils.py:781:see_memory_usage] DeepSpeedZeRoOffload initialize [begin]
+[2026-04-15 18:56:22,344] [INFO] [utils.py:782:see_memory_usage] MA 2.4 GB         Max_MA 2.4 GB         CA 2.49 GB         Max_CA 2 GB 
+[2026-04-15 18:56:22,344] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 65.56 GB, percent = 13.0%
+Parameter Offload: Total persistent parameters: 1487872 in 217 params
+/home/wan/enter/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/wan/enter/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/wan/enter/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[2026-04-15 18:56:23,156] [INFO] [utils.py:781:see_memory_usage] DeepSpeedZeRoOffload initialize [end]
+[2026-04-15 18:56:23,157] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 2.4 GB         CA 2.49 GB         Max_CA 2 GB 
+[2026-04-15 18:56:23,157] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 65.72 GB, percent = 13.1%
+[2026-04-15 18:56:23,300] [INFO] [utils.py:781:see_memory_usage] Before creating fp16 partitions
+[2026-04-15 18:56:23,301] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 2.49 GB         Max_CA 2 GB 
+[2026-04-15 18:56:23,301] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 65.72 GB, percent = 13.1%
+/home/wan/enter/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[2026-04-15 18:56:23,468] [INFO] [utils.py:781:see_memory_usage] After creating fp16 partitions: 1
+[2026-04-15 18:56:23,469] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 2.49 GB         Max_CA 2 GB 
+[2026-04-15 18:56:23,469] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 66.03 GB, percent = 13.1%
+[2026-04-15 18:56:23,611] [INFO] [utils.py:781:see_memory_usage] Before creating fp32 partitions
+[2026-04-15 18:56:23,611] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 2.49 GB         Max_CA 2 GB 
+[2026-04-15 18:56:23,611] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 66.03 GB, percent = 13.1%
+[2026-04-15 18:56:23,782] [INFO] [utils.py:781:see_memory_usage] After creating fp32 partitions
+[2026-04-15 18:56:23,782] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 2.49 GB         Max_CA 2 GB 
+[2026-04-15 18:56:23,782] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 66.08 GB, percent = 13.1%
+[2026-04-15 18:56:23,924] [INFO] [utils.py:781:see_memory_usage] Before initializing optimizer states
+[2026-04-15 18:56:23,925] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 2.49 GB         Max_CA 2 GB 
+[2026-04-15 18:56:23,925] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 66.54 GB, percent = 13.2%
+[2026-04-15 18:56:24,132] [INFO] [utils.py:781:see_memory_usage] After initializing optimizer states
+[2026-04-15 18:56:24,133] [INFO] [utils.py:782:see_memory_usage] MA 0.0 GB         Max_MA 0.0 GB         CA 2.49 GB         Max_CA 2 GB 
+[2026-04-15 18:56:24,133] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 66.6 GB, percent = 13.2%
+[2026-04-15 18:56:24,133] [INFO] [stage3.py:517:_setup_for_real_optimizer] optimizer state initialized
+/home/wan/enter/lib/python3.13/site-packages/transformers/data/data_collator.py:740: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /pytorch/torch/csrc/utils/tensor_new.cpp:253.)
+  batch["labels"] = torch.tensor(batch["labels"], dtype=torch.int64)
+/home/wan/enter/lib/python3.13/site-packages/transformers/data/data_collator.py:740: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /pytorch/torch/csrc/utils/tensor_new.cpp:253.)
+  batch["labels"] = torch.tensor(batch["labels"], dtype=torch.int64)
+/home/wan/enter/lib/python3.13/site-packages/transformers/data/data_collator.py:740: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /pytorch/torch/csrc/utils/tensor_new.cpp:253.)
+  batch["labels"] = torch.tensor(batch["labels"], dtype=torch.int64)
+[2026-04-15 18:56:24,401] [INFO] [utils.py:781:see_memory_usage] After initializing ZeRO optimizer
+[2026-04-15 18:56:24,401] [INFO] [utils.py:782:see_memory_usage] MA 0.03 GB         Max_MA 0.03 GB         CA 2.49 GB         Max_CA 2 GB 
+[2026-04-15 18:56:24,401] [INFO] [utils.py:789:see_memory_usage] CPU Virtual Memory:  used = 66.73 GB, percent = 13.3%
+[2026-04-15 18:56:24,401] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed Final Optimizer = DeepSpeedZeroOptimizer_Stage3
+[2026-04-15 18:56:24,402] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed using configured LR scheduler = WarmupDecayLR
+[2026-04-15 18:56:24,402] [INFO] [logging.py:96:log_dist] [Rank 0] DeepSpeed LR Scheduler = <deepspeed.runtime.lr_schedules.WarmupDecayLR object at 0x7689dc4e0440>
+[2026-04-15 18:56:24,402] [INFO] [logging.py:96:log_dist] [Rank 0] step=0, skipped=0, lr=[5e-05], mom=[[0.9, 0.999]]
+[2026-04-15 18:56:24,406] [INFO] [config.py:999:print] DeepSpeedEngine configuration:
+[2026-04-15 18:56:24,406] [INFO] [config.py:1003:print]   activation_checkpointing_config  {
+    "partition_activations": false, 
+    "contiguous_memory_optimization": false, 
+    "cpu_checkpointing": false, 
+    "number_checkpoints": null, 
+    "synchronize_checkpoint_boundary": false, 
+    "profile": false
+}
+[2026-04-15 18:56:24,406] [INFO] [config.py:1003:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True, 'use_gds': False}
+[2026-04-15 18:56:24,406] [INFO] [config.py:1003:print]   amp_enabled .................. False
+[2026-04-15 18:56:24,406] [INFO] [config.py:1003:print]   amp_params ................... False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   autotuning_config ............ {
+    "enabled": false, 
+    "start_step": null, 
+    "end_step": null, 
+    "metric_path": null, 
+    "arg_mappings": null, 
+    "metric": "throughput", 
+    "model_info": null, 
+    "results_dir": "autotuning_results", 
+    "exps_dir": "autotuning_exps", 
+    "overwrite": true, 
+    "fast": true, 
+    "start_profile_step": 3, 
+    "end_profile_step": 5, 
+    "tuner_type": "gridsearch", 
+    "tuner_early_stopping": 5, 
+    "tuner_num_trials": 50, 
+    "model_info_path": null, 
+    "mp_size": 1, 
+    "max_train_batch_size": null, 
+    "min_train_batch_size": 1, 
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+    "min_train_micro_batch_size_per_gpu": 1, 
+    "num_tuning_micro_batch_sizes": 3
+}
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   bfloat16_enabled ............. True
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   bfloat16_immediate_grad_update  False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   checkpoint_parallel_write_pipeline  False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   checkpoint_tag_validation_enabled  True
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   checkpoint_tag_validation_fail  False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7689dd109bd0>
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   communication_data_type ...... None
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   curriculum_enabled_legacy .... False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   curriculum_params_legacy ..... False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   data_efficiency_enabled ...... False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   dataloader_drop_last ......... False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   disable_allgather ............ False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   dump_state ................... False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   dynamic_loss_scale_args ...... None
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   eigenvalue_enabled ........... False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   eigenvalue_gas_boundary_resolution  1
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   eigenvalue_layer_num ......... 0
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   eigenvalue_max_iter .......... 100
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   eigenvalue_stability ......... 1e-06
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   eigenvalue_tol ............... 0.01
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   eigenvalue_verbose ........... False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   elasticity_enabled ........... False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   flops_profiler_config ........ {
+    "enabled": false, 
+    "recompute_fwd_factor": 0.0, 
+    "profile_step": 1, 
+    "module_depth": -1, 
+    "top_modules": 1, 
+    "detailed": true, 
+    "output_file": null
+}
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   fp16_auto_cast ............... None
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   fp16_enabled ................. False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   fp16_master_weights_and_gradients  False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   global_rank .................. 0
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   grad_accum_dtype ............. None
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   gradient_accumulation_steps .. 4
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   gradient_clipping ............ 1.0
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   gradient_predivide_factor .... 1.0
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   graph_harvesting ............. False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   initial_dynamic_scale ........ 1
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   load_universal_checkpoint .... False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   loss_scale ................... 1.0
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   memory_breakdown ............. False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   mics_hierarchial_params_gather  False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   mics_shard_size .............. -1
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') comet=CometConfig(enabled=False, samples_log_interval=100, project=None, workspace=None, api_key=None, experiment_name=None, experiment_key=None, online=None, mode=None) wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName')
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   nebula_config ................ {
+    "enabled": false, 
+    "persistent_storage_path": null, 
+    "persistent_time_interval": 100, 
+    "num_of_version_in_retention": 2, 
+    "enable_nebula_load": true, 
+    "load_path": null
+}
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   optimizer_legacy_fusion ...... False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   optimizer_name ............... adamw
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   optimizer_params ............. {'lr': 5e-05, 'betas': [0.9, 0.999], 'eps': 1e-08, 'weight_decay': 0.0}
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0, 'pipe_partitioned': True, 'grad_partitioned': True}
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   pld_enabled .................. False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   pld_params ................... False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   prescale_gradients ........... False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   scheduler_name ............... WarmupDecayLR
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   scheduler_params ............. {'total_num_steps': 20, 'warmup_min_lr': 0, 'warmup_max_lr': 5e-05, 'warmup_num_steps': 1}
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   seq_parallel_communication_data_type  torch.float32
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   sparse_attention ............. None
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   sparse_gradients_enabled ..... False
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   steps_per_print .............. inf
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   timers_config ................ enabled=True synchronized=True
+[2026-04-15 18:56:24,407] [INFO] [config.py:1003:print]   train_batch_size ............. 16
+[2026-04-15 18:56:24,408] [INFO] [config.py:1003:print]   train_micro_batch_size_per_gpu  1
+[2026-04-15 18:56:24,408] [INFO] [config.py:1003:print]   use_data_before_expert_parallel_  False
+[2026-04-15 18:56:24,408] [INFO] [config.py:1003:print]   use_node_local_storage ....... False
+[2026-04-15 18:56:24,408] [INFO] [config.py:1003:print]   wall_clock_breakdown ......... False
+[2026-04-15 18:56:24,408] [INFO] [config.py:1003:print]   weight_quantization_config ... None
+[2026-04-15 18:56:24,408] [INFO] [config.py:1003:print]   world_size ................... 4
+[2026-04-15 18:56:24,408] [INFO] [config.py:1003:print]   zero_allow_untested_optimizer  False
+[2026-04-15 18:56:24,408] [INFO] [config.py:1003:print]   zero_config .................. stage=3 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=16777216 use_multi_rank_bucket_allreduce=True allgather_partitions=True allgather_bucket_size=500000000 overlap_comm=True load_from_fp32_weights=True elastic_checkpoint=False offload_param=DeepSpeedZeroOffloadParamConfig(device='cpu', nvme_path=None, buffer_count=5, buffer_size=100000000, max_in_cpu=1000000000, pin_memory=True) offload_optimizer=DeepSpeedZeroOffloadOptimizerConfig(device='cpu', nvme_path=None, buffer_count=4, pin_memory=True, pipeline_read=False, pipeline_write=False, fast_init=False, ratio=1.0) sub_group_size=1000000000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=15099494 param_persistence_threshold=40960 model_persistence_threshold=9223372036854775807 max_live_parameters=1000000000 max_reuse_distance=1000000000 gather_16bit_weights_on_model_save=True use_all_reduce_for_fetch_params=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_nontrainable_weights=False zero_quantized_gradients=False mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True
+[2026-04-15 18:56:24,408] [INFO] [config.py:1003:print]   zero_enabled ................. True
+[2026-04-15 18:56:24,408] [INFO] [config.py:1003:print]   zero_force_ds_cpu_optimizer .. True
+[2026-04-15 18:56:24,408] [INFO] [config.py:1003:print]   zero_optimization_stage ...... 3
+[2026-04-15 18:56:24,408] [INFO] [config.py:989:print_user_config]   json = {
+    "bf16": {
+        "enabled": true
+    }, 
+    "optimizer": {
+        "type": "AdamW", 
+        "params": {
+            "lr": 5e-05, 
+            "betas": [0.9, 0.999], 
+            "eps": 1e-08, 
+            "weight_decay": 0.0
+        }
+    }, 
+    "scheduler": {
+        "type": "WarmupDecayLR", 
+        "params": {
+            "total_num_steps": 20, 
+            "warmup_min_lr": 0, 
+            "warmup_max_lr": 5e-05, 
+            "warmup_num_steps": 1
+        }
+    }, 
+    "zero_optimization": {
+        "stage": 3, 
+        "offload_optimizer": {
+            "device": "cpu", 
+            "pin_memory": true
+        }, 
+        "offload_param": {
+            "device": "cpu", 
+            "pin_memory": true
+        }, 
+        "overlap_comm": true, 
+        "contiguous_gradients": true, 
+        "sub_group_size": 1.000000e+09, 
+        "reduce_bucket_size": 1.677722e+07, 
+        "stage3_prefetch_bucket_size": 1.509949e+07, 
+        "stage3_param_persistence_threshold": 4.096000e+04, 
+        "stage3_max_live_parameters": 1.000000e+09, 
+        "stage3_max_reuse_distance": 1.000000e+09, 
+        "stage3_gather_16bit_weights_on_model_save": true
+    }, 
+    "gradient_accumulation_steps": 4, 
+    "gradient_clipping": 1.0, 
+    "steps_per_print": inf, 
+    "train_batch_size": 16, 
+    "train_micro_batch_size_per_gpu": 1, 
+    "wall_clock_breakdown": false, 
+    "fp16": {
+        "enabled": false
+    }
+}
+[INFO|trainer.py:2519] 2026-04-15 18:56:24,409 >> ***** Running training *****
+[INFO|trainer.py:2520] 2026-04-15 18:56:24,409 >>   Num examples = 1
+[INFO|trainer.py:2521] 2026-04-15 18:56:24,409 >>   Num Epochs = 20
+[INFO|trainer.py:2522] 2026-04-15 18:56:24,409 >>   Instantaneous batch size per device = 1
+[INFO|trainer.py:2525] 2026-04-15 18:56:24,409 >>   Total train batch size (w. parallel, distributed & accumulation) = 16
+[INFO|trainer.py:2526] 2026-04-15 18:56:24,409 >>   Gradient Accumulation steps = 4
+[INFO|trainer.py:2527] 2026-04-15 18:56:24,409 >>   Total optimization steps = 20
+[INFO|trainer.py:2528] 2026-04-15 18:56:24,413 >>   Number of trainable parameters = 43,646,976
+  0%|          | 0/20 [00:00<?, ?it/s]/home/wan/enter/lib/python3.13/site-packages/transformers/data/data_collator.py:740: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /pytorch/torch/csrc/utils/tensor_new.cpp:253.)
+  batch["labels"] = torch.tensor(batch["labels"], dtype=torch.int64)
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "<frozen runpy>", line 198, in _run_module_as_main
+[rank3]:   File "<frozen runpy>", line 88, in _run_code
+[rank3]:   File "/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py", line 208, in <module>
+[rank3]:     main()
+[rank3]:     ~~~~^^
+[rank3]:   File "/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py", line 197, in main
+[rank3]:     train_result = trainer.train(resume_from_checkpoint=checkpoint)
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 2325, in train
+[rank3]:     return inner_training_loop(
+[rank3]:         args=args,
+[rank3]:     ...<2 lines>...
+[rank3]:         ignore_keys_for_eval=ignore_keys_for_eval,
+[rank3]:     )
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+[rank3]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 4020, in training_step
+[rank3]:     loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 4110, in compute_loss
+[rank3]:     outputs = model(**inputs)
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/utils/nvtx.py", line 18, in wrapped_fn
+[rank3]:     ret_val = func(*args, **kwargs)
+[rank3]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/engine.py", line 1899, in forward
+[rank3]:     loss = self.module(*inputs, **kwargs)
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank3]:     return inner()
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank3]:     result = forward_call(*args, **kwargs)
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/peft/peft_model.py", line 1850, in forward
+[rank3]:     return self.base_model(
+[rank3]:            ~~~~~~~~~~~~~~~^
+[rank3]:         input_ids=input_ids,
+[rank3]:         ^^^^^^^^^^^^^^^^^^^^
+[rank3]:     ...<6 lines>...
+[rank3]:         **kwargs,
+[rank3]:         ^^^^^^^^^
+[rank3]:     )
+[rank3]:     ^
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank3]:     return inner()
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank3]:     result = forward_call(*args, **kwargs)
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/peft/tuners/tuners_utils.py", line 222, in forward
+[rank3]:     return self.model.forward(*args, **kwargs)
+[rank3]:            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/utils/generic.py", line 918, in wrapper
+[rank3]:     output = func(self, *args, **kwargs)
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 480, in forward
+[rank3]:     outputs: BaseModelOutputWithPast = self.model(
+[rank3]:                                        ~~~~~~~~~~^
+[rank3]:         input_ids=input_ids,
+[rank3]:         ^^^^^^^^^^^^^^^^^^^^
+[rank3]:     ...<6 lines>...
+[rank3]:         **kwargs,
+[rank3]:         ^^^^^^^^^
+[rank3]:     )
+[rank3]:     ^
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank3]:     return inner()
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank3]:     result = forward_call(*args, **kwargs)
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/utils/generic.py", line 1064, in wrapper
+[rank3]:     outputs = func(self, *args, **kwargs)
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 410, in forward
+[rank3]:     hidden_states = decoder_layer(
+[rank3]:         hidden_states,
+[rank3]:     ...<6 lines>...
+[rank3]:         **kwargs,
+[rank3]:     )
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/modeling_layers.py", line 94, in __call__
+[rank3]:     return super().__call__(*args, **kwargs)
+[rank3]:            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank3]:     return inner()
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank3]:     result = forward_call(*args, **kwargs)
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+[rank3]:     return func(*args, **kwargs)
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 275, in forward
+[rank3]:     hidden_states = self.mlp(hidden_states)
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank3]:     return inner()
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank3]:     result = forward_call(*args, **kwargs)
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 82, in forward
+[rank3]:     down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank3]:     return inner()
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank3]:     result = forward_call(*args, **kwargs)
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/peft/tuners/lora/layer.py", line 771, in forward
+[rank3]:     result = result + lora_B(lora_A(dropout(x))) * scaling
+[rank3]:                       ~~~~~~^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank3]:     return inner()
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank3]:     result = forward_call(*args, **kwargs)
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/linear.py", line 125, in forward
+[rank3]:     return F.linear(input, self.weight, self.bias)
+[rank3]:            ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/zero/linear.py", line 116, in zero3_linear_wrap
+[rank3]:     return LinearFunctionForZeroStage3.apply(input, weight)
+[rank3]:            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/autograd/function.py", line 576, in apply
+[rank3]:     return super().apply(*args, **kwargs)  # type: ignore[misc]
+[rank3]:            ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank3]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/amp/autocast_mode.py", line 517, in decorate_fwd
+[rank3]:     return fwd(*args, **kwargs)
+[rank3]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/zero/linear.py", line 64, in forward
+[rank3]:     output = input.matmul(weight.t())
+[rank3]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 32.00 MiB. GPU 3 has a total capacity of 23.53 GiB of which 9.62 MiB is free. Including non-PyTorch memory, this process has 23.50 GiB memory in use. Of the allocated memory 22.88 GiB is allocated by PyTorch, and 38.99 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "<frozen runpy>", line 198, in _run_module_as_main
+[rank0]:   File "<frozen runpy>", line 88, in _run_code
+[rank0]:   File "/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py", line 208, in <module>
+[rank0]:     main()
+[rank0]:     ~~~~^^
+[rank0]:   File "/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py", line 197, in main
+[rank0]:     train_result = trainer.train(resume_from_checkpoint=checkpoint)
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 2325, in train
+[rank0]:     return inner_training_loop(
+[rank0]:         args=args,
+[rank0]:     ...<2 lines>...
+[rank0]:         ignore_keys_for_eval=ignore_keys_for_eval,
+[rank0]:     )
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+[rank0]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 4020, in training_step
+[rank0]:     loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 4110, in compute_loss
+[rank0]:     outputs = model(**inputs)
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/utils/nvtx.py", line 18, in wrapped_fn
+[rank0]:     ret_val = func(*args, **kwargs)
+[rank0]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/engine.py", line 1899, in forward
+[rank0]:     loss = self.module(*inputs, **kwargs)
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank0]:     return inner()
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank0]:     result = forward_call(*args, **kwargs)
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/peft/peft_model.py", line 1850, in forward
+[rank0]:     return self.base_model(
+[rank0]:            ~~~~~~~~~~~~~~~^
+[rank0]:         input_ids=input_ids,
+[rank0]:         ^^^^^^^^^^^^^^^^^^^^
+[rank0]:     ...<6 lines>...
+[rank0]:         **kwargs,
+[rank0]:         ^^^^^^^^^
+[rank0]:     )
+[rank0]:     ^
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank0]:     return inner()
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank0]:     result = forward_call(*args, **kwargs)
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/peft/tuners/tuners_utils.py", line 222, in forward
+[rank0]:     return self.model.forward(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/utils/generic.py", line 918, in wrapper
+[rank0]:     output = func(self, *args, **kwargs)
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 480, in forward
+[rank0]:     outputs: BaseModelOutputWithPast = self.model(
+[rank0]:                                        ~~~~~~~~~~^
+[rank0]:         input_ids=input_ids,
+[rank0]:         ^^^^^^^^^^^^^^^^^^^^
+[rank0]:     ...<6 lines>...
+[rank0]:         **kwargs,
+[rank0]:         ^^^^^^^^^
+[rank0]:     )
+[rank0]:     ^
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank0]:     return inner()
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank0]:     result = forward_call(*args, **kwargs)
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/utils/generic.py", line 1064, in wrapper
+[rank0]:     outputs = func(self, *args, **kwargs)
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 410, in forward
+[rank0]:     hidden_states = decoder_layer(
+[rank0]:         hidden_states,
+[rank0]:     ...<6 lines>...
+[rank0]:         **kwargs,
+[rank0]:     )
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/modeling_layers.py", line 94, in __call__
+[rank0]:     return super().__call__(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank0]:     return inner()
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank0]:     result = forward_call(*args, **kwargs)
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+[rank0]:     return func(*args, **kwargs)
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 275, in forward
+[rank0]:     hidden_states = self.mlp(hidden_states)
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank0]:     return inner()
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank0]:     result = forward_call(*args, **kwargs)
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 82, in forward
+[rank0]:     down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank0]:     return inner()
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank0]:     result = forward_call(*args, **kwargs)
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/peft/tuners/lora/layer.py", line 771, in forward
+[rank0]:     result = result + lora_B(lora_A(dropout(x))) * scaling
+[rank0]:                       ~~~~~~^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank0]:     return inner()
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank0]:     result = forward_call(*args, **kwargs)
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/linear.py", line 125, in forward
+[rank0]:     return F.linear(input, self.weight, self.bias)
+[rank0]:            ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/zero/linear.py", line 116, in zero3_linear_wrap
+[rank0]:     return LinearFunctionForZeroStage3.apply(input, weight)
+[rank0]:            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/autograd/function.py", line 576, in apply
+[rank0]:     return super().apply(*args, **kwargs)  # type: ignore[misc]
+[rank0]:            ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/amp/autocast_mode.py", line 517, in decorate_fwd
+[rank0]:     return fwd(*args, **kwargs)
+[rank0]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/zero/linear.py", line 64, in forward
+[rank0]:     output = input.matmul(weight.t())
+[rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 32.00 MiB. GPU 0 has a total capacity of 23.53 GiB of which 9.62 MiB is free. Including non-PyTorch memory, this process has 23.50 GiB memory in use. Of the allocated memory 22.88 GiB is allocated by PyTorch, and 38.99 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "<frozen runpy>", line 198, in _run_module_as_main
+[rank1]:   File "<frozen runpy>", line 88, in _run_code
+[rank1]:   File "/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py", line 208, in <module>
+[rank1]:     main()
+[rank1]:     ~~~~^^
+[rank1]:   File "/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py", line 197, in main
+[rank1]:     train_result = trainer.train(resume_from_checkpoint=checkpoint)
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 2325, in train
+[rank1]:     return inner_training_loop(
+[rank1]:         args=args,
+[rank1]:     ...<2 lines>...
+[rank1]:         ignore_keys_for_eval=ignore_keys_for_eval,
+[rank1]:     )
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+[rank1]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 4020, in training_step
+[rank1]:     loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 4110, in compute_loss
+[rank1]:     outputs = model(**inputs)
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/utils/nvtx.py", line 18, in wrapped_fn
+[rank1]:     ret_val = func(*args, **kwargs)
+[rank1]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/engine.py", line 1899, in forward
+[rank1]:     loss = self.module(*inputs, **kwargs)
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank1]:     return inner()
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank1]:     result = forward_call(*args, **kwargs)
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/peft/peft_model.py", line 1850, in forward
+[rank1]:     return self.base_model(
+[rank1]:            ~~~~~~~~~~~~~~~^
+[rank1]:         input_ids=input_ids,
+[rank1]:         ^^^^^^^^^^^^^^^^^^^^
+[rank1]:     ...<6 lines>...
+[rank1]:         **kwargs,
+[rank1]:         ^^^^^^^^^
+[rank1]:     )
+[rank1]:     ^
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank1]:     return inner()
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank1]:     result = forward_call(*args, **kwargs)
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/peft/tuners/tuners_utils.py", line 222, in forward
+[rank1]:     return self.model.forward(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/utils/generic.py", line 918, in wrapper
+[rank1]:     output = func(self, *args, **kwargs)
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 480, in forward
+[rank1]:     outputs: BaseModelOutputWithPast = self.model(
+[rank1]:                                        ~~~~~~~~~~^
+[rank1]:         input_ids=input_ids,
+[rank1]:         ^^^^^^^^^^^^^^^^^^^^
+[rank1]:     ...<6 lines>...
+[rank1]:         **kwargs,
+[rank1]:         ^^^^^^^^^
+[rank1]:     )
+[rank1]:     ^
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank1]:     return inner()
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank1]:     result = forward_call(*args, **kwargs)
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/utils/generic.py", line 1064, in wrapper
+[rank1]:     outputs = func(self, *args, **kwargs)
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 410, in forward
+[rank1]:     hidden_states = decoder_layer(
+[rank1]:         hidden_states,
+[rank1]:     ...<6 lines>...
+[rank1]:         **kwargs,
+[rank1]:     )
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/modeling_layers.py", line 94, in __call__
+[rank1]:     return super().__call__(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank1]:     return inner()
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank1]:     result = forward_call(*args, **kwargs)
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+[rank1]:     return func(*args, **kwargs)
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 275, in forward
+[rank1]:     hidden_states = self.mlp(hidden_states)
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank1]:     return inner()
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank1]:     result = forward_call(*args, **kwargs)
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 82, in forward
+[rank1]:     down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank1]:     return inner()
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank1]:     result = forward_call(*args, **kwargs)
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/peft/tuners/lora/layer.py", line 771, in forward
+[rank1]:     result = result + lora_B(lora_A(dropout(x))) * scaling
+[rank1]:                       ~~~~~~^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank1]:     return inner()
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank1]:     result = forward_call(*args, **kwargs)
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/linear.py", line 125, in forward
+[rank1]:     return F.linear(input, self.weight, self.bias)
+[rank1]:            ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/zero/linear.py", line 116, in zero3_linear_wrap
+[rank1]:     return LinearFunctionForZeroStage3.apply(input, weight)
+[rank1]:            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/autograd/function.py", line 576, in apply
+[rank1]:     return super().apply(*args, **kwargs)  # type: ignore[misc]
+[rank1]:            ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank1]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/amp/autocast_mode.py", line 517, in decorate_fwd
+[rank1]:     return fwd(*args, **kwargs)
+[rank1]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/zero/linear.py", line 64, in forward
+[rank1]:     output = input.matmul(weight.t())
+[rank1]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 32.00 MiB. GPU 1 has a total capacity of 23.53 GiB of which 9.62 MiB is free. Including non-PyTorch memory, this process has 23.50 GiB memory in use. Of the allocated memory 22.88 GiB is allocated by PyTorch, and 38.99 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "<frozen runpy>", line 198, in _run_module_as_main
+[rank2]:   File "<frozen runpy>", line 88, in _run_code
+[rank2]:   File "/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py", line 208, in <module>
+[rank2]:     main()
+[rank2]:     ~~~~^^
+[rank2]:   File "/mnt/workspace0/WWWWWWWWWWWW/OR-R1/01_sft_train.py", line 197, in main
+[rank2]:     train_result = trainer.train(resume_from_checkpoint=checkpoint)
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 2325, in train
+[rank2]:     return inner_training_loop(
+[rank2]:         args=args,
+[rank2]:     ...<2 lines>...
+[rank2]:         ignore_keys_for_eval=ignore_keys_for_eval,
+[rank2]:     )
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 2674, in _inner_training_loop
+[rank2]:     tr_loss_step = self.training_step(model, inputs, num_items_in_batch)
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 4020, in training_step
+[rank2]:     loss = self.compute_loss(model, inputs, num_items_in_batch=num_items_in_batch)
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/trainer.py", line 4110, in compute_loss
+[rank2]:     outputs = model(**inputs)
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/utils/nvtx.py", line 18, in wrapped_fn
+[rank2]:     ret_val = func(*args, **kwargs)
+[rank2]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/engine.py", line 1899, in forward
+[rank2]:     loss = self.module(*inputs, **kwargs)
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank2]:     return inner()
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank2]:     result = forward_call(*args, **kwargs)
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/peft/peft_model.py", line 1850, in forward
+[rank2]:     return self.base_model(
+[rank2]:            ~~~~~~~~~~~~~~~^
+[rank2]:         input_ids=input_ids,
+[rank2]:         ^^^^^^^^^^^^^^^^^^^^
+[rank2]:     ...<6 lines>...
+[rank2]:         **kwargs,
+[rank2]:         ^^^^^^^^^
+[rank2]:     )
+[rank2]:     ^
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank2]:     return inner()
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank2]:     result = forward_call(*args, **kwargs)
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/peft/tuners/tuners_utils.py", line 222, in forward
+[rank2]:     return self.model.forward(*args, **kwargs)
+[rank2]:            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/utils/generic.py", line 918, in wrapper
+[rank2]:     output = func(self, *args, **kwargs)
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 480, in forward
+[rank2]:     outputs: BaseModelOutputWithPast = self.model(
+[rank2]:                                        ~~~~~~~~~~^
+[rank2]:         input_ids=input_ids,
+[rank2]:         ^^^^^^^^^^^^^^^^^^^^
+[rank2]:     ...<6 lines>...
+[rank2]:         **kwargs,
+[rank2]:         ^^^^^^^^^
+[rank2]:     )
+[rank2]:     ^
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank2]:     return inner()
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank2]:     result = forward_call(*args, **kwargs)
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/utils/generic.py", line 1064, in wrapper
+[rank2]:     outputs = func(self, *args, **kwargs)
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 410, in forward
+[rank2]:     hidden_states = decoder_layer(
+[rank2]:         hidden_states,
+[rank2]:     ...<6 lines>...
+[rank2]:         **kwargs,
+[rank2]:     )
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/modeling_layers.py", line 94, in __call__
+[rank2]:     return super().__call__(*args, **kwargs)
+[rank2]:            ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank2]:     return inner()
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank2]:     result = forward_call(*args, **kwargs)
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+[rank2]:     return func(*args, **kwargs)
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 275, in forward
+[rank2]:     hidden_states = self.mlp(hidden_states)
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank2]:     return inner()
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank2]:     result = forward_call(*args, **kwargs)
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 82, in forward
+[rank2]:     down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank2]:     return inner()
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank2]:     result = forward_call(*args, **kwargs)
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/peft/tuners/lora/layer.py", line 771, in forward
+[rank2]:     result = result + lora_B(lora_A(dropout(x))) * scaling
+[rank2]:                       ~~~~~~^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1879, in _call_impl
+[rank2]:     return inner()
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/module.py", line 1827, in inner
+[rank2]:     result = forward_call(*args, **kwargs)
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/nn/modules/linear.py", line 125, in forward
+[rank2]:     return F.linear(input, self.weight, self.bias)
+[rank2]:            ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/zero/linear.py", line 116, in zero3_linear_wrap
+[rank2]:     return LinearFunctionForZeroStage3.apply(input, weight)
+[rank2]:            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/autograd/function.py", line 576, in apply
+[rank2]:     return super().apply(*args, **kwargs)  # type: ignore[misc]
+[rank2]:            ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+[rank2]:   File "/home/wan/enter/lib/python3.13/site-packages/torch/amp/autocast_mode.py", line 517, in decorate_fwd
+[rank2]:     return fwd(*args, **kwargs)
+[rank2]:   File "/mnt/workspace1/LoRA-Pro-main/DeepSpeed-0.15.1/deepspeed/runtime/zero/linear.py", line 64, in forward
+[rank2]:     output = input.matmul(weight.t())
+[rank2]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 32.00 MiB. GPU 2 has a total capacity of 23.53 GiB of which 9.62 MiB is free. Including non-PyTorch memory, this process has 23.50 GiB memory in use. Of the allocated memory 22.88 GiB is allocated by PyTorch, and 38.99 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+  0%|          | 0/20 [00:03<?, ?it/s]
+W0415 18:56:29.948000 3453707 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3453795 closing signal SIGTERM
+W0415 18:56:29.949000 3453707 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3453796 closing signal SIGTERM
+W0415 18:56:29.949000 3453707 site-packages/torch/distributed/elastic/multiprocessing/api.py:900] Sending process 3453797 closing signal SIGTERM
+E0415 18:56:31.879000 3453707 site-packages/torch/distributed/elastic/multiprocessing/api.py:874] failed (exitcode: 1) local_rank: 0 (pid: 3453794) of binary: /mnt/workspace0/WWWWWWWWWWWW/OR-R1/.venv/bin/python
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/wan/enter/lib/python3.13/site-packages/torch/distributed/run.py", line 905, in <module>
+    main()
+    ~~~~^^
+  File "/home/wan/enter/lib/python3.13/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 357, in wrapper
+    return f(*args, **kwargs)
+  File "/home/wan/enter/lib/python3.13/site-packages/torch/distributed/run.py", line 901, in main
+    run(args)
+    ~~~^^^^^^
+  File "/home/wan/enter/lib/python3.13/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+    ~~~~~~~~~~~~~~~
+        config=config,
+        ~~~~~~~~~~~~~~
+        entrypoint=cmd,
+        ~~~~~~~~~~~~~~~
+    )(*cmd_args)
+    ~^^^^^^^^^^^
+  File "/home/wan/enter/lib/python3.13/site-packages/torch/distributed/launcher/api.py", line 143, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/wan/enter/lib/python3.13/site-packages/torch/distributed/launcher/api.py", line 277, in launch_agent
+    raise ChildFailedError(
+    ...<2 lines>...
+    )
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+01_sft_train FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-04-15_18:56:29
+  host      : ubuntu-14
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 3453794)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

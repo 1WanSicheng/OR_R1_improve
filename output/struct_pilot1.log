@@ -1,0 +1,72 @@
+
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+/home/wan/enter/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/home/wan/enter/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/home/wan/enter/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/home/wan/enter/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/home/wan/enter/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/home/wan/enter/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+INFO 04-03 11:44:20 [__init__.py:216] Automatically detected platform cuda.
+INFO 04-03 11:44:20 [__init__.py:216] Automatically detected platform cuda.
+/home/wan/enter/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'repr' attribute with value False was provided to the `Field()` function, which has no effect in the context it was used. 'repr' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+/home/wan/enter/lib/python3.13/site-packages/pydantic/_internal/_generate_schema.py:2249: UnsupportedFieldAttributeWarning: The 'frozen' attribute with value True was provided to the `Field()` function, which has no effect in the context it was used. 'frozen' is field-specific metadata, and can only be attached to a model field using `Annotated` metadata or by assignment. This may have happened because an `Annotated` type alias using the `type` statement was used, or if the `Field()` function was attached to a single member of a union type.
+  warnings.warn(
+INFO 04-03 11:44:21 [__init__.py:216] Automatically detected platform cuda.
+INFO 04-03 11:44:21 [__init__.py:216] Automatically detected platform cuda.
+[2026-04-03 11:44:21,880] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-04-03 11:44:21,941] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-04-03 11:44:22,062] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-04-03 11:44:22,287] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2026-04-03 11:44:22,602] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-04-03 11:44:22,605] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-04-03 11:44:22,605] [INFO] [comm.py:683:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2026-04-03 11:44:22,702] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-04-03 11:44:22,915] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 4
+[2026-04-03 11:44:22,918] [INFO] [comm.py:652:init_distributed] cdb=None
+[2026-04-03 11:44:22,924] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 4
+[2026-04-03 11:44:22,985] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 4
+[2026-04-03 11:44:23,179] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 4
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s][2026-04-03 11:44:27,241] [INFO] [partition_parameters.py:348:__exit__] finished initializing model - num_params = 399, num_elems = 8.19B
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:08,  2.75s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:08,  2.73s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:08,  2.75s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:02<00:08,  2.89s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:05<00:05,  2.80s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:05<00:05,  2.80s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:05<00:05,  2.79s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:05<00:05,  2.82s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:08<00:02,  2.79s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:08<00:02,  2.79s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:08<00:02,  2.80s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:08<00:02,  2.79s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.07s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.33s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.07s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.33s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.06s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.33s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.06s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:09<00:00,  2.34s/it]
+Map:   0%|          | 0/99 [00:00<?, ? examples/s]Map: 100%|██████████| 99/99 [00:00<00:00, 3625.63 examples/s]
+Gradient accumulation steps mismatch: GradientAccumulationPlugin has 1, DeepSpeed config has 8. Using DeepSpeed's value.
+ninja: no work to do.
+Time to load cpu_adam op: 2.330554485321045 seconds
+ninja: no work to do.
+Time to load cpu_adam op: 2.3461122512817383 seconds
+ninja: no work to do.
+Time to load cpu_adam op: 2.3350346088409424 seconds
+ninja: no work to do.
+Time to load cpu_adam op: 2.345222234725952 seconds
+Parameter Offload: Total persistent parameters: 22721536 in 541 params
+/home/wan/enter/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/wan/enter/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/wan/enter/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/home/wan/enter/lib/python3.13/site-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+  0%|          | 0/1 [00:00<?, ?it/s]`generation_config` default values have been modified to match model-specific defaults: {'temperature': 0.6, 'top_p': 0.95}. If this is not desired, please set these values explicitly.
+`generation_config` default values have been modified to match model-specific defaults: {'temperature': 0.6, 'top_p': 0.95}. If this is not desired, please set these values explicitly.
+`generation_config` default values have been modified to match model-specific defaults: {'temperature': 0.6, 'top_p': 0.95}. If this is not desired, please set these values explicitly.
+`generation_config` default values have been modified to match model-specific defaults: {'temperature': 0.6, 'top_p': 0.95}. If this is not desired, please set these values explicitly.
+True Rate: 0.00, Mean Format Reward: 0.33, Mean Valid Code Reward: 0.00, Mean Answer Reward: 0.00, Mean Struct Reward: 0.29
+True Rate: 0.25, Mean Format Reward: 0.60, Mean Valid Code Reward: 0.25, Mean Answer Reward: 0.25, Mean Struct Reward: 0.72
+True Rate: 0.50, Mean Format Reward: 0.58, Mean Valid Code Reward: 0.50, Mean Answer Reward: 0.50, Mean Struct Reward: 0.15
+True Rate: 0.25, Mean Format Reward: 0.92, Mean Valid Code Reward: 0.62, Mean Answer Reward: 0.25, Mean Struct Reward: 0.79
+100%|██████████| 1/1 [03:26<00:00, 206.96s/it]                                              {'loss': -0.1493, 'grad_norm': 0.005682933144271374, 'learning_rate': 0.0001, 'num_tokens': 82360.0, 'completions/mean_length': 1362.875, 'completions/min_length': 4.0, 'completions/max_length': 2048.0, 'completions/clipped_ratio': 0.3125, 'completions/mean_terminated_length': 1051.45458984375, 'completions/min_terminated_length': 4.0, 'completions/max_terminated_length': 1882.0, 'rewards/reward_with_reference/mean': 1.6913541555404663, 'rewards/reward_with_reference/std': 1.3604350090026855, 'reward': 1.6913541555404663, 'reward_std': 0.682768702507019, 'frac_reward_zero_std': 0.125, 'entropy': 0.34710610657930374, 'clip_ratio/low_mean': 0.0, 'clip_ratio/low_min': 0.0, 'clip_ratio/high_mean': 0.0, 'clip_ratio/high_max': 0.0, 'clip_ratio/region_mean': 0.0, 'epoch': 0.08}
+100%|██████████| 1/1 [03:26<00:00, 206.96s/it]                                              {'train_runtime': 222.6182, 'train_samples_per_second': 0.144, 'train_steps_per_second': 0.004, 'train_loss': -0.14925941824913025, 'epoch': 0.08}
+100%|██████████| 1/1 [03:42<00:00, 206.96s/it]100%|██████████| 1/1 [03:42<00:00, 222.61s/it]

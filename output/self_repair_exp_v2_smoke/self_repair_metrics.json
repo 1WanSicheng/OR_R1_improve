@@ -1,0 +1,33 @@
+{
+  "initial_num_samples": 8,
+  "initial_pass@1": 0.0,
+  "initial_optimal_rate": 0.0,
+  "initial_executable_rate": 0.625,
+  "initial_improved_rate": 0.0,
+  "coarse_num_samples": 4,
+  "coarse_pass@1": 0.0,
+  "coarse_optimal_rate": 0.0,
+  "coarse_executable_rate": 0.5,
+  "coarse_improved_rate": 0.0,
+  "diagnosis_num_samples": 4,
+  "diagnosis_pass@1": 0.0,
+  "diagnosis_optimal_rate": 0.0,
+  "diagnosis_executable_rate": 0.5,
+  "diagnosis_improved_rate": 0.0,
+  "failed_sample_count": 4,
+  "self_repair_sft_examples": 0,
+  "sft_quality_tiers": {},
+  "initial_no_code_count": 3,
+  "coarse_no_code_count": 2,
+  "diagnosis_no_code_count": 2,
+  "initial_extraction_modes": {
+    "none": 3,
+    "section_recovery": 5
+  },
+  "diagnosis_route_counts": {
+    "execution": 2,
+    "format": 2
+  },
+  "trajectory_file": "output/self_repair_exp_v2_smoke/self_repair_trajectories.jsonl",
+  "sft_file": "output/self_repair_exp_v2_smoke/self_repair_sft.jsonl"
+}

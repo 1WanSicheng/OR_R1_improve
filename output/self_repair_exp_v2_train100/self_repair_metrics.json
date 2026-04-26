@@ -1,0 +1,35 @@
+{
+  "initial_num_samples": 99,
+  "initial_pass@1": 0.16161616161616163,
+  "initial_optimal_rate": 0.30303030303030304,
+  "initial_executable_rate": 0.8585858585858586,
+  "initial_improved_rate": 0.0,
+  "coarse_num_samples": 48,
+  "coarse_pass@1": 0.0,
+  "coarse_optimal_rate": 0.10416666666666667,
+  "coarse_executable_rate": 0.7291666666666666,
+  "coarse_improved_rate": 0.0,
+  "diagnosis_num_samples": 48,
+  "diagnosis_pass@1": 0.0,
+  "diagnosis_optimal_rate": 0.10416666666666667,
+  "diagnosis_executable_rate": 0.7291666666666666,
+  "diagnosis_improved_rate": 0.0,
+  "failed_sample_count": 48,
+  "self_repair_sft_examples": 0,
+  "sft_quality_tiers": {},
+  "initial_no_code_count": 14,
+  "coarse_no_code_count": 13,
+  "diagnosis_no_code_count": 13,
+  "initial_extraction_modes": {
+    "none": 14,
+    "python_fence": 44,
+    "section_recovery": 41
+  },
+  "diagnosis_route_counts": {
+    "execution": 27,
+    "format": 12,
+    "modeling": 9
+  },
+  "trajectory_file": "output/self_repair_exp_v2_train100/self_repair_trajectories.jsonl",
+  "sft_file": "output/self_repair_exp_v2_train100/self_repair_sft.jsonl"
+}
