@@ -159,6 +159,80 @@ question
 
 也就是说，它是通过 **改变 completion 级别的 reward**，间接改变模型的生成偏好。
 
+### 3.2.1 structure reward 的训练数据是怎么构建的
+
+这部分最容易误解成“是不是要再造一份新的 SFT 数据”。当前版本不是。
+
+当前训练仍然直接使用原始 OR-R1 的 RL 数据文件，例如：
+
+- `datasets/trainset/train_100.jsonl`
+
+这类数据一条样本只有：
+
+- `question`
+- `answer`
+
+其中：
+
+- `question` 用来构造成 GRPO 的输入 prompt
+- `answer` 主要用于记录和离线评估，不是直接提供标准 completion
+
+所以 structure reward 不是通过“新增 labeled completion”来训练，而是通过原始 RL 采样流转来训练：
+
+```text
+question
+-> 按 OR-R1 模板包装成 prompt
+-> 当前策略采样 K 个 completions
+-> 每个 completion 分别算原 reward 和 r_struct
+-> 合成 total reward
+-> GRPO 用这一组 reward 回传更新策略
+```
+
+因此，所谓“构建训练”的真实含义是：
+
+- 不改数据集字段
+- 不改监督标签
+- 只改 completion 生成后的 reward 计算链
+
+从第一性原理看，structure reward 训练的是：
+
+```text
+哪些 completion 更值得保留
+```
+
+而不是：
+
+```text
+标准答案文本应该长什么样
+```
+
+### 3.2.2 一条真实样本在训练里怎么流转
+
+一条 GRPO 样本的真实流转，可以压成下面这条链：
+
+```text
+dataset row(question, answer)
+-> build prompt
+-> sample completion_1 ... completion_K
+-> 对每个 completion:
+     抽代码
+     执行代码
+     提取 prediction_answer
+     计算 r_fmt / r_code / r_vote / r_struct
+-> 得到一组 total rewards
+-> GRPO 根据组内相对高低更新模型
+```
+
+这里 structure reward 只参与最后这一段：
+
+```text
+completion text -> completion_schema
+question text -> problem_schema
+schema match -> r_struct
+```
+
+它不参与代码执行，不参与求解器返回，也不替代原始的 `r_fmt / r_code / r_vote`。
+
 ### 3.3 新 reward 怎么计算
 
 `r_struct` 不是由另一个 LLM 生成的，也不是再让模型跑一次题。它是基于规则的 schema matching。
@@ -248,6 +322,59 @@ completion 在数学上是否“严格正确”
 - `problem_schema` 自身可能抽错
 - `completion_schema` 自身也可能抽不全
 - 所以 `r_struct` 是启发式信号，不是绝对真值
+
+### 3.3.2 reward 在代码里是怎么落地验证的
+
+当前实现里，`r_struct` 的验证不是一次性黑盒打分，而是“先抽字段，再逐项比对”。
+
+可以把它理解成 4 步：
+
+1. `extract_problem_schema(question)`
+   从题目文本里抽：
+   - 目标方向
+   - 变量类型/维度
+   - 约束类别
+   - 参数与实体关系
+
+2. `extract_completion_schema(completion)`
+   从模型输出里抽：
+   - 有没有写出目标方向
+   - 有没有出现二元/整数/连续变量表述
+   - 有没有出现 capacity / demand / flow / assignment 这类结构
+   - 有没有相应的参数和对象关系
+
+3. 分项比较
+   - `objective match`
+   - `variable match`
+   - `constraint overlap`
+   - `alignment overlap`
+
+4. 聚合成 `r_struct`
+   按权重做加权平均，其中约束项默认更重
+
+因此它的“verify”更接近：
+
+```text
+schema-level consistency check
+```
+
+不是：
+
+```text
+solver-backed correctness check
+```
+
+这一点必须和原始 OR-R1 分清楚：
+
+- `r_code` 的 verify 是真执行代码
+- `r_vote` 的 verify 是组内答案投票
+- `r_struct` 的 verify 是文本结构规则匹配
+
+所以三者的证据强度并不一样：
+
+- `r_code` 属于执行证据
+- `r_vote` 属于一致性证据
+- `r_struct` 属于结构启发式证据
 
 ### 3.4 它和原始 OR-R1 的区别
 
